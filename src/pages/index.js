@@ -5,10 +5,12 @@ import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import * as styles from "../components/index.module.css"
+import HeroSection from "../components/sections/HeroSection"
 
 const IndexPage = () => (
   <Layout>
     <Seo title="Home" />
+    <HeroSection />
     <div>Hi there</div>
     <Link to="/page-2/">Go to page 2</Link>
   </Layout>
