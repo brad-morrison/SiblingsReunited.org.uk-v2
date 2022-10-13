@@ -11,8 +11,6 @@ const IndexPage = () => (
   <Layout>
     <Seo title="Home" />
     <HeroSection />
-    <div>Hi there</div>
-    <Link to="/page-2/">Go to page 2</Link>
   </Layout>
 )
 
