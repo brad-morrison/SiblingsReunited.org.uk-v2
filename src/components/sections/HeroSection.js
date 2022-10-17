@@ -17,16 +17,6 @@ function HeroSection() {
             ullamco veniam.
           </Description>
         </TextWrapper>
-        <TextWrapper>
-          <Title>
-            STAR <br /> Siblings Reunited
-          </Title>
-          <Description>
-            Sint enim aliqua exercitation aliqua velit irure velit. Velit eu
-            laborum anim cupidatat ipsum veniam velit dolor laborum velit
-            ullamco veniam.
-          </Description>
-        </TextWrapper>
       </ContentWrapper>
     </Wrapper>
   )

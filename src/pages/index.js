@@ -6,11 +6,13 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import * as styles from "../components/index.module.css"
 import HeroSection from "../components/sections/HeroSection"
+import StoreCarousel from "../components/sections/StoreCarousel"
 
 const IndexPage = () => (
   <Layout>
     <Seo title="Home" />
     <HeroSection />
+    <StoreCarousel />
   </Layout>
 )
 
