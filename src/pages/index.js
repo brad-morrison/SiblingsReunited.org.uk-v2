@@ -7,12 +7,12 @@ import Seo from "../components/seo"
 import * as styles from "../components/index.module.css"
 import HeroSection from "../components/sections/HeroSection"
 import StoreCarousel from "../components/sections/StoreCarousel"
+import NavBar from "../components/layout/NavBar"
 
 const IndexPage = () => (
   <Layout>
     <Seo title="Home" />
-    <HeroSection />
-    <StoreCarousel />
+    <NavBar />
   </Layout>
 )
 
