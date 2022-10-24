@@ -12,14 +12,17 @@ function TriplePostSection() {
           <PostCard
             title="Find out more about our unique charity"
             subTitle="We are the first of it's kind in the UK"
+            img="11.png"
           />
           <PostCard
             title="Donate or fundraise to help us do what we do"
             subTitle="No donation is too small or too large"
+            img="2.jpg.webp"
           />
           <PostCard
             title="Come and volunteer for Siblings Reunited"
             subTitle="We are always looking for new team members."
+            img="3.jpg"
           />
         </PostCards>
       </ContentWrapper>
@@ -43,9 +46,9 @@ const ContentWrapper = styled.div`
 const PostCards = styled.div`
   display: grid;
   padding: 0 30px;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 30px;
-  height: 100%;
+  height: auto;
 
   // mid
   @media (max-width: 1034px) {
