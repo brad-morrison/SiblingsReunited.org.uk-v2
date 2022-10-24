@@ -8,11 +8,13 @@ import * as styles from "../components/index.module.css"
 import HeroSection from "../components/sections/HeroSection"
 import StoreCarousel from "../components/sections/StoreCarousel"
 import NavBar from "../components/layout/NavBar"
+import PostCard from "../components/objects/PostCard"
+import TriplePostSection from "../components/sections/TriplePostSection"
 
 const IndexPage = () => (
   <Layout>
     <Seo title="Home" />
-    <NavBar />
+    <TriplePostSection />
   </Layout>
 )
 
