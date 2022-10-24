@@ -22,11 +22,16 @@ export default PostCard
 const CardWrapper = styled.div`
   width: 100%;
   display: grid;
-  grid-template-rows: 1fr auto;
+  grid-template-rows: 1.4fr 1fr;
   background: #f4f4ef;
   border-radius: 22px;
   overflow: hidden;
   height: auto;
+
+  // small
+  @media (max-width: 688px) {
+    grid-template-rows: 1fr auto;
+  }
 `
 
 const CardImageWrapper = styled.div``
