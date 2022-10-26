@@ -22,6 +22,7 @@ import PartnerSection from "../components/sections/PartnerSection"
 const IndexPage = () => (
   <Layout>
     <Seo title="Home" />
+    <NavBar />
     <HeroSection />
     <DetailDescSection />
     <TriplePostSection title="Get Involved" />
