@@ -1,37 +1,36 @@
 import { stripLineComment } from "babel-plugin-styled-components/lib/minify"
 import React from "react"
 import styled from "styled-components"
+import Button from "../objects/Button"
 import PostCard from "../objects/PostCard"
 import { H1, MediumText } from "../styles/TextStyles"
 
-function DetailDescSection() {
+function ChildIntroSection() {
   return (
     <Wrapper>
       <ContentWrapper>
-        <ImageWrapper>
-          <Image src="4.jpg" />
-        </ImageWrapper>
         <TextWrapper>
           <Text>
+            <Title>Are you a child coming to STAR Siblings Reunited?</Title>
             <Paragraph>
-              Siblings Reunited (STAR) reunites Brothers and Sisters separated
-              in the care system, through adoption or Kinship care by providing
-              the opportunity for quality and regular Sibling contact.
-            </Paragraph>
-            <Paragraph>
-              Run from its unique farmland setting it provides a safe, fun and
-              exhilarating learning environment where children can foster
-              emotional bonds and help overcome the trauma associated with being
-              separated.
+              We can’t wait to welcome you and your siblings! Click below to
+              open our child page and see what fun activities you can do
+              together.
             </Paragraph>
           </Text>
+          <ButtonWrapper>
+            <Button text="What can I do at STAR?" />
+          </ButtonWrapper>
         </TextWrapper>
+        <ImageWrapper>
+          <Image src="5.jpeg" />
+        </ImageWrapper>
       </ContentWrapper>
     </Wrapper>
   )
 }
 
-export default DetailDescSection
+export default ChildIntroSection
 
 const Wrapper = styled.div`
   position: relative;
@@ -42,7 +41,7 @@ const ContentWrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   max-width: 1300px;
-  margin: 20px auto;
+  margin: 30px auto;
 
   // mid
   @media (max-width: 1034px) {
@@ -65,6 +64,7 @@ const Image = styled.img`
 const TextWrapper = styled.div`
   padding: 30px;
   display: grid;
+  gap: 30px;
   align-items: center;
 `
 
@@ -77,9 +77,22 @@ const Paragraph = styled.div`
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-style: normal;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 33px;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 36px;
 
   color: #000000;
 `
+
+const Title = styled.p`
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 34px;
+  line-height: 50px;
+
+  color: #000000;
+`
+
+const ButtonWrapper = styled.div``

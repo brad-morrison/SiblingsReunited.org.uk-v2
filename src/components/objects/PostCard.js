@@ -45,7 +45,7 @@ const CardImage = styled.img`
 const CardText = styled.div`
   display: grid;
   gap: 10px;
-  padding: 20px;
+  padding: 30px;
   height: auto;
 `
 

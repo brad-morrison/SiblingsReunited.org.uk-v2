@@ -11,12 +11,20 @@ import NavBar from "../components/layout/NavBar"
 import PostCard from "../components/objects/PostCard"
 import TriplePostSection from "../components/sections/TriplePostSection"
 import DetailDescSection from "../components/sections/DetailDescSection"
+import ChildIntroSection from "../components/sections/ChildIntroSection"
+import FeaturedPostSection from "../components/sections/FeaturedPostSection"
+import QuoteCard from "../components/objects/QuoteCard"
+import QuotesSection from "../components/sections/QuotesSection"
 
 const IndexPage = () => (
   <Layout>
     <Seo title="Home" />
     <DetailDescSection />
-    <TriplePostSection />
+    <TriplePostSection title="Get Involved" />
+    <ChildIntroSection />
+    <QuotesSection />
+    <FeaturedPostSection />
+    <TriplePostSection title="Recent Posts" />
   </Layout>
 )
 

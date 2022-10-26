@@ -2,38 +2,35 @@ import { stripLineComment } from "babel-plugin-styled-components/lib/minify"
 import React from "react"
 import styled from "styled-components"
 import PostCard from "../objects/PostCard"
+import QuoteCard from "../objects/QuoteCard"
 import { H1, MediumText } from "../styles/TextStyles"
 
-function TriplePostSection(props) {
+function QuotesSection(props) {
   return (
     <Wrapper>
       <ContentWrapper>
-        <MainTitle>{props.title}</MainTitle>
-        <PostCards>
-          <PostCard
-            title="Find out more about our unique charity"
-            subTitle="We are the first of it's kind in the UK"
-            img="11.png"
+        <MainTitle>What people say</MainTitle>
+        <QuoteCards>
+          <QuoteCard
+            quote="I just wanted to thank you for a brilliant visit to STAR today. Your
+          vision is amazing and the setting is perfect"
+            author="Children's panel member"
           />
-
-          <PostCard
-            title="Donate or fundraise to help us do what we do"
-            subTitle="No donation is too small or too large"
-            img="2.jpg.webp"
+          <QuoteCard
+            quote="I found it to be a magical place for Christopher to meet his siblings, with no one assessing or judging them"
+            author="Kinship carer"
           />
-
-          <PostCard
-            title="Come and volunteer for Siblings Reunited"
-            subTitle="We are always looking for new team members."
-            img="3.jpg"
+          <QuoteCard
+            quote="Most importantly for the girls, it was a carefree environment. Two hours of quality uninterrupted sister time."
+            author="Foster carer"
           />
-        </PostCards>
+        </QuoteCards>
       </ContentWrapper>
     </Wrapper>
   )
 }
 
-export default TriplePostSection
+export default QuotesSection
 
 const Wrapper = styled.div`
   position: relative;
@@ -57,7 +54,7 @@ const ContentWrapper = styled.div`
   height: auto;
 `
 
-const PostCards = styled.div`
+const QuoteCards = styled.div`
   display: grid;
   padding: 0 30px;
   grid-template-columns: 1fr 1fr 1fr;

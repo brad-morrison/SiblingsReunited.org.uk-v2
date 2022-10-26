@@ -1,48 +1,62 @@
 import { stripLineComment } from "babel-plugin-styled-components/lib/minify"
 import React from "react"
 import styled from "styled-components"
+import Button from "../objects/Button"
 import PostCard from "../objects/PostCard"
 import { H1, MediumText } from "../styles/TextStyles"
 
-function DetailDescSection() {
+function FeaturedPostSection() {
   return (
     <Wrapper>
+      <MainTitle>Featured Post</MainTitle>
       <ContentWrapper>
         <ImageWrapper>
-          <Image src="4.jpg" />
+          <Image src="6.jpg" />
         </ImageWrapper>
         <TextWrapper>
           <Text>
+            <Title>Brothers and sisters split up by the care system</Title>
             <Paragraph>
-              Siblings Reunited (STAR) reunites Brothers and Sisters separated
-              in the care system, through adoption or Kinship care by providing
-              the opportunity for quality and regular Sibling contact.
-            </Paragraph>
-            <Paragraph>
-              Run from its unique farmland setting it provides a safe, fun and
-              exhilarating learning environment where children can foster
-              emotional bonds and help overcome the trauma associated with being
-              separated.
+              A major review of Scotland's care system has said the pain of
+              brothers and sisters being separated often has "profound and
+              lifelong consequences".
             </Paragraph>
           </Text>
+          <ButtonWrapper>
+            <Button text="Read more" />
+          </ButtonWrapper>
         </TextWrapper>
       </ContentWrapper>
     </Wrapper>
   )
 }
 
-export default DetailDescSection
+export default FeaturedPostSection
 
 const Wrapper = styled.div`
   position: relative;
   overflow: hidden;
+  margin: 30px auto;
+  background-color: #f4f4ef;
+`
+
+const MainTitle = styled.p`
+  text-align: center;
+  margin-top: 30px;
+
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
 `
 
 const ContentWrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   max-width: 1300px;
-  margin: 20px auto;
+  margin: 0 auto;
+  margin-bottom: 30px;
 
   // mid
   @media (max-width: 1034px) {
@@ -65,6 +79,7 @@ const Image = styled.img`
 const TextWrapper = styled.div`
   padding: 30px;
   display: grid;
+  gap: 30px;
   align-items: center;
 `
 
@@ -77,9 +92,22 @@ const Paragraph = styled.div`
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-style: normal;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 33px;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 36px;
 
   color: #000000;
 `
+
+const Title = styled.p`
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 34px;
+  line-height: 50px;
+
+  color: #000000;
+`
+
+const ButtonWrapper = styled.div``
