@@ -18,6 +18,7 @@ import QuotesSection from "../components/sections/QuotesSection"
 import StayInTouchSection from "../components/sections/StayInTouchSection"
 import FunderSection from "../components/sections/FunderSection"
 import PartnerSection from "../components/sections/PartnerSection"
+import Footer from "../components/layout/Footer"
 
 const IndexPage = () => (
   <Layout>
@@ -33,6 +34,7 @@ const IndexPage = () => (
     <StayInTouchSection />
     <FunderSection title="Funded by" />
     <PartnerSection title="In Partnership with" />
+    <Footer></Footer>
   </Layout>
 )
 
