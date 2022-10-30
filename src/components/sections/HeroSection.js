@@ -8,7 +8,6 @@ import SocialMediaBar from "../objects/SocialMediaBar"
 function HeroSection() {
   return (
     <Wrapper>
-      <HeroImage src="hero.jpg"></HeroImage>
       <Content>
         <SocialMediaBarWrapper>
           <SocialMediaBar />
@@ -35,32 +34,21 @@ export default HeroSection
 
 const Wrapper = styled.div`
   position: relative;
-  width: 100%;
-  min-width: 100%;
+  background: url("/hero.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 `
 
 const ContentWrapper = styled.div`
-  max-width: 980px;
   display: grid;
   grid-template-columns: 500px auto;
-
-  @media (max-width: 768px) {
-  }
 `
 
-const HeroImage = styled.img`
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  max-height: 100%;
-  z-index: -1;
-  object-fit: cover;
-  bottom: 0;
-  top: 0;
-`
 const Content = styled.div`
-  //max-width: 100px;
-  width: 100%;
+  position: relative;
+  display: grid;
+  max-width: 1500px;
+  margin: auto;
 `
 
 const LeftSection = styled.div`
