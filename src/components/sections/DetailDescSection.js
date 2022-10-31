@@ -1,8 +1,7 @@
 import { stripLineComment } from "babel-plugin-styled-components/lib/minify"
 import React from "react"
 import styled from "styled-components"
-import PostCard from "../objects/PostCard"
-import { H1, MediumText } from "../styles/TextStyles"
+import { BodyMain, H1, MediumText } from "../styles/TextStyles"
 
 function DetailDescSection() {
   return (
@@ -73,13 +72,4 @@ const Text = styled.div`
   gap: 30px;
 `
 
-const Paragraph = styled.div`
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 33px;
-
-  color: #000000;
-`
+const Paragraph = styled(BodyMain)``

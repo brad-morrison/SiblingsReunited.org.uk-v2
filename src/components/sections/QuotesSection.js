@@ -3,7 +3,7 @@ import React from "react"
 import styled from "styled-components"
 import PostCard from "../objects/PostCard"
 import QuoteCard from "../objects/QuoteCard"
-import { H1, MediumText } from "../styles/TextStyles"
+import { BodyIntro, H1, MediumText } from "../styles/TextStyles"
 
 function QuotesSection(props) {
   return (
@@ -36,15 +36,9 @@ const Wrapper = styled.div`
   position: relative;
 `
 
-const MainTitle = styled.p`
+const MainTitle = styled(BodyIntro)`
   text-align: center;
   margin-bottom: 30px;
-
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 22px;
 `
 
 const ContentWrapper = styled.div`

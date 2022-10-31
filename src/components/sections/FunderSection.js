@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import FunderCard from "../objects/FunderCard"
+import { BodyIntro } from "../styles/TextStyles"
 
 function FunderSection(props) {
   return (
@@ -33,13 +34,7 @@ const FunderCards = styled.div`
   gap: 20px;
 `
 
-const MainTitle = styled.p`
+const MainTitle = styled(BodyIntro)`
   text-align: center;
   margin-bottom: 30px;
-
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 22px;
 `

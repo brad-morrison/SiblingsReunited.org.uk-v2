@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import Button from "../objects/Button"
+import { BodyIntro, Caption, Caption2, MediumText } from "../styles/TextStyles"
 
 function NavBar() {
   return (
@@ -58,16 +59,11 @@ const Items = styled.div`
   align-content: center;
   gap: 30px;
   padding: 0 30px;
-
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 18px;
 `
 
-const Item = styled.p`
+const Item = styled(MediumText)`
   align-self: center;
+  font-weight: bold;
 `
 
 const SecondaryBar = styled.div`
@@ -76,14 +72,8 @@ const SecondaryBar = styled.div`
   height: auto;
 `
 
-const SecondaryContent = styled.div`
+const SecondaryContent = styled(Caption)`
   color: white;
   text-align: right;
   padding: 8px 30px;
-
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 16px;
 `

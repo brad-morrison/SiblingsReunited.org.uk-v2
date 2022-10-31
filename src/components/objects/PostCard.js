@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { H1, MediumText } from "../styles/TextStyles"
+import { H4, MediumText, BodyIntro, BodyMain } from "../styles/TextStyles"
 
 function PostCard(props) {
   return (
@@ -49,25 +49,6 @@ const CardText = styled.div`
   height: auto;
 `
 
-const CardTitle = styled.p`
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+const CardTitle = styled(H4)``
 
-  font-style: normal;
-  font-weight: 800;
-  font-size: 26px;
-  line-height: 36px;
-
-  color: #000000;
-`
-
-const CardSubTitle = styled.p`
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 22px;
-  line-height: 33px;
-
-  color: #000000;
-`
+const CardSubTitle = styled(BodyMain)``

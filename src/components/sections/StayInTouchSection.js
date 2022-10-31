@@ -4,7 +4,7 @@ import styled from "styled-components"
 import Button from "../objects/Button"
 import PostCard from "../objects/PostCard"
 import SocialMediaButton from "../objects/SocialMediaButton"
-import { H1, MediumText } from "../styles/TextStyles"
+import { BodyMain, H3, MediumText } from "../styles/TextStyles"
 
 function StayInTouchSection() {
   const buttonSize = "75px"
@@ -41,17 +41,6 @@ const Wrapper = styled.div`
   overflow: hidden;
   margin: 30px auto;
   background-color: #f4f4ef;
-`
-
-const MainTitle = styled.p`
-  text-align: center;
-  margin-top: 30px;
-
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 22px;
 `
 
 const ContentWrapper = styled.div`
@@ -91,27 +80,9 @@ const Text = styled.div`
   gap: 30px;
 `
 
-const Paragraph = styled.div`
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 26px;
-  line-height: 36px;
+const Paragraph = styled(BodyMain)``
 
-  color: #000000;
-`
-
-const Title = styled.p`
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 34px;
-  line-height: 50px;
-
-  color: #000000;
-`
+const Title = styled(H3)``
 
 const ButtonWrapper = styled.div`
   display: flex;

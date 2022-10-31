@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { MediumText, SmallText } from "../styles/TextStyles"
 
 function Footer() {
   return (
@@ -84,25 +85,16 @@ const TextContent = styled.div`
 
 const Column = styled.div``
 
-const ColumnTitle = styled.p`
+const ColumnTitle = styled(MediumText)`
   color: white;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 16px;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
+  font-weight: bold;
 `
 
-const ColumnItem = styled.p`
+const ColumnItem = styled(MediumText)`
   margin-bottom: 12px;
   color: white;
   opacity: 70%;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 15px;
 `
 
 const FooterContent = styled.div`
@@ -111,14 +103,9 @@ const FooterContent = styled.div`
   padding: 30px 30px;
 `
 
-const BottomText = styled.div`
+const BottomText = styled(SmallText)`
   padding: 30px 30px;
   background-color: #1d1d1b;
   color: white;
   opacity: 50%;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
 `

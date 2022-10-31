@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { H1, MediumText } from "../styles/TextStyles"
+import { BodyIntro, BodyMain, H1, H2, MediumText } from "../styles/TextStyles"
 import Button from "../objects/Button"
 import SocialMediaBar from "../objects/SocialMediaBar"
 
@@ -77,10 +77,6 @@ const TextWrapper = styled.div`
   border-radius: 15px;
 `
 
-const Title = styled(H1)`
-  color: black;
-`
+const Title = styled(H1)``
 
-const Description = styled(MediumText)`
-  color: black;
-`
+const Description = styled(BodyMain)``
