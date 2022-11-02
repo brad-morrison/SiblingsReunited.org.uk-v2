@@ -41,7 +41,7 @@ const Wrapper = styled.div`
 
 const ContentWrapper = styled.div`
   display: grid;
-  grid-template-columns: 500px auto;
+  grid-template-columns: 600px auto;
 `
 
 const Content = styled.div`
@@ -74,7 +74,7 @@ const TextWrapper = styled.div`
   display: grid;
   gap: 20px;
   background-color: ${themes.background};
-  padding: 20px;
+  padding: 40px;
   border-radius: 15px;
 `
 
@@ -82,4 +82,4 @@ const Title = styled(H1)`
   color: ${themes.text1};
 `
 
-const Description = styled(BodyMain)``
+const Description = styled(BodyIntro)``
