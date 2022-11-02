@@ -3,6 +3,7 @@ import React from "react"
 import styled from "styled-components"
 import Button from "../objects/Button"
 import PostCard from "../objects/PostCard"
+import { themes } from "../styles/ColorStyles"
 import { BodyIntro, BodyMain, H1, H3, MediumText } from "../styles/TextStyles"
 
 function FeaturedPostSection() {
@@ -37,7 +38,7 @@ const Wrapper = styled.div`
   position: relative;
   overflow: hidden;
   margin: 30px auto;
-  background-color: #f4f4ef;
+  background-color: ${themes.secondaryBackground};
 `
 
 const MainTitle = styled(BodyIntro)`

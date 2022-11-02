@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import Button from "../objects/Button"
+import { themes } from "../styles/ColorStyles"
 import { BodyIntro, Caption, Caption2, MediumText } from "../styles/TextStyles"
 
 function NavBar() {
@@ -32,6 +33,7 @@ export default NavBar
 
 const Wrapper = styled.div`
   width: 100%;
+  background-color: ${themes.background};
 `
 
 const ContentWrapper = styled.div`
@@ -68,7 +70,7 @@ const Item = styled(MediumText)`
 
 const SecondaryBar = styled.div`
   width: 100%;
-  background-color: #b28ad2;
+  background-color: ${themes.purple};
   height: auto;
 `
 

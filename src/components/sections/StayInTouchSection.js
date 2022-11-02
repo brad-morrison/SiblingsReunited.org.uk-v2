@@ -4,6 +4,7 @@ import styled from "styled-components"
 import Button from "../objects/Button"
 import PostCard from "../objects/PostCard"
 import SocialMediaButton from "../objects/SocialMediaButton"
+import { themes } from "../styles/ColorStyles"
 import { BodyMain, H3, MediumText } from "../styles/TextStyles"
 
 function StayInTouchSection() {
@@ -40,7 +41,7 @@ const Wrapper = styled.div`
   position: relative;
   overflow: hidden;
   margin: 30px auto;
-  background-color: #f4f4ef;
+  background-color: ${themes.secondaryBackground};
 `
 
 const ContentWrapper = styled.div`

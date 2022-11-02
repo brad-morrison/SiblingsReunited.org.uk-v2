@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import FunderCard from "../objects/FunderCard"
+import { themes } from "../styles/ColorStyles"
 import { BodyIntro } from "../styles/TextStyles"
 
 function FunderSection(props) {
@@ -20,7 +21,7 @@ function FunderSection(props) {
 export default FunderSection
 
 const Wrapper = styled.div`
-  background-color: #f4f4ef;
+  background-color: ${themes.secondaryBackground};
 `
 
 const ContentWrapper = styled.div`

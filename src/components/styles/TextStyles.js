@@ -48,7 +48,6 @@ export const ButtonText = styled.p`
   border-radius: 50px;
   font-weight: 900;
   font-size: 20px;
-  background-color: #fbd878;
 `
 
 export const MediumText = styled.p`

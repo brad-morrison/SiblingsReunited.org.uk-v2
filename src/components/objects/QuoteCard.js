@@ -2,6 +2,7 @@ import { stripLineComment } from "babel-plugin-styled-components/lib/minify"
 import React from "react"
 import styled from "styled-components"
 import PostCard from "../objects/PostCard"
+import { themes } from "../styles/ColorStyles"
 import { H1, MediumText } from "../styles/TextStyles"
 
 function QuoteCard(props) {
@@ -26,7 +27,7 @@ const ContentWrapper = styled.div`
   padding: 40px;
   border-radius: 30px;
 
-  background-color: #f4f4ef;
+  background-color: ${themes.secondaryBackground};
 `
 
 const Text = styled.p`

@@ -3,6 +3,7 @@ import styled from "styled-components"
 import { BodyIntro, BodyMain, H1, H2, MediumText } from "../styles/TextStyles"
 import Button from "../objects/Button"
 import SocialMediaBar from "../objects/SocialMediaBar"
+import { themes } from "../styles/ColorStyles"
 
 function HeroSection() {
   return (
@@ -72,11 +73,13 @@ const SocialMediaBarWrapper = styled.div`
 const TextWrapper = styled.div`
   display: grid;
   gap: 20px;
-  background-color: white;
+  background-color: ${themes.background};
   padding: 20px;
   border-radius: 15px;
 `
 
-const Title = styled(H1)``
+const Title = styled(H1)`
+  color: ${themes.text1};
+`
 
 const Description = styled(BodyMain)``

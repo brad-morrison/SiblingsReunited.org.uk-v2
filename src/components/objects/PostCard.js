@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { themes } from "../styles/ColorStyles"
 import { H4, MediumText, BodyIntro, BodyMain } from "../styles/TextStyles"
 
 function PostCard(props) {
@@ -23,7 +24,7 @@ const CardWrapper = styled.div`
   width: 100%;
   display: grid;
   grid-template-rows: 1.4fr 1fr;
-  background: #f4f4ef;
+  background: ${themes.secondaryBackground};
   border-radius: 22px;
   overflow: hidden;
   height: auto;

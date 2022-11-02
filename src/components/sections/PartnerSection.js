@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import FunderCard from "../objects/FunderCard"
+import { themes } from "../styles/ColorStyles"
 import { BodyIntro } from "../styles/TextStyles"
 
 function PartnerSection(props) {
@@ -22,7 +23,7 @@ function PartnerSection(props) {
 export default PartnerSection
 
 const Wrapper = styled.div`
-  background-color: #f4f4ef;
+  background-color: ${themes.secondaryBackground};
 `
 
 const ContentWrapper = styled.div`

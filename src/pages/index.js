@@ -20,24 +20,24 @@ import FunderSection from "../components/sections/FunderSection"
 import PartnerSection from "../components/sections/PartnerSection"
 import Footer from "../components/layout/Footer"
 
-const IndexPage = () => (
-  <Layout>
-    <Seo title="Home" />
-    <NavBar />
-    <HeroSection />
-    <DetailDescSection />
-    <TriplePostSection title="Get Involved" />
-    <ChildIntroSection />
-    <QuotesSection />
-    <FeaturedPostSection />
-    <TriplePostSection title="Recent Posts" />
-    <StayInTouchSection />
-    <FunderSection title="Funded by" />
-    <PartnerSection title="In Partnership with" />
-    <Footer></Footer>
-  </Layout>
-)
-
-export const Head = () => <Seo title="Home" />
+function IndexPage() {
+  return (
+    <Layout>
+      <Seo title="Home" />
+      <NavBar />
+      <HeroSection />
+      <DetailDescSection />
+      <TriplePostSection title="Get Involved" />
+      <ChildIntroSection />
+      <QuotesSection />
+      <FeaturedPostSection />
+      <TriplePostSection title="Recent Posts" />
+      <StayInTouchSection />
+      <FunderSection title="Funded by" />
+      <PartnerSection title="In Partnership with" />
+      <Footer></Footer>
+    </Layout>
+  )
+}
 
 export default IndexPage

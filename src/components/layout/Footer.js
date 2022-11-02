@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { themes } from "../styles/ColorStyles"
 import { MediumText, SmallText } from "../styles/TextStyles"
 
 function Footer() {
@@ -54,7 +55,7 @@ const Wrapper = styled.div`
 `
 
 const ContentWrapper = styled.div`
-  background-color: #1d1d1b;
+  background-color: ${themes.darkBackground};
   min-height: 300px;
   padding: 0 80px;
 `
