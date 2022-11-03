@@ -6,7 +6,7 @@ import { themes } from "../styles/ColorStyles"
 import { BodyIntro, Caption, Caption2, MediumText } from "../styles/TextStyles"
 
 const menuData = [
-  { title: "Home", link: "/index" },
+  { title: "Home", link: "/" },
   { title: "About us", link: "/AboutUs" },
   { title: "What we do", link: "/WhatWeDo" },
   { title: "Store", link: "/Store" },
@@ -58,7 +58,7 @@ const LogoWrapper = styled.div`
 
 const Logo = styled.div`
   height: 100%;
-  background: url("/logo.svg");
+  background: url("./images/logos/logo.svg");
   background-size: contain;
   background-repeat: no-repeat;
 `

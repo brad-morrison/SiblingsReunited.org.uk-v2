@@ -10,8 +10,8 @@ function FunderSection(props) {
       <ContentWrapper>
         <MainTitle>{props.title}</MainTitle>
         <FunderCards>
-          <FunderCard logo="logo-1.png" />
-          <FunderCard logo="logo-3.png" />
+          <FunderCard logo="/images/logos/lottery.png" />
+          <FunderCard logo="/images/logos/corra.png" />
         </FunderCards>
       </ContentWrapper>
     </Wrapper>

@@ -12,7 +12,7 @@ function FeaturedPostSection() {
       <MainTitle>Featured Post</MainTitle>
       <ContentWrapper>
         <ImageWrapper>
-          <Image src="6.jpg" />
+          <Image src="/images/news.jpg" />
         </ImageWrapper>
         <TextWrapper>
           <Text>

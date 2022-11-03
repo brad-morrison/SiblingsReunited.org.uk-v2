@@ -10,10 +10,10 @@ function PartnerSection(props) {
       <ContentWrapper>
         <MainTitle>{props.title}</MainTitle>
         <FunderCards>
-          <FunderCard logo="logo-1.png" />
-          <FunderCard logo="logo-5.png" />
-          <FunderCard logo="logo-4.png" />
-          <FunderCard logo="logo-2.png" />
+          <FunderCard logo="/images/logos/afka.png" />
+          <FunderCard logo="/images/logos/sufs.png" />
+          <FunderCard logo="/images/logos/promise.png" />
+          <FunderCard logo="/images/logos/corra.png" />
         </FunderCards>
       </ContentWrapper>
     </Wrapper>

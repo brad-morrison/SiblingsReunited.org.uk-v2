@@ -18,7 +18,7 @@ function StoreCard() {
   return (
     <Wrapper>
       <ContentWrapper>
-        <ItemImage src="7.png"></ItemImage>
+        <ItemImage src="images/tablet.jpg"></ItemImage>
         <Title>Homemade Tablet</Title>
         <Price>£2.99</Price>
       </ContentWrapper>

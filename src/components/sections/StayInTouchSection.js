@@ -13,7 +13,7 @@ function StayInTouchSection() {
     <Wrapper>
       <ContentWrapper>
         <ImageWrapper>
-          <Image src="7.png" />
+          <Image src="/images/wellies.png" />
         </ImageWrapper>
         <TextWrapper>
           <Text>
@@ -25,9 +25,18 @@ function StayInTouchSection() {
             </Paragraph>
           </Text>
           <ButtonWrapper>
-            <SocialMediaButton type="face.svg" width={buttonSize} />
-            <SocialMediaButton type="twit.svg" width={buttonSize} />
-            <SocialMediaButton type="inst.svg" width={buttonSize} />
+            <SocialMediaButton
+              type="/images/icons/face.svg"
+              width={buttonSize}
+            />
+            <SocialMediaButton
+              type="/images/icons/twit.svg"
+              width={buttonSize}
+            />
+            <SocialMediaButton
+              type="/images/icons/inst.svg"
+              width={buttonSize}
+            />
           </ButtonWrapper>
         </TextWrapper>
       </ContentWrapper>

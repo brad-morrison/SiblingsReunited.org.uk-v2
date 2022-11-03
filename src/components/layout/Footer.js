@@ -71,7 +71,7 @@ const LogoWrapper = styled.div`
 const Logo = styled.div`
   height: 100%;
   width: 100%;
-  background: url("/logo-white.svg");
+  background: url("/images/logos/logoWhite.svg");
   background-size: contain;
   background-repeat: no-repeat;
 `

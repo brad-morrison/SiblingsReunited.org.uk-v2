@@ -12,19 +12,19 @@ function TriplePostSection(props) {
           <PostCard
             title="Find out more about our unique charity"
             subTitle="We are the first of it's kind in the UK"
-            img="11.png"
+            img="/images/teacher.jpg"
           />
 
           <PostCard
             title="Donate or fundraise to help us do what we do"
             subTitle="No donation is too small or too large"
-            img="2.jpg.webp"
+            img="images/donate.png"
           />
 
           <PostCard
             title="Come and volunteer for Siblings Reunited"
             subTitle="We are always looking for new team members."
-            img="3.jpg"
+            img="images/volunteer.jpg"
           />
         </PostCards>
       </ContentWrapper>

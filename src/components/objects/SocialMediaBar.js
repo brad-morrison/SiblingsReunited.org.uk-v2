@@ -7,9 +7,9 @@ function SocialMediaBar() {
   return (
     <Wrapper>
       <ContentWrapper>
-        <SocialMediaButton type="inst.svg" width={buttonSize} />
-        <SocialMediaButton type="face.svg" width={buttonSize} />
-        <SocialMediaButton type="twit.svg" width={buttonSize} />
+        <SocialMediaButton type="/images/icons/inst.svg" width={buttonSize} />
+        <SocialMediaButton type="/images/icons/face.svg" width={buttonSize} />
+        <SocialMediaButton type="/images/icons/twit.svg" width={buttonSize} />
       </ContentWrapper>
     </Wrapper>
   )

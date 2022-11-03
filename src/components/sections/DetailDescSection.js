@@ -8,7 +8,7 @@ function DetailDescSection() {
     <Wrapper>
       <ContentWrapper>
         <ImageWrapper>
-          <Image src="4.jpg" />
+          <Image src="/images/site.jpg" />
         </ImageWrapper>
         <TextWrapper>
           <Text>

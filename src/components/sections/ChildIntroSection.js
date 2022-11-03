@@ -30,7 +30,7 @@ function ChildIntroSection() {
           </ButtonWrapper>
         </TextWrapper>
         <ImageWrapper>
-          <Image src="5.jpeg" />
+          <Image src="/images/kids.jpeg" />
         </ImageWrapper>
       </ContentWrapper>
     </Wrapper>
