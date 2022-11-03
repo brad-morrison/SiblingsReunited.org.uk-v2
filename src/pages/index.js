@@ -19,6 +19,7 @@ import StayInTouchSection from "../components/sections/StayInTouchSection"
 import FunderSection from "../components/sections/FunderSection"
 import PartnerSection from "../components/sections/PartnerSection"
 import Footer from "../components/layout/Footer"
+import StoreSection from "../components/sections/StoreSection"
 
 function IndexPage() {
   return (
@@ -32,6 +33,7 @@ function IndexPage() {
       <QuotesSection />
       <FeaturedPostSection />
       <TriplePostSection title="Recent Posts" />
+      <StoreSection />
       <StayInTouchSection />
       <FunderSection title="Funded by" />
       <PartnerSection title="In Partnership with" />
