@@ -2,13 +2,13 @@ import * as React from "react"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
-function AboutUsPage() {
+function VolunteerPage() {
   return (
     <Layout>
-      <Seo title="AboutUs" />
-      <h1>About Us</h1>
+      <Seo title="Volunteer" />
+      <h1>Volunteer</h1>
     </Layout>
   )
 }
 
-export default AboutUsPage
+export default VolunteerPage

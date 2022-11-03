@@ -2,13 +2,13 @@ import * as React from "react"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
-function AboutUsPage() {
+function StorePage() {
   return (
     <Layout>
-      <Seo title="AboutUs" />
-      <h1>About Us</h1>
+      <Seo title="Store" />
+      <h1>Store</h1>
     </Layout>
   )
 }
 
-export default AboutUsPage
+export default StorePage
