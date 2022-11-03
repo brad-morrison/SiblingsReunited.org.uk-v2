@@ -12,16 +12,56 @@ function StoreSection() {
         <Title>Buy our goodies</Title>
         <SubTitle>100% of profits go to charity!</SubTitle>
         <Carousel>
-          <StoreCard />
-          <StoreCard />
-          <StoreCard />
-          <StoreCard />
-          <StoreCard />
-          <StoreCard />
-          <StoreCard />
-          <StoreCard />
-          <StoreCard />
-          <StoreCard />
+          <StoreCard
+            img="/images/tablet.jpg"
+            name="Homemade Tablet"
+            price="2.99"
+          />
+          <StoreCard
+            img="/images/birdhouse.jpg"
+            name="Birdhouse Kit"
+            price="6.99"
+          />
+          <StoreCard
+            img="/images/fairyDoor.jpg"
+            name="Fairy Door"
+            price="3.99"
+          />
+          <StoreCard
+            img="/images/tablet.jpg"
+            name="Homemade Tablet"
+            price="2.99"
+          />
+          <StoreCard
+            img="/images/fairyDoor.jpg"
+            name="Fairy Door"
+            price="3.99"
+          />
+          <StoreCard
+            img="/images/birdhouse.jpg"
+            name="Birdhouse Kit"
+            price="6.99"
+          />
+          <StoreCard
+            img="/images/tablet.jpg"
+            name="Homemade Tablet"
+            price="2.99"
+          />
+          <StoreCard
+            img="/images/birdhouse.jpg"
+            name="Birdhouse Kit"
+            price="6.99"
+          />
+          <StoreCard
+            img="/images/fairyDoor.jpg"
+            name="Fairy Door"
+            price="3.99"
+          />
+          <StoreCard
+            img="/images/tablet.jpg"
+            name="Homemade Tablet"
+            price="2.99"
+          />
         </Carousel>
         <ButtonWrapper>
           <Button text="Visit our shop" />

@@ -14,13 +14,13 @@ import {
   SmallText2,
 } from "../styles/TextStyles"
 
-function StoreCard() {
+function StoreCard(props) {
   return (
     <Wrapper>
       <ContentWrapper>
-        <ItemImage src="images/tablet.jpg"></ItemImage>
-        <Title>Homemade Tablet</Title>
-        <Price>£2.99</Price>
+        <ItemImage src={props.img}></ItemImage>
+        <Title>{props.name}</Title>
+        <Price>£{props.price}</Price>
       </ContentWrapper>
     </Wrapper>
   )
@@ -30,8 +30,6 @@ export default StoreCard
 
 const Wrapper = styled.div`
   background-color: ${themes.background};
-  width: 300px;
-  min-width: 300px;
   height: auto;
   box-shadow: 0px 13px 30px rgba(0, 0, 0, 0.1);
 `
@@ -45,7 +43,8 @@ const ContentWrapper = styled.div`
 
 const ItemImage = styled.img`
   object-fit: cover;
-  width: 100%;
+  width: 300px;
+  height: 250px;
   padding: 10px;
 `
 
