@@ -25,7 +25,6 @@ function IndexPage() {
   return (
     <Layout>
       <Seo title="Home" />
-      <NavBar />
       <HeroSection />
       <DetailDescSection />
       <TriplePostSection title="Get Involved" />
@@ -37,7 +36,6 @@ function IndexPage() {
       <StayInTouchSection />
       <FunderSection title="Funded by" />
       <PartnerSection title="In Partnership with" />
-      <Footer></Footer>
     </Layout>
   )
 }

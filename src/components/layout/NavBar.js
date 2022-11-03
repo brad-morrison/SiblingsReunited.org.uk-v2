@@ -1,8 +1,19 @@
+import { Link } from "gatsby"
 import React from "react"
 import styled from "styled-components"
 import Button from "../objects/Button"
 import { themes } from "../styles/ColorStyles"
 import { BodyIntro, Caption, Caption2, MediumText } from "../styles/TextStyles"
+
+const menuData = [
+  { title: "Home", link: "/index" },
+  { title: "About us", link: "/AboutUs" },
+  { title: "What we do", link: "/WhatWeDo" },
+  { title: "Store", link: "/Store" },
+  { title: "Fundraising", link: "/Fundraising" },
+  { title: "Volunteer", link: "/Volunteer" },
+  { title: "Contact", link: "/Contact" },
+]
 
 function NavBar() {
   return (
@@ -12,13 +23,11 @@ function NavBar() {
           <Logo />
         </LogoWrapper>
         <Items>
-          <Item>Home</Item>
-          <Item>About us</Item>
-          <Item>What we do</Item>
-          <Item>Contact</Item>
-          <Item>Help</Item>
-          <Item>Shop</Item>
-          <Item>Fundraising</Item>
+          {menuData.map((item, index) => (
+            <Link to={item.link} key={index}>
+              <Item>{item.title}</Item>
+            </Link>
+          ))}
           <Button text="Donate"></Button>
         </Items>
       </ContentWrapper>
@@ -61,6 +70,13 @@ const Items = styled.div`
   align-content: center;
   gap: 30px;
   padding: 0 30px;
+
+  // nav links
+  a {
+    align-self: center;
+    text-decoration: none;
+    color: ${themes.text1};
+  }
 `
 
 const Item = styled(MediumText)`
