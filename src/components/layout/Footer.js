@@ -1,3 +1,4 @@
+import { Link } from "gatsby"
 import React from "react"
 import styled from "styled-components"
 import { themes } from "../styles/ColorStyles"
@@ -9,33 +10,67 @@ function Footer() {
       <ContentWrapper>
         <FooterContent>
           <LogoWrapper>
-            <Logo></Logo>
+            <Link to="/">
+              <Logo />
+            </Link>
           </LogoWrapper>
           <TextContent>
             <Column>
               <ColumnTitle>SiteMap</ColumnTitle>
-              <ColumnItem>Fundraising</ColumnItem>
-              <ColumnItem>Volunteering</ColumnItem>
-              <ColumnItem>About us</ColumnItem>
-              <ColumnItem>Contact</ColumnItem>
-              <ColumnItem>Child Page</ColumnItem>
-              <ColumnItem>Store</ColumnItem>
+              <Link to="/Fundraising">
+                <ColumnItem>Fundraising</ColumnItem>
+              </Link>
+              <Link to="/Fundraising">
+                <ColumnItem>Volunteering</ColumnItem>
+              </Link>
+              <Link to="/Fundraising">
+                <ColumnItem>About us</ColumnItem>
+              </Link>
+              <Link to="/Fundraising">
+                <ColumnItem>Contact</ColumnItem>
+              </Link>
+              <Link to="/Fundraising">
+                <ColumnItem>Child Page</ColumnItem>
+              </Link>
+              <Link to="/Fundraising">
+                <ColumnItem>Store</ColumnItem>
+              </Link>
             </Column>
             <Column>
               <ColumnTitle>Useful links</ColumnTitle>
-              <ColumnItem>Frequently asked questions</ColumnItem>
-              <ColumnItem>Map</ColumnItem>
-              <ColumnItem>Contact details</ColumnItem>
-              <ColumnItem>Media centre</ColumnItem>
-              <ColumnItem>Partners</ColumnItem>
-              <ColumnItem>Funders</ColumnItem>
+              <Link to="/Fundraising">
+                <ColumnItem>Frequently asked questions</ColumnItem>
+              </Link>
+              <Link to="/Fundraising">
+                <ColumnItem>Map</ColumnItem>
+              </Link>
+              <Link to="/Fundraising">
+                <ColumnItem>Contact details</ColumnItem>
+              </Link>
+              <Link to="/Fundraising">
+                <ColumnItem>Media centre</ColumnItem>
+              </Link>
+              <Link to="/Fundraising">
+                <ColumnItem>Partners</ColumnItem>
+              </Link>
+              <Link to="/Fundraising">
+                <ColumnItem>Funders</ColumnItem>
+              </Link>
             </Column>
             <Column>
               <ColumnTitle>Legal links</ColumnTitle>
-              <ColumnItem>Privacy policy</ColumnItem>
-              <ColumnItem>Cookies policy</ColumnItem>
-              <ColumnItem>Terms of use</ColumnItem>
-              <ColumnItem>Fair fundraising</ColumnItem>
+              <Link to="/Fundraising">
+                <ColumnItem>Privacy policy</ColumnItem>
+              </Link>
+              <Link to="/Fundraising">
+                <ColumnItem>Cookies policy</ColumnItem>
+              </Link>
+              <Link to="/Fundraising">
+                <ColumnItem>Terms of use</ColumnItem>
+              </Link>
+              <Link to="/Fundraising">
+                <ColumnItem>Fair fundraising</ColumnItem>
+              </Link>
             </Column>
           </TextContent>
         </FooterContent>
@@ -96,6 +131,11 @@ const ColumnItem = styled(MediumText)`
   margin-bottom: 12px;
   color: white;
   opacity: 70%;
+  transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+  :hover {
+    opacity: 100%;
+  }
 `
 
 const FooterContent = styled.div`

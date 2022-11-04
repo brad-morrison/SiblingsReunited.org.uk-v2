@@ -87,7 +87,7 @@ const ContentWrapper = styled.div`
 `
 
 const Carousel = styled.div`
-  padding: 30px 60px;
+  padding: 50px 60px;
   display: flex;
   gap: 40px;
   overflow-x: scroll;

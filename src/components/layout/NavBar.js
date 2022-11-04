@@ -20,7 +20,9 @@ function NavBar() {
     <Wrapper>
       <ContentWrapper>
         <LogoWrapper>
-          <Logo />
+          <Link to="/">
+            <Logo />
+          </Link>
         </LogoWrapper>
         <Items>
           {menuData.map((item, index) => (
@@ -32,7 +34,9 @@ function NavBar() {
         </Items>
       </ContentWrapper>
       <SecondaryBar>
-        <SecondaryContent>View our child friendly page</SecondaryContent>
+        <Link to="/">
+          <SecondaryContent>View our child friendly page</SecondaryContent>
+        </Link>
       </SecondaryBar>
     </Wrapper>
   )
@@ -41,7 +45,9 @@ function NavBar() {
 export default NavBar
 
 const Wrapper = styled.div`
-  width: 100%;
+  //width: 100%;
+  overflow-x: hidden;
+  max-width: 100%;
   background-color: ${themes.background};
 `
 
@@ -82,6 +88,13 @@ const Items = styled.div`
 const Item = styled(MediumText)`
   align-self: center;
   font-weight: bold;
+  border-bottom: 3px solid ${themes.background};
+  transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+  :hover {
+    border-bottom: 3px solid ${themes.purple};
+    transform: translateY(-5px);
+  }
 `
 
 const SecondaryBar = styled.div`

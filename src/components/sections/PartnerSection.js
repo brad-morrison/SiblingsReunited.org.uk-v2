@@ -27,8 +27,7 @@ const Wrapper = styled.div`
 `
 
 const ContentWrapper = styled.div`
-  margin: 20px auto;
-  padding: 20px 30px;
+  padding: 70px 30px;
 `
 
 const FunderCards = styled.div`

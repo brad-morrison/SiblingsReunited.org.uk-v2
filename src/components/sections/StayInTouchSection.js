@@ -50,7 +50,7 @@ const Wrapper = styled.div`
   position: relative;
   overflow: hidden;
   margin: 30px auto;
-  background-color: ${themes.secondaryBackground};
+  background-color: ${themes.background};
 `
 
 const ContentWrapper = styled.div`
@@ -76,6 +76,7 @@ const Image = styled.img`
   height: 100%;
   object-fit: cover;
   vertical-align: middle;
+  border: 0.5px lightgray solid;
 `
 
 const TextWrapper = styled.div`

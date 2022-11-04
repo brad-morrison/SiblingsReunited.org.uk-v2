@@ -66,6 +66,7 @@ const Image = styled.img`
   height: 100%;
   object-fit: cover;
   vertical-align: middle;
+  border: 0.5px lightgray solid;
 `
 
 const TextWrapper = styled.div`

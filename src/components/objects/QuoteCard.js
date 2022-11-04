@@ -26,6 +26,7 @@ const ContentWrapper = styled.div`
   gap: 10px;
   padding: 40px;
   border-radius: 30px;
+  border: 0.5px lightgray solid;
 
   background-color: ${themes.secondaryBackground};
 `

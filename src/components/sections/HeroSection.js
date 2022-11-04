@@ -42,6 +42,10 @@ const Wrapper = styled.div`
 const ContentWrapper = styled.div`
   display: grid;
   grid-template-columns: 600px auto;
+
+  @media (max-width: 688px) {
+    grid-template-columns: auto;
+  }
 `
 
 const Content = styled.div`
@@ -68,6 +72,7 @@ const SocialMediaBarWrapper = styled.div`
   right: 0;
   bottom: 0;
   padding: 30px;
+  z-index: 5;
 `
 
 const TextWrapper = styled.div`
