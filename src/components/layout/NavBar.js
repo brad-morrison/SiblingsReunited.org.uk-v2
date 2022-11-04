@@ -2,6 +2,7 @@ import { Link } from "gatsby"
 import React from "react"
 import styled from "styled-components"
 import Button from "../objects/Button"
+import DropDownMenu from "../objects/DropDownMenu"
 import { themes } from "../styles/ColorStyles"
 import { BodyIntro, Caption, Caption2, MediumText } from "../styles/TextStyles"
 
@@ -18,6 +19,7 @@ const menuData = [
 function NavBar() {
   return (
     <Wrapper>
+      <DropDownMenu />
       <ContentWrapper>
         <LogoWrapper>
           <Link to="/">
