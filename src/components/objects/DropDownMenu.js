@@ -3,15 +3,17 @@ import styled from "styled-components"
 import { themes } from "../styles/ColorStyles"
 import { MediumText } from "../styles/TextStyles"
 
-function DropDownMenu() {
+function DropDownMenu(props) {
+  //const { isOpen } = props //this deconstructs the props for use in this component
+  //const data = props
+
   return (
-    <Wrapper>
+    <Wrapper isOpen={props.isOpen}>
       <ContentWrapper>
         <Items>
-          <Item>Meet the team</Item>
-          <Item>Why we exist</Item>
-          <Item>Find out more</Item>
-          <Item>In the news</Item>
+          {props.subTitles.map((item, index) => (
+            <p>{item}</p>
+          ))}
         </Items>
       </ContentWrapper>
     </Wrapper>
@@ -28,6 +30,7 @@ const Wrapper = styled.div`
   width: fit-content;
   border-radius: 25px;
   border: 0.5px lightgray solid;
+  opacity: ${props => (props.isOpen ? 1 : 0)};
 `
 
 const ContentWrapper = styled.div`

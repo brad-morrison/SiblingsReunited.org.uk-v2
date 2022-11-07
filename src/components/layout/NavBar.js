@@ -7,21 +7,28 @@ import { themes } from "../styles/ColorStyles"
 import { BodyIntro, Caption, Caption2, MediumText } from "../styles/TextStyles"
 
 const menuData = [
-  { title: "Home", link: "/" },
-  { title: "About us", link: "/AboutUs" },
-  { title: "What we do", link: "/WhatWeDo" },
-  { title: "Store", link: "/Store" },
-  { title: "Fundraising", link: "/Fundraising" },
-  { title: "Volunteer", link: "/Volunteer" },
-  { title: "Contact", link: "/Contact" },
+  { title: "Home", link: "/", subTitles: ["1", "2", "3", "4"] },
+  { title: "About us", link: "/AboutUs", subTitles: ["1", "2", "3", "4"] },
+  { title: "What we do", link: "/WhatWeDo", subTitles: ["1", "2", "3", "4"] },
+  { title: "Store", link: "/Store", subTitles: ["1", "2", "3", "4"] },
+  {
+    title: "Fundraising",
+    link: "/Fundraising",
+    subTitles: ["1", "2", "3", "4"],
+  },
+  { title: "Volunteer", link: "/Volunteer", subTitles: ["1", "2", "3", "4"] },
+  { title: "Contact", link: "/Contact", subTitles: ["1", "2", "3", "4"] },
 ]
 
-function NavBar() {
-  const [isOpen, setIsOpen] = useState(false)
+export default function NavBar() {
+  const [dropDownOpen, setDropDownOpen] = useState(false)
 
   return (
     <Wrapper>
-      <DropDownMenu />
+      <button onClick={() => setDropDownOpen(!dropDownOpen)}>
+        {dropDownOpen ? "open" : "closed"}
+      </button>
+      <DropDownMenu isOpen={dropDownOpen} />
       <ContentWrapper>
         <LogoWrapper>
           <Link to="/">
@@ -32,6 +39,10 @@ function NavBar() {
           {menuData.map((item, index) => (
             <Link to={item.link} key={index}>
               <Item>{item.title}</Item>
+              <DropDownMenu
+                isOpen={dropDownOpen}
+                dropDownItems={[item.subTitles]}
+              ></DropDownMenu>
             </Link>
           ))}
           <Button text="Donate"></Button>
@@ -45,8 +56,6 @@ function NavBar() {
     </Wrapper>
   )
 }
-
-export default NavBar
 
 const Wrapper = styled.div`
   //width: 100%;
