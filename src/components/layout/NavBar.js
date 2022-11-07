@@ -1,5 +1,5 @@
 import { Link } from "gatsby"
-import React from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 import Button from "../objects/Button"
 import DropDownMenu from "../objects/DropDownMenu"
@@ -17,6 +17,8 @@ const menuData = [
 ]
 
 function NavBar() {
+  const [isOpen, setIsOpen] = useState(false)
+
   return (
     <Wrapper>
       <DropDownMenu />

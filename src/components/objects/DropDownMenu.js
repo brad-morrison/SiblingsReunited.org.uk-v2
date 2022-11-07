@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 import { themes } from "../styles/ColorStyles"
 import { MediumText } from "../styles/TextStyles"
@@ -8,10 +8,10 @@ function DropDownMenu() {
     <Wrapper>
       <ContentWrapper>
         <Items>
-          <Item>item 1</Item>
-          <Item>item 2</Item>
-          <Item>item 3</Item>
-          <Item>item 4</Item>
+          <Item>Meet the team</Item>
+          <Item>Why we exist</Item>
+          <Item>Find out more</Item>
+          <Item>In the news</Item>
         </Items>
       </ContentWrapper>
     </Wrapper>
@@ -24,8 +24,10 @@ const Wrapper = styled.div`
   position: absolute;
   z-index: 5;
   background-color: ${themes.secondaryBackground};
-  padding: 20px;
+  padding: 8px;
   width: fit-content;
+  border-radius: 25px;
+  border: 0.5px lightgray solid;
 `
 
 const ContentWrapper = styled.div`
@@ -35,7 +37,7 @@ const ContentWrapper = styled.div`
 
 const Items = styled.div`
   display: grid;
-  gap: 10px;
+  gap: 16px;
 `
 
 const Item = styled(MediumText)`

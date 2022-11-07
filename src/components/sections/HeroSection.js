@@ -81,6 +81,7 @@ const TextWrapper = styled.div`
   background-color: ${themes.background};
   padding: 40px;
   border-radius: 15px;
+  border: 0.5px lightgray solid;
 `
 
 const Title = styled(H1)`
