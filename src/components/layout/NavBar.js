@@ -2,33 +2,14 @@ import { Link } from "gatsby"
 import React, { useState } from "react"
 import styled from "styled-components"
 import Button from "../objects/Button"
-import DropDownMenu from "../objects/DropDownMenu"
 import { themes } from "../styles/ColorStyles"
 import { BodyIntro, Caption, Caption2, MediumText } from "../styles/TextStyles"
-
-const menuData = [
-  { title: "Home", link: "/", subTitles: ["1", "2", "3", "4"] },
-  { title: "About us", link: "/AboutUs", subTitles: ["1", "2", "3", "4"] },
-  { title: "What we do", link: "/WhatWeDo", subTitles: ["1", "2", "3", "4"] },
-  { title: "Store", link: "/Store", subTitles: ["1", "2", "3", "4"] },
-  {
-    title: "Fundraising",
-    link: "/Fundraising",
-    subTitles: ["1", "2", "3", "4"],
-  },
-  { title: "Volunteer", link: "/Volunteer", subTitles: ["1", "2", "3", "4"] },
-  { title: "Contact", link: "/Contact", subTitles: ["1", "2", "3", "4"] },
-]
+import { menuData } from "../../data/SiteData"
+import MenuItem from "./MenuItem"
 
 export default function NavBar() {
-  const [dropDownOpen, setDropDownOpen] = useState(false)
-
   return (
     <Wrapper>
-      <button onClick={() => setDropDownOpen(!dropDownOpen)}>
-        {dropDownOpen ? "open" : "closed"}
-      </button>
-      <DropDownMenu isOpen={dropDownOpen} />
       <ContentWrapper>
         <LogoWrapper>
           <Link to="/">
@@ -37,13 +18,7 @@ export default function NavBar() {
         </LogoWrapper>
         <Items>
           {menuData.map((item, index) => (
-            <Link to={item.link} key={index}>
-              <Item>{item.title}</Item>
-              <DropDownMenu
-                isOpen={dropDownOpen}
-                dropDownItems={[item.subTitles]}
-              ></DropDownMenu>
-            </Link>
+            <MenuItem key={index} item={item} />
           ))}
           <Button text="Donate"></Button>
         </Items>
@@ -95,18 +70,6 @@ const Items = styled.div`
     align-self: center;
     text-decoration: none;
     color: ${themes.text1};
-  }
-`
-
-const Item = styled(MediumText)`
-  align-self: center;
-  font-weight: bold;
-  border-bottom: 3px solid ${themes.background};
-  transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
-
-  :hover {
-    border-bottom: 3px solid ${themes.purple};
-    transform: translateY(-5px);
   }
 `
 
