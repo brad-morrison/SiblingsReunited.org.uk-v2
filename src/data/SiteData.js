@@ -1,47 +1,88 @@
-/* export const menuData = [
-  { title: "Home", link: "/", subTitles: ["1", "2", "3", "4"] },
-  { title: "About us", link: "/AboutUs", subTitles: ["1", "2", "3", "4"] },
-  { title: "What we do", link: "/WhatWeDo", subTitles: ["1", "2", "3", "4"] },
-  { title: "Store", link: "/Store", subTitles: ["1", "2", "3", "4"] },
-  {
-    title: "Fundraising",
-    link: "/Fundraising",
-    subTitles: ["1", "2", "3", "4"],
-  },
-  { title: "Volunteer", link: "/Volunteer", subTitles: ["1", "2", "3", "4"] },
-  { title: "Contact", link: "/Contact", subTitles: ["1", "2", "3", "4"] },
-] */
-
 export const menuData = [
   {
     title: "Home",
     link: "/",
+    items: [],
+  },
+  //
+  {
+    title: "About us",
+    link: "/AboutUs",
     items: [
       {
-        title: "Go back home",
+        title: "What we do",
+        link: "/AboutUs",
+      },
+      {
+        title: "Meet the team",
+        link: "/AboutUs",
+      },
+      {
+        title: "Our partners",
+        link: "/AboutUs",
+      },
+    ],
+  },
+  //
+  {
+    title: "Store",
+    link: "/Store",
+    items: [],
+  },
+  //
+  {
+    title: "Fundraising",
+    link: "/Fundraising",
+    items: [
+      {
+        title: "Help us",
         link: "/",
       },
       {
-        title: "Find out more",
+        title: "Fundraising pack",
         link: "/",
       },
       {
-        title: "Our history",
+        title: "Our funders",
         link: "/",
       },
     ],
   },
+  //
   {
-    title: "Home 2",
-    link: "/",
+    title: "Volunteer",
+    link: "/Volunteer",
     items: [
       {
-        title: "C",
-        link: "/",
+        title: "FAQs",
+        link: "/Volunteer",
       },
       {
-        title: "D",
-        link: "/",
+        title: "Our events",
+        link: "/Volunteer",
+      },
+      {
+        title: "Roles",
+        link: "/Volunteer",
+      },
+    ],
+  },
+  //
+  {
+    title: "Contact",
+    link: "/Contact",
+    items: [
+      {
+        title: "Our location",
+        link: "/Contact",
+      },
+      {
+        title: "Get in touch",
+        link: "/Contact",
+      },
+      {
+        title: "Email",
+        link: "/Contact",
       },
     ],
   },

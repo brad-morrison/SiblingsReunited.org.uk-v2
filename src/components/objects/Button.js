@@ -17,7 +17,10 @@ function Button(props) {
 
 export default Button
 
-const Wrapper = styled.div``
+const Wrapper = styled.div`
+  display: grid;
+  align-content: center;
+`
 const ContentWrapper = styled.div``
 const Text = styled(ButtonText)`
   background-color: ${themes.yellow};

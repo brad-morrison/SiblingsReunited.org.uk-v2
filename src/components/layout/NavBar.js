@@ -37,6 +37,7 @@ const Wrapper = styled.div`
   overflow-x: hidden;
   max-width: 100%;
   background-color: ${themes.background};
+  z-index: 5;
 `
 
 const ContentWrapper = styled.div`
@@ -61,9 +62,11 @@ const Items = styled.div`
   display: grid;
   grid-template-columns: auto auto auto auto auto auto auto auto;
   justify-content: end;
-  align-content: center;
+  align-content: stretch;
   gap: 30px;
-  padding: 0 30px;
+  //padding: 0 0px;
+  height: 100%;
+  min-height: 100%;
 
   // nav links
   a {
