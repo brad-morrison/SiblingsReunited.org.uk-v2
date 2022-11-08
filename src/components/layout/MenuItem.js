@@ -7,14 +7,27 @@ import { MediumText } from "../styles/TextStyles"
 export default function MenuItem(props) {
   const [dropDownOpen, setDropDownOpen] = useState(false)
 
+  // dropdown menu component
+  const dropDown = dropDownMenu()
+  const title = BuildTitle()
+
   return (
     <Wrapper>
       <MenuItemWrapper onMouseLeave={() => setDropDownOpen(false)}>
         <Link to={props.item.link}>
           <MenuTitle onMouseOver={() => setDropDownOpen(true)}>
-            {props.item.title}
+            {title}
           </MenuTitle>
         </Link>
+        {dropDown}
+      </MenuItemWrapper>
+    </Wrapper>
+  )
+
+  // drop menu in seperate function to allow conditional rendering
+  function dropDownMenu() {
+    if (props.item.items.length > 0) {
+      return (
         <DropDownMenuWrapper>
           <DropDownMenu
             dropDownOpen={dropDownOpen}
@@ -27,9 +40,17 @@ export default function MenuItem(props) {
             ))}
           </DropDownMenu>
         </DropDownMenuWrapper>
-      </MenuItemWrapper>
-    </Wrapper>
-  )
+      )
+    }
+  }
+
+  function BuildTitle() {
+    if (props.item.items.length > 0) {
+      return props.item.title + "->"
+    } else {
+      return props.item.title
+    }
+  }
 }
 
 const Wrapper = styled.div``
@@ -69,7 +90,7 @@ const DropDownMenu = styled(MediumText)`
   min-width: 120px;
   transform: translateY(10px);
 
-  transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
   z-index: ${props => (props.dropDownOpen ? 100 : 1)};
   background-color: ${themes.background};
   border: 0.5px lightgray solid;

@@ -74,6 +74,12 @@ const Items = styled.div`
     text-decoration: none;
     color: ${themes.text1};
   }
+
+  @media (max-width: 1180px) {
+    visibility: hidden;
+    background-color: blue;
+    opacity: 0;
+  }
 `
 
 const SecondaryBar = styled.div`
