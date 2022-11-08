@@ -3,9 +3,11 @@ import { Link } from "gatsby"
 import styled from "styled-components"
 import { themes } from "../styles/ColorStyles"
 import { MediumText } from "../styles/TextStyles"
+import { VscTriangleDown } from "react-icons/vsc"
 
 export default function MenuItem(props) {
   const [dropDownOpen, setDropDownOpen] = useState(false)
+  const [itemsExist, setItemsExist] = useState(false)
 
   // dropdown menu component
   const dropDown = dropDownMenu()
@@ -46,7 +48,7 @@ export default function MenuItem(props) {
 
   function BuildTitle() {
     if (props.item.items.length > 0) {
-      return props.item.title + "->"
+      return props.item.title + <VscTriangleDown />
     } else {
       return props.item.title
     }
