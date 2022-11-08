@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
 import { themes } from "../styles/ColorStyles"
@@ -13,22 +13,26 @@ export default function MenuItem(props) {
   const dropDown = dropDownMenu()
   const title = BuildTitle()
 
+  // checks once on render if the item has subtitles
+  useEffect(() => {
+    if (props.item.items.length > 0) {
+      setItemsExist(true)
+    }
+  }, [])
+
   return (
     <Wrapper>
       <MenuItemWrapper onMouseLeave={() => setDropDownOpen(false)}>
-        <Link to={props.item.link}>
-          <MenuTitle onMouseOver={() => setDropDownOpen(true)}>
-            {title}
-          </MenuTitle>
-        </Link>
+        <Link to={props.item.link}>{title}</Link>
         {dropDown}
       </MenuItemWrapper>
     </Wrapper>
   )
 
-  // drop menu in seperate function to allow conditional rendering
+  // Drop Menu Component
+  // returns nothing if no subtitles exist
   function dropDownMenu() {
-    if (props.item.items.length > 0) {
+    if (itemsExist) {
       return (
         <DropDownMenuWrapper>
           <DropDownMenu
@@ -46,11 +50,28 @@ export default function MenuItem(props) {
     }
   }
 
+  // Title Component
+  // checks if the item has subtitles and adds a triangle icon if its does
   function BuildTitle() {
-    if (props.item.items.length > 0) {
-      return props.item.title + <VscTriangleDown />
+    if (itemsExist) {
+      return (
+        <MenuTitle
+          onMouseOver={() => setDropDownOpen(true)}
+          itemsExist={itemsExist}
+        >
+          {props.item.title}
+          <VscTriangleDown className="arrowIcon" />
+        </MenuTitle>
+      )
     } else {
-      return props.item.title
+      return (
+        <MenuTitle
+          onMouseOver={() => setDropDownOpen(true)}
+          itemsExist={itemsExist}
+        >
+          {props.item.title}
+        </MenuTitle>
+      )
     }
   }
 }
@@ -65,16 +86,35 @@ const MenuItemWrapper = styled.div`
 `
 
 const MenuTitle = styled(MediumText)`
+  position: relative;
   align-self: center;
   justify-content: center;
   align-content: center;
   font-weight: bold;
   border-bottom: 3px solid ${themes.background};
-  transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  display: flex;
+  gap: 5px;
+  margin-right: ${props => (props.itemsExist ? "15px" : "0px")};
+
+  .arrowIcon {
+    position: absolute;
+    right: -20px;
+    top: 3px;
+    transform: rotateZ(-90deg);
+    color: ${themes.purple};
+
+    transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
 
   :hover {
     border-bottom: 3px solid ${themes.purple};
     transform: translateY(-5px);
+
+    .arrowIcon {
+      color: ${themes.purple};
+      transform: rotateZ(0);
+    }
   }
 `
 
