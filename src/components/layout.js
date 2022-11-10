@@ -3,6 +3,7 @@ import styled from "styled-components"
 import "./layout.css"
 import Footer from "./layout/Footer"
 import NavBar from "./layout/NavBar"
+import SideMenu from "./layout/SideMenu"
 
 function Layout({ children }) {
   return (
@@ -10,6 +11,7 @@ function Layout({ children }) {
       <NavBar />
       <main>{children}</main>
       <Footer />
+      <SideMenu />
     </Site>
   )
 }
