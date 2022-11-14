@@ -8,10 +8,10 @@ import SideMenu from "./layout/SideMenu"
 function Layout({ children }) {
   return (
     <Site>
+      <SideMenu />
       <NavBar />
       <main>{children}</main>
       <Footer />
-      <SideMenu />
     </Site>
   )
 }

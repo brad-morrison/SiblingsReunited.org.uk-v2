@@ -6,6 +6,7 @@ import { themes } from "../styles/ColorStyles"
 import { BodyIntro, Caption, Caption2, MediumText } from "../styles/TextStyles"
 import { menuData } from "../../data/SiteData"
 import MenuItem from "./MenuItem"
+import { breaks } from "../styles/BreakStyles"
 
 export default function NavBar() {
   return (
@@ -75,7 +76,7 @@ const Items = styled.div`
     color: ${themes.text1};
   }
 
-  @media (max-width: 1180px) {
+  @media (max-width: ${breaks.tablet}) {
     visibility: hidden;
     background-color: blue;
     opacity: 0;

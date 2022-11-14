@@ -96,6 +96,7 @@ const MenuTitle = styled(MediumText)`
   display: flex;
   gap: 5px;
   margin-right: ${props => (props.itemsExist ? "15px" : "0px")};
+  padding-bottom: 0px;
 
   .arrowIcon {
     position: absolute;
@@ -109,7 +110,7 @@ const MenuTitle = styled(MediumText)`
 
   :hover {
     border-bottom: 3px solid ${themes.purple};
-    transform: translateY(-5px);
+    padding-bottom: 6px;
 
     .arrowIcon {
       color: ${themes.purple};

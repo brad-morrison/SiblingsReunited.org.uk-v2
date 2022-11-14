@@ -20,7 +20,7 @@ export default Button
 const Wrapper = styled.div`
   display: grid;
   align-content: center;
-  z-index: 100;
+  z-index: 80;
 `
 const ContentWrapper = styled.div``
 const Text = styled(ButtonText)`
