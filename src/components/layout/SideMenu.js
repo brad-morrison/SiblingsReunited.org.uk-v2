@@ -10,21 +10,20 @@ import useScrollBlock from "../../utilities/useScrollBlock"
 
 export default function SideMenu() {
   const [sideMenuOpen, set_sideMenuOpen] = useState(false)
-  const [blockScroll, allowScroll] = useScrollBlock(false)
+  const [blockScroll, allowScroll] = useScrollBlock()
 
   useEffect(() => {
     // This set scrollBlock to false at page load
-    //allowScroll()
-  }, [])
 
-  function handleClick(event) {
-    set_sideMenuOpen(!sideMenuOpen)
-    if (sideMenuOpen) {
+    if (!sideMenuOpen) {
       blockScroll()
     } else {
       allowScroll()
     }
-    console.log("button pressed" + { sideMenuOpen })
+  })
+
+  function handleClick(event) {
+    set_sideMenuOpen(!sideMenuOpen)
   }
 
   return (
@@ -64,7 +63,7 @@ const Back = styled.div`
   display: none;
 
   @media (max-width: ${breaks.tablet}) {
-    opacity: ${props => (props.sideMenuOpen ? "30%" : "0%")};
+    opacity: ${props => (props.sideMenuOpen ? "50%" : "0%")};
     visibility: visible;
     display: block;
   }
@@ -75,7 +74,7 @@ const Wrapper = styled.div`
   top: 0;
   bottom: 0;
   transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-  right: ${props => (props.sideMenuOpen ? "-480px" : "-80px")};
+  right: ${props => (props.sideMenuOpen ? "-80px" : "-480px")};
   z-index: 500;
 
   @media (min-width: ${breaks.tablet}) {
