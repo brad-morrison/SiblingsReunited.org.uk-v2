@@ -12,17 +12,13 @@ export default function SideMenu() {
   const [sideMenuOpen, set_sideMenuOpen] = useState(false)
   const [blockScroll, allowScroll] = useScrollBlock()
 
-  useEffect(() => {
-    // This set scrollBlock to false at page load
-    if (sideMenuOpen) {
+  function handleClick(event) {
+    set_sideMenuOpen(!sideMenuOpen)
+    if (!sideMenuOpen) {
       blockScroll()
     } else {
       allowScroll()
     }
-  })
-
-  function handleClick(event) {
-    set_sideMenuOpen(!sideMenuOpen)
   }
 
   return (
