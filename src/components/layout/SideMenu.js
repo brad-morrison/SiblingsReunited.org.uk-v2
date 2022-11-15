@@ -14,8 +14,7 @@ export default function SideMenu() {
 
   useEffect(() => {
     // This set scrollBlock to false at page load
-
-    if (!sideMenuOpen) {
+    if (sideMenuOpen) {
       blockScroll()
     } else {
       allowScroll()
@@ -37,7 +36,12 @@ export default function SideMenu() {
           <SidePanel>
             <Items>
               {menuData.map((item, index) => (
-                <SideMenuItem key={index} title={item.title} link={item.link} />
+                <SideMenuItem
+                  key={index}
+                  title={item.title}
+                  link={item.link}
+                  sideMenuControl={handleClick}
+                />
               ))}
             </Items>
           </SidePanel>

@@ -8,7 +8,7 @@ import { BodyIntro, H2, H3, H4, MediumText } from "../styles/TextStyles"
 export default function SideMenuItem(props) {
   return (
     <Wrapper>
-      <Link to={props.link}>
+      <Link to={props.link} onClick={props.sideMenuControl}>
         <Item>{props.title}</Item>
       </Link>
     </Wrapper>
