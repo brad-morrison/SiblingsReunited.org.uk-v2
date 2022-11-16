@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react"
 import styled from "styled-components"
 import Button from "../objects/Button"
 import SideMenuItem from "../objects/SideMenuItem"
+
 import { breaks } from "../styles/BreakStyles"
 import { themes } from "../styles/ColorStyles"
 import { MediumText } from "../styles/TextStyles"

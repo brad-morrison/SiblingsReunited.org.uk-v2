@@ -34,9 +34,10 @@ export default HeroSection
 
 const Wrapper = styled.div`
   position: relative;
-  background: url("/images/hero.jpg");
+  background: url("/images/hero2.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
+  max-height: fit-content;
 `
 
 const ContentWrapper = styled.div`
@@ -59,7 +60,7 @@ const LeftSection = styled.div`
   display: grid;
   justify-content: start;
   align-content: center;
-  padding: 120px 30px;
+  padding: 80px 30px;
   gap: 50px;
 `
 
