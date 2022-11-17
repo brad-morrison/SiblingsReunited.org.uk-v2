@@ -1,14 +1,15 @@
 import React from "react"
 import styled from "styled-components"
+import { breaks } from "../styles/BreakStyles"
 import { themes } from "../styles/ColorStyles"
 import { H1 } from "../styles/TextStyles"
 
-export default function TopicPageTitle() {
+export default function TopicPageTitle(props) {
   return (
     <Wrapper>
-      <ContentWrapper>
-        <Title>About Us</Title>
-        <Back>f</Back>
+      <ContentWrapper img={props.img}>
+        <Title>{props.title}</Title>
+        <Back></Back>
       </ContentWrapper>
     </Wrapper>
   )
@@ -24,9 +25,15 @@ const ContentWrapper = styled.div`
   display: grid;
   justify-content: center;
   align-content: center;
-  background: url("/images/volunteer.jpg");
+  background: url(${props => props.img});
   background-size: cover;
   background-position: 50% 40%;
+  padding: 30px;
+  transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+  @media (max-width: ${breaks.phone}) {
+    height: 240px;
+  }
 `
 
 const Title = styled(H1)`
@@ -34,6 +41,11 @@ const Title = styled(H1)`
   background-color: rgba(0, 0, 0, 0.6);
   padding: 12px 24px;
   z-index: 100;
+  transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+  @media (max-width: ${breaks.phone}) {
+    font-size: 40px;
+  }
 `
 
 const Back = styled.div`

@@ -7,7 +7,7 @@ function AboutUsPage() {
   return (
     <Layout>
       <Seo title="AboutUs" />
-      <TopicPageTitle />
+      <TopicPageTitle title="About Us" img="/images/volunteer.jpg" />
     </Layout>
   )
 }
