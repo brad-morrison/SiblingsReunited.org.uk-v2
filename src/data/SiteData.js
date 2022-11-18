@@ -86,10 +86,4 @@ export const menuData = [
       },
     ],
   },
-  //
-  {
-    title: "Bradley",
-    link: "/Contact",
-    items: [],
-  },
 ]

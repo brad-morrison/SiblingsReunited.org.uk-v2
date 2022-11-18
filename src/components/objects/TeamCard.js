@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { breaks } from "../styles/BreakStyles"
 import { themes } from "../styles/ColorStyles"
 import { BodyIntro, Caption, Caption2, SmallText } from "../styles/TextStyles"
 
@@ -26,6 +27,11 @@ const Image = styled.img`
   height: 200px;
   background: url(${props => props.img});
   background-size: cover;
+
+  @media (max-width: ${breaks.phone}) {
+    width: 150px;
+    height: 150px;
+  }
 `
 
 const Details = styled.div`

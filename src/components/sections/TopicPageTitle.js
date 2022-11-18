@@ -17,6 +17,7 @@ export default function TopicPageTitle(props) {
 
 const Wrapper = styled.div`
   width: 100%;
+  margin-bottom: 25px;
 `
 
 const ContentWrapper = styled.div`

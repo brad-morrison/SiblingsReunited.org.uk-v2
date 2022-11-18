@@ -7,6 +7,8 @@ import Seo from "../components/seo"
 import { breaks } from "../components/styles/BreakStyles"
 import { BodyMain, H2, H3 } from "../components/styles/TextStyles"
 import { teamMembers } from "../data/TeamMembers"
+import TriplePostSection from "../components/sections/TriplePostSection"
+import StayInTouchSection from "../components/sections/StayInTouchSection"
 
 export default function AboutUsPage() {
   return (
@@ -60,6 +62,8 @@ export default function AboutUsPage() {
           ))}
         </Team>
       </Block>
+      <TriplePostSection title="You may be interested in"></TriplePostSection>
+      <StayInTouchSection></StayInTouchSection>
     </Layout>
   )
 }
@@ -87,6 +91,7 @@ const WideImage = styled.img`
 `
 
 const Team = styled.div`
+  width: 100%;
   display: grid;
   justify-content: space-evenly;
   gap: 30px;
