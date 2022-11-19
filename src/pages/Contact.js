@@ -1,17 +1,78 @@
 import * as React from "react"
 import Layout from "../components/layout"
-import MapSection from "../components/sections/MapSection"
+import Map from "../components/sections/Map"
 import TopicPageTitle from "../components/sections/TopicPageTitle"
 import Seo from "../components/seo"
+import styled from "styled-components"
+import ContactCard from "../components/objects/ContactCard"
+import { themes } from "../components/styles/ColorStyles"
+import { breaks } from "../components/styles/BreakStyles"
+import TriplePostSection from "../components/sections/TriplePostSection"
+import StayInTouchSection from "../components/sections/StayInTouchSection"
+import { BodyIntro, H4 } from "../components/styles/TextStyles"
 
-function ContactPage() {
+export default function ContactPage() {
   return (
     <Layout>
       <Seo title="Contact" />
       <TopicPageTitle title="Contact" img="/images/wellies.png" />
-      <MapSection />
+      <DetailsWrapper>
+        <DetailsTitle>Our Details</DetailsTitle>
+        <DetailsSection>
+          <MapWrapper>
+            <Map />
+          </MapWrapper>
+          <ContactCards>
+            <ContactCard
+              icon="home"
+              text="East Flisk Farm, Newburgh, Fife, KY146HP"
+            />
+            <ContactCard icon="mail" text="karen@siblingsreunited.co.uk" />
+            <ContactCard icon="phone" text="07398721366" />
+            <ContactCard icon="facebook" text="facebook.com/SiblingsReunited" />
+          </ContactCards>
+        </DetailsSection>
+      </DetailsWrapper>
+      <TriplePostSection title="You might also be interested in"></TriplePostSection>
+      <StayInTouchSection></StayInTouchSection>
     </Layout>
   )
 }
 
-export default ContactPage
+const DetailsWrapper = styled.div`
+  background-color: ${themes.secondaryBackground};
+  width: 100%;
+  padding: 40px 20px;
+  padding-top: 25px;
+`
+
+const DetailsSection = styled.div`
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  margin: auto;
+  max-width: 1240px;
+  gap: 30px;
+
+  @media (max-width: 900px) {
+    grid-template-columns: auto;
+  }
+`
+
+const MapWrapper = styled.div`
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  border: 0.5px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.08);
+`
+
+const ContactCards = styled.div`
+  display: grid;
+  align-content: center;
+  gap: 30px;
+`
+
+const DetailsTitle = styled(BodyIntro)`
+  text-align: center;
+  margin-bottom: 24px;
+`
