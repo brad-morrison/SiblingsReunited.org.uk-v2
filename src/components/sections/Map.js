@@ -34,14 +34,18 @@ export default function Map() {
 const Wrapper = styled.div`
   height: 100%;
   width: 100%;
-  border: white solid 10px;
-  border-radius: 30px;
+  border-radius: 10px;
   overflow: hidden;
+
+  @media (max-width: ${breaks.phone}) {
+    border-radius: 0px;
+  }
 `
 
 const MapWrapper = styled.div`
   height: 500px; // height of this component must be declared for Map to render
   width: 100%;
+  border: white solid 10px;
 
   @media (max-width: 900px) {
     height: 380px;
@@ -49,5 +53,6 @@ const MapWrapper = styled.div`
 
   @media (max-width: ${breaks.phone}) {
     height: 300px;
+    border: 0px;
   }
 `

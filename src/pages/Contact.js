@@ -44,6 +44,10 @@ const DetailsWrapper = styled.div`
   width: 100%;
   padding: 40px 20px;
   padding-top: 25px;
+
+  @media (max-width: ${breaks.phone}) {
+    padding: 30px 0px;
+  }
 `
 
 const DetailsSection = styled.div`
@@ -61,15 +65,24 @@ const DetailsSection = styled.div`
 const MapWrapper = styled.div`
   width: 100%;
   height: 100%;
-  border-radius: 30px;
+  border-radius: 10px;
   border: 0.5px solid rgba(0, 0, 0, 0.1);
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.08);
+
+  @media (max-width: ${breaks.phone}) {
+    border-radius: 0px;
+    border: 0px;
+  }
 `
 
 const ContactCards = styled.div`
   display: grid;
   align-content: center;
   gap: 30px;
+
+  @media (max-width: ${breaks.phone}) {
+    padding: 0px 20px;
+  }
 `
 
 const DetailsTitle = styled(BodyIntro)`

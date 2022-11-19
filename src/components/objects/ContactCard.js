@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { themes } from "../styles/ColorStyles"
-import { BodyIntro, BodyMain } from "../styles/TextStyles"
+import { BodyIntro, BodyMain, Caption } from "../styles/TextStyles"
 import { FaEnvelope, FaFacebook, FaHome, FaMail, FaPhone } from "react-icons/fa"
 
 export default function ContactCard(props) {
@@ -28,7 +28,7 @@ export default function ContactCard(props) {
   return (
     <Wrapper>
       <ContentWrapper>
-        <IconWrapper className="abc">{Icon()}</IconWrapper>
+        <IconWrapper>{Icon()}</IconWrapper>
         <Text>{props.text}</Text>
       </ContentWrapper>
     </Wrapper>
@@ -50,16 +50,9 @@ const ContentWrapper = styled.div`
   border-radius: 30px;
   border: 0.5px solid rgba(0, 0, 0, 0.1);
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.08);
-  transition: 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
-
-  .abc {
-    transition: 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
-  }
 
   :hover {
     cursor: pointer;
-    .abc {
-    }
   }
 `
 
@@ -75,6 +68,6 @@ const IconWrapper = styled.div`
   font-size: 30px;
 `
 
-const Text = styled(BodyMain)`
+const Text = styled(Caption)`
   align-self: center;
 `
