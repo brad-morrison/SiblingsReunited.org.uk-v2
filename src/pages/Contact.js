@@ -10,6 +10,7 @@ import { breaks } from "../components/styles/BreakStyles"
 import TriplePostSection from "../components/sections/TriplePostSection"
 import StayInTouchSection from "../components/sections/StayInTouchSection"
 import { BodyIntro, H4 } from "../components/styles/TextStyles"
+import FormSection from "../components/sections/FormSection"
 
 export default function ContactPage() {
   return (
@@ -33,6 +34,7 @@ export default function ContactPage() {
           </ContactCards>
         </DetailsSection>
       </DetailsWrapper>
+      <FormSection />
       <TriplePostSection title="You might also be interested in"></TriplePostSection>
       <StayInTouchSection></StayInTouchSection>
     </Layout>
