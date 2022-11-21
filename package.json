@@ -21,6 +21,8 @@
     "react-dom": "^18.1.0",
     "react-hook-form": "^7.39.4",
     "react-icons": "^4.6.0",
+    "react-slick": "^0.29.0",
+    "slick-carousel": "^1.8.1",
     "styled-components": "^5.3.6"
   },
   "devDependencies": {
