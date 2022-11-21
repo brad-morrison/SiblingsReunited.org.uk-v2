@@ -1,9 +1,9 @@
 import { stripLineComment } from "babel-plugin-styled-components/lib/minify"
 import React from "react"
 import styled from "styled-components"
-import { BodyMain, H1, MediumText } from "../styles/TextStyles"
+import { BodyMain, H1, H4, MediumText } from "../styles/TextStyles"
 
-function DetailDescSection() {
+function DetailDescSection(props) {
   return (
     <Wrapper>
       <ContentWrapper>
@@ -12,17 +12,9 @@ function DetailDescSection() {
         </ImageWrapper>
         <TextWrapper>
           <Text>
-            <Paragraph>
-              Siblings Reunited (STAR) reunites Brothers and Sisters separated
-              in the care system, through adoption or Kinship care by providing
-              the opportunity for quality and regular Sibling contact.
-            </Paragraph>
-            <Paragraph>
-              Run from its unique farmland setting it provides a safe, fun and
-              exhilarating learning environment where children can foster
-              emotional bonds and help overcome the trauma associated with being
-              separated.
-            </Paragraph>
+            <Title>{props.title}</Title>
+            <Paragraph>{props.text1}</Paragraph>
+            <Paragraph>{props.text2}</Paragraph>
           </Text>
         </TextWrapper>
       </ContentWrapper>
@@ -74,3 +66,5 @@ const Text = styled.div`
 `
 
 const Paragraph = styled(BodyMain)``
+
+const Title = styled(H4)``

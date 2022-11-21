@@ -17,7 +17,16 @@ function IndexPage() {
     <Layout>
       <Seo title="Home" />
       <HeroSection />
-      <DetailDescSection />
+      <DetailDescSection
+        title="Reunited siblings is what we do"
+        text1="Siblings Reunited (STAR) reunites Brothers and Sisters separated
+              in the care system, through adoption or Kinship care by providing
+              the opportunity for quality and regular Sibling contact."
+        text2="Run from its unique farmland setting it provides a safe, fun and
+              exhilarating learning environment where children can foster
+              emotional bonds and help overcome the trauma associated with being
+              separated."
+      />
       <TriplePostSection title="Get Involved" />
       <ChildIntroSection />
       <QuotesSection />
