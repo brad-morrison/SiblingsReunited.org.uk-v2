@@ -14,6 +14,10 @@ export const menuData = [
         link: "/AboutUs",
       },
       {
+        title: "In the News",
+        link: "/AboutUs",
+      },
+      {
         title: "Meet the team",
         link: "/AboutUs",
       },
