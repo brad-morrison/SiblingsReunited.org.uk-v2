@@ -29,15 +29,20 @@ export const menuData = [
   },
   //
   {
-    title: "Our Site",
-    link: "/OurSite",
+    title: "What we provide",
+    link: "/WhatWeProvide",
     items: [
       {
-        title: "What we offer",
+        title: "Our Site",
         link: "/Volunteer",
       },
       {
         title: "Animals",
+        link: "/Volunteer",
+      },
+
+      {
+        title: "Supervisors",
         link: "/Volunteer",
       },
       {

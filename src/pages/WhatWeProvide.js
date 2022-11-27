@@ -3,11 +3,11 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import TopicPageTitle from "../components/sections/TopicPageTitle"
 
-export default function OurSitePage() {
+export default function WhatWeProvidePage() {
   return (
     <Layout>
-      <Seo title="OurSite" />
-      <TopicPageTitle title="Our Site" img="/images/birdHouse.jpg" />
+      <Seo title="WhatWeProvide" />
+      <TopicPageTitle title="What We Provide" img="/images/birdHouse.jpg" />
     </Layout>
   )
 }
