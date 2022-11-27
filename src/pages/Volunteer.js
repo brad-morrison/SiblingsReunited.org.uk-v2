@@ -7,6 +7,20 @@ import Carousel from "../components/objects/Carousel"
 import styled from "styled-components"
 
 export default function VolunteerPage() {
+  const images = [
+    {
+      id: 1,
+      src: "/images/7.png",
+    },
+    {
+      id: 2,
+      src: "/images/tablet.jpg",
+    },
+    {
+      id: 3,
+      src: "/images/teacher.jpg",
+    },
+  ]
   return (
     <Layout>
       <Seo title="Volunteer" />
@@ -17,7 +31,7 @@ export default function VolunteerPage() {
         text2="Please get in touch if you would like to receive information on our process to becoming a volunteer supervisor at star, even if you can just spare 2 hours a month you could be helping supervise one family."
       />
       <CarouselWrapper>
-        <Carousel />
+        <Carousel images={images} />
       </CarouselWrapper>
     </Layout>
   )
@@ -26,6 +40,4 @@ export default function VolunteerPage() {
 const CarouselWrapper = styled.div`
   width: 800px;
   height: 400px;
-  overflow: hidden;
-  object-fit: cover;
 `

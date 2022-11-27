@@ -1,40 +1,36 @@
-import React from "react"
+import React, { useRef } from "react"
 import Slider from "react-slick"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 import styled from "styled-components"
 
-export default function Carousel() {
-  var settings = {
+export default function Carousel(props) {
+  const settings = {
     dots: true,
+    lazyLoad: true,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
-    easing: "spring",
+    initialSlide: 2,
   }
+  const carousel = useRef()
   return (
-    <Slider {...settings}>
-      <ImageWrapper>
-        <Image src="/images/site.jpg" />
-      </ImageWrapper>
-      <ImageWrapper>
-        <Image src="/images/donate.png" />
-      </ImageWrapper>
-      <ImageWrapper>
-        <Image src="/images/wellies.png" />
-      </ImageWrapper>
-    </Slider>
+    <Top>
+      <Slider {...settings}>
+        {props.images.map(item => (
+          <div key={item.id}>
+            <img src={item.src} />
+          </div>
+        ))}
+      </Slider>
+    </Top>
   )
 }
 
-const ImageWrapper = styled.div`
-  width: 100%;
-  min-width: 100%;
+const Top = styled.div`
+  img {
+  }
 `
-const Image = styled.img`
-  width: 100%;
-  //background: url(${props => props.img});
-  //background-size: cover;
-`
+const ImageWrapper = styled.div``
+const Image = styled.img``

@@ -9,6 +9,7 @@ import { BodyMain, H2, H3 } from "../components/styles/TextStyles"
 import { teamMembers } from "../data/TeamMembers"
 import TriplePostSection from "../components/sections/TriplePostSection"
 import StayInTouchSection from "../components/sections/StayInTouchSection"
+import DetailDescSection from "../components/sections/DetailDescSection"
 
 export default function AboutUsPage() {
   return (
@@ -42,6 +43,18 @@ export default function AboutUsPage() {
           more. We love letting everyone know what our sibling groups have been
           up to!
         </Text>
+      </Block>
+      <Block>
+        <SubHeading>A message from our Founder & Owner</SubHeading>
+        <DetailDescSection
+          title="Why I created STAR Siblings Reunited"
+          text1="I created Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s."
+          text2="Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s."
+        ></DetailDescSection>
       </Block>
       <Block>
         <SubHeading>Meet the Siblings Reunited team</SubHeading>
