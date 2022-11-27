@@ -15,18 +15,19 @@ import {
   SmallText2,
 } from "../styles/TextStyles"
 import Form from "../objects/Form"
+import { breaks } from "../styles/BreakStyles"
 
 export default function FormSection() {
   return (
     <Wrapper>
       <ContentWrapper>
-        <Form></Form>
         <FormInfo>
           <Title>We'd love to hear from you!</Title>
           <SubTitle>
             We aim to respond to your enquiry within 24 hours.
           </SubTitle>
         </FormInfo>
+        <Form></Form>
       </ContentWrapper>
     </Wrapper>
   )
@@ -43,6 +44,10 @@ const ContentWrapper = styled.div`
   justify-content: center;
   padding: 30px;
   gap: 30px;
+
+  @media (max-width: ${breaks.tablet}) {
+    grid-template-columns: auto;
+  }
 `
 
 // right section
