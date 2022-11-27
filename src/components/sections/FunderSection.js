@@ -32,6 +32,7 @@ const FunderCards = styled.div`
   display: flex;
   justify-content: center;
   gap: 20px;
+  flex-wrap: wrap;
 `
 
 const MainTitle = styled(BodyIntro)`

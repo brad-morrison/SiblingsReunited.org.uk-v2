@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import FunderCard from "../objects/FunderCard"
+import { breaks } from "../styles/BreakStyles"
 import { themes } from "../styles/ColorStyles"
 import { BodyIntro } from "../styles/TextStyles"
 
@@ -34,6 +35,7 @@ const FunderCards = styled.div`
   display: flex;
   justify-content: center;
   gap: 20px;
+  flex-wrap: wrap;
 `
 
 const MainTitle = styled(BodyIntro)`
