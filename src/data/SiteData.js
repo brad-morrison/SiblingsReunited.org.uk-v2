@@ -25,9 +25,22 @@ export const menuData = [
   },
   //
   {
-    title: "Store",
-    link: "/Store",
-    items: [],
+    title: "Our Site",
+    link: "/OurSite",
+    items: [
+      {
+        title: "What we offer",
+        link: "/Volunteer",
+      },
+      {
+        title: "Animals",
+        link: "/Volunteer",
+      },
+      {
+        title: "Seasonal Events",
+        link: "/Volunteer",
+      },
+    ],
   },
   //
   {
@@ -54,7 +67,11 @@ export const menuData = [
     link: "/Volunteer",
     items: [
       {
-        title: "FAQs",
+        title: "Roles",
+        link: "/Volunteer",
+      },
+      {
+        title: "The team",
         link: "/Volunteer",
       },
       {
@@ -62,10 +79,17 @@ export const menuData = [
         link: "/Volunteer",
       },
       {
-        title: "Roles",
+        title: "FAQs",
         link: "/Volunteer",
       },
     ],
+  },
+
+  //
+  {
+    title: "Store",
+    link: "/Store",
+    items: [],
   },
   //
   {
