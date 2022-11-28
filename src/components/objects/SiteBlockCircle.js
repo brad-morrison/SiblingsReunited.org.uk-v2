@@ -48,6 +48,7 @@ const ImageWrapper = styled.div`
 
   @media (max-width: 1034px) {
     order: 0;
+    justify-self: center;
   }
 `
 
