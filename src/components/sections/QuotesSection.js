@@ -9,7 +9,7 @@ function QuotesSection(props) {
   return (
     <Wrapper>
       <ContentWrapper>
-        <MainTitle>What people say</MainTitle>
+        <MainTitle hideTitle={props.hideTitle}>What people say</MainTitle>
         <QuoteCards>
           <QuoteCard
             quote="I just wanted to thank you for a brilliant visit to STAR today. Your
@@ -39,6 +39,7 @@ const Wrapper = styled.div`
 const MainTitle = styled(BodyIntro)`
   text-align: center;
   margin-bottom: 30px;
+  display: ${props => (props.hideTitle = true ? "none" : "block")};
 `
 
 const ContentWrapper = styled.div`

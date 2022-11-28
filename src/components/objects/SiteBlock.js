@@ -1,9 +1,8 @@
-import { stripLineComment } from "babel-plugin-styled-components/lib/minify"
 import React from "react"
 import styled from "styled-components"
-import { BodyMain, H1, H4, MediumText } from "../styles/TextStyles"
+import { BodyMain, H4 } from "../styles/TextStyles"
 
-function DetailDescSection(props) {
+export default function SiteBlock(props) {
   return (
     <Wrapper>
       <ContentWrapper>
@@ -21,8 +20,6 @@ function DetailDescSection(props) {
     </Wrapper>
   )
 }
-
-export default DetailDescSection
 
 const Wrapper = styled.div`
   position: relative;
@@ -45,6 +42,11 @@ const ImageWrapper = styled.div`
   max-height: 400px;
   padding: 30px;
   order: ${props => props.flipped};
+
+  @media (max-width: 1034px) {
+    grid-template-columns: auto;
+    order: 0;
+  }
 `
 
 const Image = styled.img`
