@@ -10,20 +10,24 @@ export const menuData = [
     link: "/AboutUs",
     items: [
       {
+        title: "Who we are",
+        link: "/AboutUs#who-we-are",
+      },
+      {
         title: "What we do",
-        link: "/AboutUs",
+        link: "/AboutUs#what-we-do",
       },
       {
         title: "In the News",
-        link: "/AboutUs",
+        link: "/AboutUs#in-the-news",
       },
       {
         title: "Meet the team",
-        link: "/AboutUs",
+        link: "/AboutUs#meet-the-team",
       },
       {
         title: "Our partners",
-        link: "/AboutUs",
+        link: "/AboutUs#our-partners",
       },
     ],
   },
@@ -34,20 +38,20 @@ export const menuData = [
     items: [
       {
         title: "Our Site",
-        link: "/Volunteer",
+        link: "/WhatWeProvide#our-site",
       },
       {
         title: "Animals",
-        link: "/Volunteer",
+        link: "/WhatWeProvide#animals",
       },
 
       {
         title: "Supervisors",
-        link: "/Volunteer",
+        link: "/WhatWeProvide#supervisors",
       },
       {
         title: "Seasonal Events",
-        link: "/Volunteer",
+        link: "/WhatWeProvide#events",
       },
     ],
   },
@@ -58,15 +62,15 @@ export const menuData = [
     items: [
       {
         title: "Help us",
-        link: "/",
+        link: "/Fundraising#help-us",
       },
       {
         title: "Fundraising pack",
-        link: "/",
+        link: "/Fundraising#fundraising-pack",
       },
       {
         title: "Our funders",
-        link: "/",
+        link: "/Fundraising#our-funders",
       },
     ],
   },
@@ -77,28 +81,21 @@ export const menuData = [
     items: [
       {
         title: "Roles",
-        link: "/Volunteer",
+        link: "/Volunteer#roles",
       },
       {
         title: "The team",
-        link: "/Volunteer",
+        link: "/Volunteer#the-team",
       },
       {
         title: "Our events",
-        link: "/Volunteer",
+        link: "/Volunteer#our-events",
       },
       {
         title: "FAQs",
-        link: "/Volunteer",
+        link: "/Volunteer#faqs",
       },
     ],
-  },
-
-  //
-  {
-    title: "Store",
-    link: "/Store",
-    items: [],
   },
   //
   {
@@ -107,15 +104,15 @@ export const menuData = [
     items: [
       {
         title: "Our location",
-        link: "/Contact",
+        link: "/Contact#our-location",
       },
       {
         title: "Get in touch",
-        link: "/Contact",
+        link: "/Contact#get-in-touch",
       },
       {
         title: "Email",
-        link: "/Contact",
+        link: "/Contact#email",
       },
     ],
   },

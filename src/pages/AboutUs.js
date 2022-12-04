@@ -17,7 +17,7 @@ export default function AboutUsPage() {
       <Seo title="AboutUs" />
       <TopicPageTitle title="About Us" img="/images/volunteer.jpg" />
       <Block>
-        <SubHeading>Who we are</SubHeading>
+        <SubHeading id="who-we-are">Who we are</SubHeading>
         <Text>
           A major review of Scotland's care system has said the pain of brothers
           and sisters being separated often has "profound and lifelong
@@ -30,7 +30,7 @@ export default function AboutUsPage() {
         </Text>
       </Block>
       <Block>
-        <SubHeading>What we do</SubHeading>
+        <SubHeading id="what-we-do">What we do</SubHeading>
         <Text>
           It was popularised in the 1960s with the release of Letraset sheets
           containing Lorem Ipsum passages, and more recently with desktop
@@ -57,7 +57,9 @@ export default function AboutUsPage() {
         ></DetailDescSection>
       </Block>
       <Block>
-        <SubHeading>Meet the Siblings Reunited team</SubHeading>
+        <SubHeading id="meet-the-team">
+          Meet the Siblings Reunited team
+        </SubHeading>
         <Text>
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever

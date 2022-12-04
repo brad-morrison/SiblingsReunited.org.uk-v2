@@ -22,7 +22,7 @@ export default function WhatWeProvidePage() {
         text1="Run from its unique farmland setting it provides a safe, fun and exhilarating learning environment where children. "
         text2="Run from its unique farmland setting it provides a safe, fun and exhilarating learning environment where children. fun and exironment where children. "
       ></DetailDescSection>
-      <SubHeading>Our amazing site</SubHeading>
+      <SubHeading id="our-site">Our amazing site</SubHeading>
       <SiteBlock
         title="Woods"
         text1="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. 
@@ -60,7 +60,7 @@ export default function WhatWeProvidePage() {
       <QuotesSection hideTitle="true"></QuotesSection>
       <QuotesSection hideTitle="true"></QuotesSection>
 
-      <SubHeading>Meet the animals..</SubHeading>
+      <SubHeading id="animals">Meet the animals..</SubHeading>
       <TextBlock>
         <Text>
           We have lots of special animals here at STAR Siblings Reunited. We
@@ -79,7 +79,7 @@ export default function WhatWeProvidePage() {
         ))}
       </AnimalCards>
 
-      <SubHeading>..and our amazing supervisors</SubHeading>
+      <SubHeading id="supervisors">..and our amazing supervisors</SubHeading>
       <TextBlock>
         <Text>
           We have lots of special animals here at STAR Siblings Reunited. We
@@ -118,7 +118,7 @@ export default function WhatWeProvidePage() {
         ></SupervisorCard>
       </SupervisorsSection>
 
-      <SubHeading>Our Seasonal Events</SubHeading>
+      <SubHeading id="events">Our Seasonal Events</SubHeading>
       <TextBlock>
         <Text>
           We have lots of special animals here at STAR Siblings Reunited. We

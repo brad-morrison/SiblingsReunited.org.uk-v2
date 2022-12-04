@@ -7,6 +7,7 @@ import { BodyIntro, Caption, Caption2, MediumText } from "../styles/TextStyles"
 import { menuData } from "../../data/SiteData"
 import MenuItem from "./MenuItem"
 import { breaks } from "../styles/BreakStyles"
+import { AnchorLink } from "gatsby-plugin-anchor-links"
 
 export default function NavBar() {
   return (
@@ -34,7 +35,6 @@ export default function NavBar() {
 }
 
 const Wrapper = styled.div`
-  //width: 100%;
   overflow-x: hidden;
   max-width: 100%;
   background-color: ${themes.background};

@@ -24,7 +24,7 @@ export default function SiteBlockCircle(props) {
 const Wrapper = styled.div`
   position: relative;
   overflow: hidden;
-  max-width: 1200px;
+  max-width: 1000px;
   margin: auto;
 `
 
@@ -32,7 +32,7 @@ const ContentWrapper = styled.div`
   display: grid;
   grid-template-columns: auto auto;
   max-width: 1300px;
-  margin: 20px auto;
+  margin: 0px auto;
   justify-content: center;
 
   // mid

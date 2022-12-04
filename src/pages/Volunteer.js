@@ -24,7 +24,7 @@ export default function VolunteerPage() {
         text2="Please get in touch if you would like to receive information on our process to becoming a volunteer supervisor at star, even if you can just spare 2 hours a month you could be helping supervise one family."
       />
 
-      <SubHeading>Our Roles</SubHeading>
+      <SubHeading id="roles">Our Roles</SubHeading>
       <SiteBlockCircle
         title="Contact Supervisor"
         text1="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. 
@@ -51,7 +51,7 @@ export default function VolunteerPage() {
       <QuotesSection hideTitle="true"></QuotesSection>
 
       <Block>
-        <SubHeading>Meet our volunteers</SubHeading>
+        <SubHeading id="the-team">Meet our volunteers</SubHeading>
         <Text>
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever

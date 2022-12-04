@@ -4,6 +4,7 @@ import styled from "styled-components"
 import { themes } from "../styles/ColorStyles"
 import { MediumText } from "../styles/TextStyles"
 import { VscTriangleDown } from "react-icons/vsc"
+import { AnchorLink } from "gatsby-plugin-anchor-links"
 
 export default function MenuItem(props) {
   const [dropDownOpen, setDropDownOpen] = useState(false)
@@ -40,9 +41,11 @@ export default function MenuItem(props) {
             onMouseLeave={() => setDropDownOpen(false)}
           >
             {props.item.items.map((item, index) => (
-              <DropDownText dropDownOpen={dropDownOpen}>
-                {item.title}
-              </DropDownText>
+              <AnchorLink to={item.link} title="outteam">
+                <DropDownText dropDownOpen={dropDownOpen}>
+                  {item.title}
+                </DropDownText>
+              </AnchorLink>
             ))}
           </DropDownMenu>
         </DropDownMenuWrapper>
@@ -93,9 +96,11 @@ const MenuTitle = styled(MediumText)`
   font-weight: bold;
   border-bottom: 3px solid ${themes.background};
   transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition-property: border-bottom;
   display: flex;
   gap: 5px;
-  margin-right: ${props => (props.itemsExist ? "15px" : "0px")};
+  //margin-right: ${props => (!props.itemsExist ? "0px" : "15px")};
+  margin-right: 15px;
   padding-bottom: 0px;
 
   .arrowIcon {
@@ -110,7 +115,7 @@ const MenuTitle = styled(MediumText)`
 
   :hover {
     border-bottom: 3px solid ${themes.purple};
-    padding-bottom: 6px;
+    //padding-bottom: 6px;
 
     .arrowIcon {
       color: ${themes.purple};

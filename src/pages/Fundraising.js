@@ -16,11 +16,14 @@ function FundraisingPage() {
       <Seo title="Fundraising" />
       <TopicPageTitle title="Fundraise" img="/images/kids.jpeg" />
       <DetailDescSection
+        id="help-us"
         title="Make a real difference by fundraising for Siblings Reunited"
         text1="On a Tuesday and we keep this day free for the upkeep, maintenance, help with the animals, garden section and for the development of new projects. The bell rings at 12.30 for soup and cake and we all gather around the kitchen table and have a good chat and catch up."
         text2="Find out more below.."
       />
-      <SubHeading>Download our fundraising pack</SubHeading>
+      <SubHeading id="fundraising-pack">
+        Download our fundraising pack
+      </SubHeading>
       <FundraisePackSection>
         <TextSection>
           <Title>
@@ -43,7 +46,7 @@ function FundraisingPage() {
         <TriplePostSection></TriplePostSection>
       </TripleWrapper>
 
-      <SubHeading>Our amazing fundraisers</SubHeading>
+      <SubHeading id="our-funders">Our amazing fundraisers</SubHeading>
       <FundraiserCard
         image="/images/people/Nova.jpg"
         name="Karen Morrison"
