@@ -34,7 +34,8 @@ export default function ContactPage() {
           </ContactCards>
         </DetailsSection>
       </DetailsWrapper>
-      <FormSection />
+      <div id="get-in-touch"></div>
+      <FormSection></FormSection>
       <TriplePostSection title="You might also be interested in"></TriplePostSection>
       <StayInTouchSection></StayInTouchSection>
     </Layout>

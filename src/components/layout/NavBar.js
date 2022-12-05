@@ -26,7 +26,7 @@ export default function NavBar() {
         </Items>
       </ContentWrapper>
       <SecondaryBar>
-        <Link to="/">
+        <Link to="/ChildPage">
           <SecondaryContent>View our child friendly page</SecondaryContent>
         </Link>
       </SecondaryBar>
