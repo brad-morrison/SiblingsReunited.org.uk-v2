@@ -11,6 +11,7 @@ import StayInTouchSection from "../components/sections/StayInTouchSection"
 import FunderSection from "../components/sections/FunderSection"
 import PartnerSection from "../components/sections/PartnerSection"
 import StoreSection from "../components/sections/StoreSection"
+import ChildHero from "../components/childpage/ChildHero"
 
 function IndexPage() {
   return (
