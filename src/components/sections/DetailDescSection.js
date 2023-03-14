@@ -32,6 +32,7 @@ const Wrapper = styled.div`
 const ContentWrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 30px;
   max-width: 1300px;
   margin: 20px auto;
 
@@ -43,7 +44,7 @@ const ContentWrapper = styled.div`
 
 const ImageWrapper = styled.div`
   max-height: 400px;
-  padding: 30px;
+  //padding: 30px;
   order: ${props => props.flipped};
 `
 
@@ -56,7 +57,7 @@ const Image = styled.img`
 `
 
 const TextWrapper = styled.div`
-  padding: 30px;
+  //padding: 30px 0px;
   display: grid;
   align-items: center;
 `

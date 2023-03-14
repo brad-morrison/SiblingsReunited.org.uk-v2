@@ -46,13 +46,13 @@ const MainTitle = styled(BodyIntro)`
 const ContentWrapper = styled.div`
   max-width: 1300px;
   box-sizing: border-box;
-  margin: 20px auto;
   height: auto;
+
+  margin: auto;
 `
 
 const PostCards = styled.div`
   display: grid;
-  padding: 0 30px;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 30px;
   height: auto;
