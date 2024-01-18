@@ -87,12 +87,14 @@ export default Footer
 
 const Wrapper = styled.div`
   display: grid;
+  background-color: ${themes.darkBackground};
 `
 
 const ContentWrapper = styled.div`
-  background-color: ${themes.darkBackground};
   min-height: 300px;
   padding: 0 80px;
+  max-width: 1400px;
+  margin: auto;
 `
 
 const LogoWrapper = styled.div`
@@ -106,7 +108,7 @@ const LogoWrapper = styled.div`
 const Logo = styled.div`
   height: 100%;
   width: 100%;
-  background: url("/images/logos/logoWhite.svg");
+  background: url("/images/logos/Logo-white.png");
   background-size: contain;
   background-repeat: no-repeat;
 `

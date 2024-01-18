@@ -33,7 +33,7 @@ function IndexPage() {
       <QuotesSection />
       <FeaturedPostSection />
       <TriplePostSection title="Recent Posts" />
-      <StoreSection />
+      {/* <StoreSection /> */}
       <StayInTouchSection />
       <FunderSection title="Funded by" />
       <PartnerSection title="In Partnership with" />

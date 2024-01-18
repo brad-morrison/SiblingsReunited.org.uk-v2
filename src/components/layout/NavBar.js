@@ -45,7 +45,9 @@ const Wrapper = styled.div`
 const ContentWrapper = styled.div`
   display: grid;
   grid-template-columns: 250px auto;
-`
+  max-width: 1400px;
+  margin: auto;
+  `
 
 const LogoWrapper = styled.div`
   position: relative;
@@ -55,7 +57,7 @@ const LogoWrapper = styled.div`
 
 const Logo = styled.div`
   height: 100%;
-  background: url("./images/logos/logo.svg");
+  background: url("./images/logos/logo.png");
   background-size: contain;
   background-repeat: no-repeat;
 `
@@ -86,6 +88,7 @@ const Items = styled.div`
 
 const SecondaryBar = styled.div`
   width: 100%;
+  margin: auto;
   background-color: ${themes.purple};
   height: auto;
 `
@@ -93,5 +96,7 @@ const SecondaryBar = styled.div`
 const SecondaryContent = styled(Caption)`
   color: white;
   text-align: right;
+  max-width: 1400px;
+  margin: auto;
   padding: 8px 30px;
 `
