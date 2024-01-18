@@ -2,7 +2,7 @@ export const teamMembers = [
   {
     firstName: "Karen",
     lastName: "Morrison",
-    role: "Owner & Founder",
+    role: "Founder & Chair",
     image: "/images/people/karen.jpg",
     quote: "",
   },
