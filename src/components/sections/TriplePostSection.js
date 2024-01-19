@@ -1,5 +1,5 @@
 import React from "react"
-import styled from "styled-components"
+import styled, { keyframes } from "styled-components"
 import PostCard from "../objects/PostCard"
 import { BodyIntro } from "../styles/TextStyles"
 
@@ -34,6 +34,16 @@ function TriplePostSection(props) {
 
 export default TriplePostSection
 
+const slideUp = keyframes`
+  from { opacity: 0; transform: translateY(50px); filter: blur(2px)}
+  to { opacity: 1;  transform: translateY(0px);  filter: blur(0px)}
+`
+
+const slideDown = keyframes`
+  from { opacity: 0; transform: translateY(-20px); filter: blur(2px)}
+  to { opacity: 1;  transform: translateY(0px);  filter: blur(0px)}
+`
+
 const Wrapper = styled.div`
   position: relative;
 `
@@ -41,6 +51,7 @@ const Wrapper = styled.div`
 const MainTitle = styled(BodyIntro)`
   text-align: center;
   margin-bottom: 30px;
+  animation: ${slideDown} 1s;
 `
 
 const ContentWrapper = styled.div`
@@ -63,11 +74,31 @@ const PostCards = styled.div`
     padding: 0 20px;
     gap: 20px;
   }
-
+  
   // small
   @media (max-width: 688px) {
     grid-template-columns: auto;
     padding: 0 20px;
     gap: 20px;
   }
+
+  // animations
+  > * {
+    opacity: 0;
+    animation: ${slideUp} 1s forwards;
+
+    :nth-child(1) {
+      animation-delay: 0.1s;
+    }
+
+    :nth-child(2) {
+      animation-delay: 0.3s;
+    }
+
+    :nth-child(3) {
+      animation-delay: 0.5s;
+    }
+  }
+
+
 `
