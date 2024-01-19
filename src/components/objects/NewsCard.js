@@ -1,7 +1,8 @@
 import { Link } from "gatsby"
 import React from "react"
-import styled from "styled-components"
+import styled, { keyframes } from "styled-components"
 import { themes } from "../styles/ColorStyles"
+import LazyLoad from "react-lazy-load"
 
 import {
   BodyIntro,
@@ -15,6 +16,7 @@ import {
 
 function NewsCard(props) {
   return (
+    <LazyLoad>
     <Wrapper>
       <ContentWrapper>
         <ImageWrapper>
@@ -34,10 +36,21 @@ function NewsCard(props) {
         </TextWrapper>
       </ContentWrapper>
     </Wrapper>
+    </LazyLoad>
   )
 }
 
 export default NewsCard
+
+const slideDown = keyframes`
+  from { opacity: 0; transform: translateY(-20px); filter: blur(10px)}
+  to { opacity: 1;  transform: translateY(0px);  filter: blur(0px)}
+`
+
+const zoomIn = keyframes`
+  from { opacity: 0; transform: scale(0.8); filter: blur(10px)}
+  to { opacity: 1;  transform: scale(1);  filter: blur(0px)}
+`
 
 const Wrapper = styled.div`
   width: 100%;
@@ -69,6 +82,10 @@ const TextWrapper = styled.div`
   @media (max-width: 770px) {
     gap: 20px;
   }
+
+  // animation
+  opacity: 0;
+  animation: ${slideDown} 1s forwards;
 `
 
 const Image = styled.img`
@@ -80,6 +97,10 @@ const Image = styled.img`
   @media (max-width: 770px) {
     height: 300px;
   }
+
+  // animation
+  opacity: 0;
+  animation: ${zoomIn} 1s forwards;
 `
 
 // text styles

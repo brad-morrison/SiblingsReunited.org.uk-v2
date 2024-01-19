@@ -1,9 +1,11 @@
 import React from "react"
-import styled from "styled-components"
+import styled, { keyframes } from "styled-components"
 import { BodyMain, H4 } from "../styles/TextStyles"
+import LazyLoad from "react-lazy-load"
 
 export default function SiteBlockCircle(props) {
   return (
+    <LazyLoad>
     <Wrapper>
       <ContentWrapper flipped={props.flipped}>
         <ImageWrapper flipped={props.flipped}>
@@ -17,8 +19,19 @@ export default function SiteBlockCircle(props) {
         </TextWrapper>
       </ContentWrapper>
     </Wrapper>
+    </LazyLoad>
   )
 }
+
+const slideDown = keyframes`
+  from { opacity: 0; transform: translateY(-20px); filter: blur(10px)}
+  to { opacity: 1;  transform: translateY(0px);  filter: blur(0px)}
+`
+
+const zoomIn = keyframes`
+  from { opacity: 0; transform: scale(0.8); filter: blur(10px)}
+  to { opacity: 1;  transform: scale(1);  filter: blur(0px)}
+`
 
 const Wrapper = styled.div`
   position: relative;
@@ -49,6 +62,10 @@ const ImageWrapper = styled.div`
     order: 0;
     justify-self: center;
   }
+
+  //animation
+  opacity: 0;
+    animation: ${zoomIn} 1s 0.2s forwards;
 `
 
 const Image = styled.img`
@@ -64,6 +81,10 @@ const TextWrapper = styled.div`
   padding: 30px;
   display: grid;
   align-items: center;
+
+  // animation
+  opacity: 0;
+  animation: ${slideDown} 1s forwards;
 `
 
 const Text = styled.div`

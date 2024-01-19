@@ -39,7 +39,7 @@ const Wrapper = styled.div`
   overflow-x: hidden;
   max-width: 100%;
   background-color: ${themes.background};
-  z-index: 5;
+  z-index: 55;
 `
 
 const ContentWrapper = styled.div`
@@ -91,6 +91,7 @@ const SecondaryBar = styled.div`
   margin: auto;
   background-color: ${themes.purple};
   height: auto;
+  z-index: 100;
 `
 
 const SecondaryContent = styled(Caption)`

@@ -10,6 +10,7 @@ import QuotesSection from "../components/sections/QuotesSection"
 import AnimalCard from "../components/objects/AnimalCard"
 import { animals } from "../data/Animals"
 import SupervisorCard from "../components/objects/SupervisorCard"
+import LazyLoad from "react-lazy-load"
 
 export default function WhatWeProvidePage() {
   return (
@@ -19,40 +20,40 @@ export default function WhatWeProvidePage() {
       <DetailDescSection
         flipped="1"
         title="What makes us special?"
-        text1="Run from its unique farmland setting it provides a safe, fun and exhilarating learning environment where children. "
-        text2="Run from its unique farmland setting it provides a safe, fun and exhilarating learning environment where children. fun and exironment where children. "
+        text="Run from its unique farmland setting it provides a safe, fun and exhilarating learning environment where children. <br><br> 
+              Run from its unique farmland setting it provides a safe, fun and exhilarating learning environment where children."
       ></DetailDescSection>
       <SubHeading id="our-site">Our amazing site</SubHeading>
       <SiteBlock
         title="Woods"
-        text1="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. 
+        text="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. 
         The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
       ></SiteBlock>
       <SiteBlock
         title="Polytunnel"
-        text1="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. 
+        text="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. 
         The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
         flipped="1"
       ></SiteBlock>
       <SiteBlock
         title="Stables"
-        text1="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. 
+        text="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. 
         The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
       ></SiteBlock>
       <SiteBlock
         title="Wigwam"
-        text1="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. 
+        text="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. 
         The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
         flipped="1"
       ></SiteBlock>
       <SiteBlock
         title="BBQ Hut"
-        text1="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. 
+        text="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. 
         The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
       ></SiteBlock>
       <SiteBlock
         title="Outdoor Kitchen"
-        text1="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. 
+        text="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. 
         The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
         flipped="1"
       ></SiteBlock>
