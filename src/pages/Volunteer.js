@@ -27,18 +27,18 @@ export default function VolunteerPage() {
       <SubHeading id="roles">Our Roles</SubHeading>
       <SiteBlockCircle
         title="Contact Supervisor"
-        text1="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. 
+        text1="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. <br><br>
         The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
       ></SiteBlockCircle>
       <SiteBlockCircle
         flipped="1"
         title="General Volunteer"
-        text1="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. 
+        text1="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. <br><br>
         The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
       ></SiteBlockCircle>
       <SiteBlockCircle
         title="Contact Supervisor"
-        text1="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. 
+        text1="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. <br><br>
         The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
       ></SiteBlockCircle>
 

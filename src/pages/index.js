@@ -27,6 +27,7 @@ function IndexPage() {
               exhilarating learning environment where children can foster
               emotional bonds and help overcome the trauma associated with being
               separated."
+              image="/images/site.jpg"
       />
       <TriplePostSection title="Get Involved" />
       <ChildIntroSection />

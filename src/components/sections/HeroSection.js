@@ -34,7 +34,7 @@ export default HeroSection
 
 const Wrapper = styled.div`
   position: relative;
-  background: url("/images/hero2.jpeg");
+  background: url("/images/hero.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   max-height: fit-content;

@@ -7,13 +7,12 @@ export default function SiteBlockCircle(props) {
     <Wrapper>
       <ContentWrapper flipped={props.flipped}>
         <ImageWrapper flipped={props.flipped}>
-          <Image src="/images/site.jpg" />
+          <Image src={props.image} />
         </ImageWrapper>
         <TextWrapper>
           <Text>
             <Title>{props.title}</Title>
-            <Paragraph>{props.text1}</Paragraph>
-            <Paragraph>{props.text2}</Paragraph>
+            <Paragraph>{<p dangerouslySetInnerHTML={{ __html: props.text1}}></p>}</Paragraph>
           </Text>
         </TextWrapper>
       </ContentWrapper>

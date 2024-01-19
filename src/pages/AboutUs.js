@@ -12,6 +12,7 @@ import StayInTouchSection from "../components/sections/StayInTouchSection"
 import DetailDescSection from "../components/sections/DetailDescSection"
 import NewsSection from "../components/sections/NewsSection"
 import FeaturedPostSection from "../components/sections/FeaturedPostSection"
+import SiteBlockCircle from "../components/objects/SiteBlockCircle"
 
 export default function AboutUsPage() {
   return (
@@ -51,15 +52,12 @@ export default function AboutUsPage() {
 
         <ContentBlock>
           <SubHeading>A message from our Founder & Owner</SubHeading>
-          <DetailDescSection
+          <SiteBlockCircle
             title="Why I created STAR Siblings Reunited"
-            text1="I created Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s."
-            text2="Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s."
-          ></DetailDescSection>
+            text1="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. <br> <br>  
+            The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
+            image="/images/people/Karen.jpg"
+        ></SiteBlockCircle>
         </ContentBlock>
 
         <ContentBlock>
@@ -117,7 +115,7 @@ const Text = styled(BodyMain)``
 const WideImage = styled.img`
   width: 100%;
   height: 300px;
-  background: url("/images/hero2.jpeg");
+  background: url("/images/hero.jpg");
   background-size: cover;
   background-position: 0% 70%;
   margin: 10px 0px;

@@ -8,7 +8,7 @@ function DetailDescSection(props) {
     <Wrapper>
       <ContentWrapper>
         <ImageWrapper flipped={props.flipped}>
-          <Image src="/images/site.jpg" />
+          <Image src={props.image} />
         </ImageWrapper>
         <TextWrapper>
           <Text>
