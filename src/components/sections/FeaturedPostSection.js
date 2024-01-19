@@ -6,22 +6,18 @@ import PostCard from "../objects/PostCard"
 import { themes } from "../styles/ColorStyles"
 import { BodyIntro, BodyMain, H1, H3, MediumText } from "../styles/TextStyles"
 
-function FeaturedPostSection() {
+function FeaturedPostSection(props) {
   return (
     <Wrapper>
       <MainTitle>Featured Post</MainTitle>
       <ContentWrapper>
         <ImageWrapper>
-          <Image src="/images/news.jpg" />
+          <Image src={props.image} />
         </ImageWrapper>
         <TextWrapper>
           <Text>
-            <Title>Brothers and sisters split up by the care system</Title>
-            <Paragraph>
-              A major review of Scotland's care system has said the pain of
-              brothers and sisters being separated often has "profound and
-              lifelong consequences".
-            </Paragraph>
+            <Title>{props.title}</Title>
+            <Paragraph>{<p dangerouslySetInnerHTML={{ __html: props.text}}></p>}</Paragraph>
           </Text>
           <ButtonWrapper>
             <Button text="Read more" />
@@ -37,13 +33,12 @@ export default FeaturedPostSection
 const Wrapper = styled.div`
   position: relative;
   overflow: hidden;
-  margin: 30px auto;
+  margin: 0 auto;
   background-color: ${themes.secondaryBackground};
 `
 
 const MainTitle = styled(BodyIntro)`
   text-align: center;
-  margin-top: 30px;
 `
 
 const ContentWrapper = styled.div`
@@ -51,7 +46,6 @@ const ContentWrapper = styled.div`
   grid-template-columns: 1fr 1fr;
   max-width: 1300px;
   margin: 0 auto;
-  margin-bottom: 30px;
 
   // mid
   @media (max-width: 1034px) {

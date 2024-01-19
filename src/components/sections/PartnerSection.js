@@ -28,7 +28,7 @@ const Wrapper = styled.div`
 `
 
 const ContentWrapper = styled.div`
-  padding: 70px 30px;
+  //padding: 30px 30px;
 `
 
 const FunderCards = styled.div`
@@ -40,5 +40,4 @@ const FunderCards = styled.div`
 
 const MainTitle = styled(BodyIntro)`
   text-align: center;
-  margin-bottom: 30px;
 `

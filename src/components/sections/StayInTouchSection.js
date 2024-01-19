@@ -49,7 +49,7 @@ export default StayInTouchSection
 const Wrapper = styled.div`
   position: relative;
   overflow: hidden;
-  margin: 30px auto;
+  margin: 0 auto;
   background-color: ${themes.background};
 `
 
@@ -58,7 +58,6 @@ const ContentWrapper = styled.div`
   grid-template-columns: 1fr 1fr;
   max-width: 1300px;
   margin: 0 auto;
-  margin-bottom: 30px;
 
   // mid
   @media (max-width: 1034px) {

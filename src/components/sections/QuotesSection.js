@@ -13,7 +13,7 @@ function QuotesSection(props) {
         <QuoteCards>
           <QuoteCard
             quote="I just wanted to thank you for a brilliant visit to STAR today. Your
-          vision is amazing and the setting is perfect"
+                  vision is amazing and the setting is perfect"
             author="Children's panel member"
           />
           <QuoteCard
@@ -38,14 +38,14 @@ const Wrapper = styled.div`
 
 const MainTitle = styled(BodyIntro)`
   text-align: center;
-  margin-bottom: 30px;
+  //margin-bottom: 30px;
   display: ${props => (props.hideTitle = true ? "none" : "block")};
 `
 
 const ContentWrapper = styled.div`
   max-width: 1300px;
   box-sizing: border-box;
-  margin: 20px auto;
+  margin: 0 auto;
   height: auto;
 `
 

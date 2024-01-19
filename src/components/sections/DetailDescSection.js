@@ -13,8 +13,7 @@ function DetailDescSection(props) {
         <TextWrapper>
           <Text>
             <Title>{props.title}</Title>
-            <Paragraph>{props.text1}</Paragraph>
-            <Paragraph>{props.text2}</Paragraph>
+            <Paragraph>{<p dangerouslySetInnerHTML={{ __html: props.text}}></p>}</Paragraph>
           </Text>
         </TextWrapper>
       </ContentWrapper>
@@ -34,7 +33,7 @@ const ContentWrapper = styled.div`
   grid-template-columns: 1fr 1fr;
   gap: 30px;
   max-width: 1300px;
-  margin: 20px auto;
+  margin: 0 auto;
 
   // mid
   @media (max-width: 1034px) {
@@ -44,7 +43,7 @@ const ContentWrapper = styled.div`
 
 const ImageWrapper = styled.div`
   max-height: 400px;
-  //padding: 30px;
+  padding: 30px;
   order: ${props => props.flipped};
 `
 
@@ -57,7 +56,7 @@ const Image = styled.img`
 `
 
 const TextWrapper = styled.div`
-  //padding: 30px 0px;
+  padding: 30px;
   display: grid;
   align-items: center;
 `
