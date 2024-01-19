@@ -14,6 +14,8 @@ import styled from "styled-components"
 import StoreSection from "../components/sections/StoreSection"
 import ChildHero from "../components/childpage/ChildHero"
 import Spacer from "../components/layout/Spacer"
+import LazyLoad from "react-lazy-load"
+import SubHeroSection from "../components/sections/SubHeroSection"
 
 function IndexPage() {
   return (
@@ -21,7 +23,7 @@ function IndexPage() {
       <Seo title="Home" />
       <Content>
         <HeroSection />
-        <DetailDescSection
+        <SubHeroSection
           title="Reunited siblings is what we do"
           text="Siblings Reunited (STAR) reunites Brothers and Sisters separated
                 in the care system, through adoption or Kinship care by providing

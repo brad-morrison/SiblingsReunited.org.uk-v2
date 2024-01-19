@@ -2,40 +2,55 @@ import { stripLineComment } from "babel-plugin-styled-components/lib/minify"
 import React from "react"
 import styled, { keyframes } from "styled-components"
 import { BodyMain, H1, H4, MediumText } from "../styles/TextStyles"
+import LazyLoad from "react-lazy-load"
 
 function DetailDescSection(props) {
   return (
     <Wrapper>
-      <ContentWrapper>
-        <ImageWrapper flipped={props.flipped}>
-          <Image src={props.image} />
-        </ImageWrapper>
-        <TextWrapper>
-          <Text>
-            <Title>{props.title}</Title>
-            <Paragraph>{<p dangerouslySetInnerHTML={{ __html: props.text}}></p>}</Paragraph>
-          </Text>
-        </TextWrapper>
-      </ContentWrapper>
+      <LazyLoad>
+        <ContentWrapper>
+          <ImageWrapper flipped={props.flipped}>
+            <Image src={props.image} />
+          </ImageWrapper>
+          <TextWrapper>
+            <Text>
+              <Title>{props.title}</Title>
+              <Paragraph>{<p dangerouslySetInnerHTML={{ __html: props.text}}></p>}</Paragraph>
+            </Text>
+          </TextWrapper>
+        </ContentWrapper>
+      </LazyLoad>
     </Wrapper>
   )
 }
 
 export default DetailDescSection
 
+// animations
 const slideLeft = keyframes`
   from { opacity: 0; transform: translateX(-20px); filter: blur(10px)}
   to { opacity: 1;  transform: translateX(0px);  filter: blur(0px)}
 `
 
 const slideRight = keyframes`
-  from { opacity: 0;  transform: translateX(20px); filter: blur(10px); }
+  from { opacity: 0;  transform: translateX(50px); filter: blur(10px); }
   to { opacity: 1;   transform: translateX(0px);  filter: blur(0px)}
 `
 
+const slideDown = keyframes`
+  from { opacity: 0; transform: translateY(-20px); filter: blur(10px)}
+  to { opacity: 1;  transform: translateY(0px);  filter: blur(0px)}
+`
+
+const zoomIn = keyframes`
+  from { opacity: 0; transform: scale(0.8); filter: blur(10px)}
+  to { opacity: 1;  transform: scale(1);  filter: blur(0px)}
+`
+//
+
 const Wrapper = styled.div`
   position: relative;
-  overflow: hidden;
+  //overflow: hidden;
 `
 
 const ContentWrapper = styled.div`
@@ -66,6 +81,9 @@ const Image = styled.img`
   object-fit: cover;
   vertical-align: middle;
   border: 0.5px lightgray solid;
+
+  opacity: 0;
+  animation: ${zoomIn} 1s forwards;
 `
 
 const TextWrapper = styled.div`
@@ -74,7 +92,7 @@ const TextWrapper = styled.div`
   align-items: center;
 
   opacity: 0;
-  animation: ${slideRight} 1s 0.2s forwards;
+  animation: ${slideDown} 1s 0.2s forwards;
 `
 
 const Text = styled.div`

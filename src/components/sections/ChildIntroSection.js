@@ -1,8 +1,9 @@
 import { stripLineComment } from "babel-plugin-styled-components/lib/minify"
 import React from "react"
-import styled from "styled-components"
+import styled, { keyframes } from "styled-components"
 import Button from "../objects/Button"
 import PostCard from "../objects/PostCard"
+import LazyLoad from "react-lazy-load"
 import {
   BodyIntro,
   BodyMain,
@@ -14,6 +15,7 @@ import {
 
 function ChildIntroSection() {
   return (
+    <LazyLoad>
     <Wrapper>
       <ContentWrapper>
         <TextWrapper>
@@ -34,10 +36,22 @@ function ChildIntroSection() {
         </ImageWrapper>
       </ContentWrapper>
     </Wrapper>
+    </LazyLoad>
   )
 }
 
 export default ChildIntroSection
+
+// animations
+const slideLeft = keyframes`
+  from { opacity: 0; transform: translateX(-20px); filter: blur(10px)}
+  to { opacity: 1;  transform: translateX(0px);  filter: blur(0px)}
+  `
+
+const slideRight = keyframes`
+  from { opacity: 0;  transform: translateX(50px); filter: blur(10px); }
+  to { opacity: 1;   transform: translateX(0px);  filter: blur(0px)}
+`
 
 const Wrapper = styled.div`
   position: relative;
@@ -59,6 +73,10 @@ const ContentWrapper = styled.div`
 const ImageWrapper = styled.div`
   max-height: 400px;
   padding: 30px;
+
+  // animations
+  opacity: 0;
+  animation: ${slideRight} 1s 0.2s forwards
 `
 
 const Image = styled.img`
@@ -74,6 +92,10 @@ const TextWrapper = styled.div`
   display: grid;
   gap: 30px;
   align-items: center;
+
+  // animations
+  opacity: 0;
+  animation: ${slideLeft} 1s 0.2s forwards
 `
 
 const Text = styled.div`

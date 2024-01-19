@@ -2,32 +2,35 @@ import React from "react"
 import styled, { keyframes } from "styled-components"
 import PostCard from "../objects/PostCard"
 import { BodyIntro } from "../styles/TextStyles"
+import LazyLoad from "react-lazy-load"
 
 function TriplePostSection(props) {
   return (
     <Wrapper>
-      <ContentWrapper>
-        <MainTitle>{props.title}</MainTitle>
-        <PostCards>
-          <PostCard
-            title="Find out more about our unique charity"
-            subTitle="We are the first of it's kind in the UK"
-            img="/images/teacher.jpg"
-          />
+      <LazyLoad>
+        <ContentWrapper>
+          <MainTitle>{props.title}</MainTitle>
+          <PostCards>
+            <PostCard
+              title="Find out more about our unique charity"
+              subTitle="We are the first of it's kind in the UK"
+              img="/images/teacher.jpg"
+            />
 
-          <PostCard
-            title="Donate or fundraise to help us do what we do"
-            subTitle="No donation is too small or too large"
-            img="images/donate.png"
-          />
+            <PostCard
+              title="Donate or fundraise to help us do what we do"
+              subTitle="No donation is too small or too large"
+              img="images/donate.png"
+            />
 
-          <PostCard
-            title="Come and volunteer for Siblings Reunited"
-            subTitle="We are always looking for new team members."
-            img="images/volunteer.jpg"
-          />
-        </PostCards>
-      </ContentWrapper>
+            <PostCard
+              title="Come and volunteer for Siblings Reunited"
+              subTitle="We are always looking for new team members."
+              img="images/volunteer.jpg"
+            />
+          </PostCards>
+        </ContentWrapper>
+      </LazyLoad>
     </Wrapper>
   )
 }

@@ -23,6 +23,7 @@
     "react-dom": "^18.1.0",
     "react-hook-form": "^7.39.4",
     "react-icons": "^4.6.0",
+    "react-lazy-load": "^4.0.1",
     "react-slick": "^0.29.0",
     "slick-carousel": "^1.8.1",
     "smooth-scroll": "^16.1.3",

@@ -1,15 +1,17 @@
 import { stripLineComment } from "babel-plugin-styled-components/lib/minify"
 import React from "react"
-import styled from "styled-components"
+import styled, { keyframes } from "styled-components"
 import Button from "../objects/Button"
 import PostCard from "../objects/PostCard"
 import SocialMediaButton from "../objects/SocialMediaButton"
 import { themes } from "../styles/ColorStyles"
 import { BodyMain, H3, MediumText } from "../styles/TextStyles"
+import LazyLoad from "react-lazy-load"
 
 function StayInTouchSection() {
   const buttonSize = "75px"
   return (
+    <LazyLoad>
     <Wrapper>
       <ContentWrapper>
         <ImageWrapper>
@@ -41,10 +43,16 @@ function StayInTouchSection() {
         </TextWrapper>
       </ContentWrapper>
     </Wrapper>
+    </LazyLoad>
   )
 }
 
 export default StayInTouchSection
+
+const zoomIn = keyframes`
+  from { opacity: 0; transform: scale(0.8); filter: blur(10px)}
+  to { opacity: 1;  transform: scale(1);  filter: blur(0px)}
+`
 
 const Wrapper = styled.div`
   position: relative;
@@ -63,6 +71,10 @@ const ContentWrapper = styled.div`
   @media (max-width: 1034px) {
     grid-template-columns: auto;
   }
+
+  // animations
+  opacity: 0;
+  animation: ${zoomIn} 1s forwards;
 `
 
 const ImageWrapper = styled.div`
@@ -97,4 +109,22 @@ const Title = styled(H3)``
 const ButtonWrapper = styled.div`
   display: flex;
   gap: 20px;
+
+  // animations
+  > * {
+    opacity: 0;
+    animation: ${zoomIn} 1s forwards;
+
+    :nth-child(1) {
+      animation-delay: 0.3s;
+    }
+
+    :nth-child(2) {
+      animation-delay: 0.5s;
+    }
+
+    :nth-child(3) {
+      animation-delay: 0.7s;
+    }
+  }
 `
