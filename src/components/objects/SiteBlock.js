@@ -3,10 +3,11 @@ import styled, { keyframes } from "styled-components"
 import { BodyMain, H4 } from "../styles/TextStyles"
 import LazyLoad from "react-lazy-load"
 
-export default function SiteBlock(props) {
+function SiteBlock(props) {
   return (
-    <LazyLoad>
+    <LazyLoad height={"400px"}>
     <Wrapper>
+      
       <ContentWrapper>
         <ImageWrapper flipped={props.flipped}>
           <Image src="/images/site.jpg" />
@@ -20,10 +21,14 @@ export default function SiteBlock(props) {
           
         </TextWrapper>
       </ContentWrapper>
+      
     </Wrapper>
     </LazyLoad>
+    
   )
 }
+
+export default SiteBlock
 
 const slideDown = keyframes`
   from { opacity: 0; transform: translateY(-20px); filter: blur(10px)}
@@ -35,6 +40,11 @@ const slideRight = keyframes`
   to { opacity: 1;  transform: translateX(0px);  filter: blur(0px)}
 `
 
+const slideLeft = keyframes`
+  from { opacity: 0; transform: translateX(-20px); filter: blur(10px)}
+  to { opacity: 1;  transform: translateX(0px);  filter: blur(0px)}
+`
+
 const zoomIn = keyframes`
   from { opacity: 0; transform: scale(0.8); filter: blur(10px)}
   to { opacity: 1;  transform: scale(1);  filter: blur(0px)}
@@ -42,14 +52,13 @@ const zoomIn = keyframes`
 
 const Wrapper = styled.div`
   position: relative;
-  overflow: hidden;
 `
 
 const ContentWrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   max-width: 1300px;
-  margin: 20px auto;
+  margin: 0 auto;
 
   // mid
   @media (max-width: 1034px) {
@@ -66,6 +75,10 @@ const ImageWrapper = styled.div`
     grid-template-columns: auto;
     order: 0;
   }
+
+  // animations
+  opacity: 0;
+  animation: ${slideRight} 0.8s forwards;
 `
 
 const Image = styled.img`
@@ -75,9 +88,7 @@ const Image = styled.img`
   vertical-align: middle;
   border: 0.5px lightgray solid;
 
-    // animations
-    opacity: 0;
-    animation: ${slideRight} 1s 0.2s forwards;
+    
 `
 
 const TextWrapper = styled.div`
@@ -93,17 +104,15 @@ const Text = styled.div`
   > * {
     // animations
     opacity: 0;
-    animation: ${slideRight} 3s forwards;
 
     :nth-child(1) {
-      animation-delay: 0.4s;
+      animation: ${slideLeft} 0.8s 0.2s forwards;
     }
 
     :nth-child(2) {
-      animation-delay: 0.6s;
+      animation: ${slideRight} 0.8s 0.6s forwards;
     }
   }
-  
 `
 
 const Paragraph = styled(BodyMain)``

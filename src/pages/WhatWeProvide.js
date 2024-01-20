@@ -10,76 +10,37 @@ import QuotesSection from "../components/sections/QuotesSection"
 import AnimalCard from "../components/objects/AnimalCard"
 import { animals } from "../data/Animals"
 import SupervisorCard from "../components/objects/SupervisorCard"
+import { func } from "prop-types"
+import OurSiteSection from "../components/sections/OurSiteSection"
+import Spacer from "../components/layout/Spacer"
 import LazyLoad from "react-lazy-load"
+import AnimalSection from "../components/sections/AnimalSection"
 
-export default function WhatWeProvidePage() {
+function WhatWeProvidePage() {
   return (
     <Layout>
       <Seo title="WhatWeProvide" />
+      <ContentWrapper>
       <TopicPageTitle title="What We Provide" img="/images/birdHouse.jpg" />
+
       <DetailDescSection
         flipped="1"
         title="What makes us special?"
         text="Run from its unique farmland setting it provides a safe, fun and exhilarating learning environment where children. <br><br> 
               Run from its unique farmland setting it provides a safe, fun and exhilarating learning environment where children."
       ></DetailDescSection>
-      <SubHeading id="our-site">Our amazing site</SubHeading>
-      <SiteBlock
-        title="Woods"
-        text="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. 
-        The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
-      ></SiteBlock>
-      <SiteBlock
-        title="Polytunnel"
-        text="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. 
-        The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
-        flipped="1"
-      ></SiteBlock>
-      <SiteBlock
-        title="Stables"
-        text="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. 
-        The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
-      ></SiteBlock>
-      <SiteBlock
-        title="Wigwam"
-        text="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. 
-        The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
-        flipped="1"
-      ></SiteBlock>
-      <SiteBlock
-        title="BBQ Hut"
-        text="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. 
-        The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
-      ></SiteBlock>
-      <SiteBlock
-        title="Outdoor Kitchen"
-        text="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. 
-        The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
-        flipped="1"
-      ></SiteBlock>
+
+      <OurSiteSection />
+
       <SubHeading>What the children say</SubHeading>
       <QuotesSection hideTitle="true"></QuotesSection>
       <QuotesSection hideTitle="true"></QuotesSection>
+      
 
-      <SubHeading id="animals">Meet the animals..</SubHeading>
-      <TextBlock>
-        <Text>
-          We have lots of special animals here at STAR Siblings Reunited. We
-          have lots of special animals here at STAR Siblings Reunited. We have
-          lots of special animals here at STAR Siblings Reunited.
-        </Text>
-      </TextBlock>
-      <AnimalCards>
-        {animals.map((animal, index) => (
-          <AnimalCard
-            key={index}
-            name={animal.name}
-            type={animal.type}
-            image={animal.image}
-          ></AnimalCard>
-        ))}
-      </AnimalCards>
+      <AnimalSection />
 
+
+      {/*}
       <SubHeading id="supervisors">..and our amazing supervisors</SubHeading>
       <TextBlock>
         <Text>
@@ -127,9 +88,19 @@ export default function WhatWeProvidePage() {
           lots of special animals here at STAR Siblings Reunited.
         </Text>
       </TextBlock>
+
+      */}
+      </ContentWrapper>
     </Layout>
   )
 }
+
+export default WhatWeProvidePage
+
+const ContentWrapper = styled.div`
+  display: grid;
+  gap: 80px;
+`
 
 const SubHeading = styled(H3)`
   text-align: center;
@@ -146,15 +117,7 @@ const Text = styled(BodyMain)`
   text-align: left;
 `
 
-const AnimalCards = styled.div`
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  max-width: 1000px;
-  margin: 80px auto;
-  justify-content: center;
-  padding: 20px;
-`
+
 
 const SupervisorsSection = styled.div`
   display: grid;
