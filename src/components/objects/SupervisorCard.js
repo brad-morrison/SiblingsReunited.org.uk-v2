@@ -1,7 +1,8 @@
 import React from "react"
-import styled from "styled-components"
+import styled, { keyframes } from "styled-components"
 import { breaks } from "../styles/BreakStyles"
 import { themes } from "../styles/ColorStyles"
+import LazyLoad from "react-lazy-load"
 import {
   BodyMain,
   Caption,
@@ -14,6 +15,7 @@ import {
 
 export default function SupervisorCard(props) {
   return (
+    <LazyLoad>
     <Wrapper>
       <CardWrapper>
         <Image img={props.image}></Image>
@@ -28,8 +30,20 @@ export default function SupervisorCard(props) {
         <Quote>"{props.quote}"</Quote>
       </TextWrapper>
     </Wrapper>
+    </LazyLoad>
   )
 }
+
+// animations
+const slideLeft = keyframes`
+  from { opacity: 0; transform: translateX(-20px); filter: blur(10px)}
+  to { opacity: 1;  transform: translateX(0px);  filter: blur(0px)}
+`
+
+const slideRight = keyframes`
+  from { opacity: 0;  transform: translateX(50px); filter: blur(10px); }
+  to { opacity: 1;   transform: translateX(0px);  filter: blur(0px)}
+`
 
 const Wrapper = styled.div`
   width: fit-content;
@@ -37,7 +51,7 @@ const Wrapper = styled.div`
   grid-template-columns: auto auto;
 
   max-width: 1000px;
-  margin: 50px auto;
+  margin: 0 auto;
   gap: 30px;
 
   @media (max-width: 800px) {
@@ -50,6 +64,10 @@ const CardWrapper = styled.div`
   box-shadow: 0px 7px 22px rgba(0, 0, 0, 0.3);
   max-width: 240px;
   margin: auto;
+
+  // animations
+  opacity: 0;
+  animation: ${slideLeft} 1s forwards;
 `
 
 const TextWrapper = styled.div`
@@ -60,6 +78,10 @@ const TextWrapper = styled.div`
 
   @media (max-width: 800px) {
   }
+
+  // animations
+  opacity: 0;
+  animation: ${slideRight} 1s forwards;
 `
 
 const Text = styled(BodyMain)``

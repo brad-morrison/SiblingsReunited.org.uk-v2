@@ -15,12 +15,15 @@ import OurSiteSection from "../components/sections/OurSiteSection"
 import Spacer from "../components/layout/Spacer"
 import LazyLoad from "react-lazy-load"
 import AnimalSection from "../components/sections/AnimalSection"
+import SupervisorSection from "../components/sections/SupervisorSection"
+import SeasonalEventsSection from "../components/sections/SeasonalEventsSection"
 
 function WhatWeProvidePage() {
   return (
     <Layout>
       <Seo title="WhatWeProvide" />
       <ContentWrapper>
+
       <TopicPageTitle title="What We Provide" img="/images/birdHouse.jpg" />
 
       <DetailDescSection
@@ -32,64 +35,16 @@ function WhatWeProvidePage() {
 
       <OurSiteSection />
 
-      <SubHeading>What the children say</SubHeading>
-      <QuotesSection hideTitle="true"></QuotesSection>
-      <QuotesSection hideTitle="true"></QuotesSection>
+      <QuotesSection title={"What the children say"}></QuotesSection>
+      <QuotesSection></QuotesSection>
       
-
       <AnimalSection />
 
+      <SupervisorSection />
 
-      {/*}
-      <SubHeading id="supervisors">..and our amazing supervisors</SubHeading>
-      <TextBlock>
-        <Text>
-          We have lots of special animals here at STAR Siblings Reunited. We
-          have lots of special animals here at STAR Siblings Reunited. We have
-          lots of special animals here at STAR Siblings Reunited.
-        </Text>
-      </TextBlock>
-      <SupervisorsSection>
-        <SupervisorCard
-          name="Claire Smith"
-          role="Supervisor"
-          image="/images/people/Claire.jpg"
-          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit,  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-          quote="Feugiat sed lectus vestibulum mattis ullamcorper velit. Sed enim ut sem viverra aliquet. Duis ultricies lacus sed turpis tincidunt id aliquet. Viverra nibh cras pulvinar mattis."
-        ></SupervisorCard>
-        <SupervisorCard
-          name="Pete Melville"
-          role="Supervisor"
-          image="/images/people/Pete.jpg"
-          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit,  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-          quote="Feugiat sed lectus vestibulum mattis ullamcorper velit. Sed enim ut sem viverra aliquet. Duis ultricies lacus sed turpis tincidunt id aliquet. Viverra nibh cras pulvinar mattis."
-        ></SupervisorCard>
-        <SupervisorCard
-          name="Eleanor Smith"
-          role="Supervisor"
-          image="/images/people/Eleanor.jpg"
-          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit,  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-          quote="Feugiat sed lectus vestibulum mattis ullamcorper velit. Sed enim ut sem viverra aliquet. Duis ultricies lacus sed turpis tincidunt id aliquet. Viverra nibh cras pulvinar mattis."
-        ></SupervisorCard>
-        <SupervisorCard
-          name="Yvonne Tasker"
-          role="Supervisor"
-          image="/images/people/Yvonne.jpg"
-          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit,  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-          quote="Feugiat sed lectus vestibulum mattis ullamcorper velit. Sed enim ut sem viverra aliquet. Duis ultricies lacus sed turpis tincidunt id aliquet. Viverra nibh cras pulvinar mattis."
-        ></SupervisorCard>
-      </SupervisorsSection>
+      <SeasonalEventsSection />
 
-      <SubHeading id="events">Our Seasonal Events</SubHeading>
-      <TextBlock>
-        <Text>
-          We have lots of special animals here at STAR Siblings Reunited. We
-          have lots of special animals here at STAR Siblings Reunited. We have
-          lots of special animals here at STAR Siblings Reunited.
-        </Text>
-      </TextBlock>
-
-      */}
+    
       </ContentWrapper>
     </Layout>
   )
@@ -119,7 +74,4 @@ const Text = styled(BodyMain)`
 
 
 
-const SupervisorsSection = styled.div`
-  display: grid;
-  padding: 20px;
-`
+
