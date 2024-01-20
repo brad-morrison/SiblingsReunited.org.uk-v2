@@ -9,6 +9,7 @@ import Button from "../components/objects/Button"
 import TriplePostSection from "../components/sections/TriplePostSection"
 import { themes } from "../components/styles/ColorStyles"
 import FundraiserCard from "../components/objects/FundraiserCard"
+import Spline from "@splinetool/react-spline"
 
 function FundraisingPage() {
   return (
@@ -18,8 +19,10 @@ function FundraisingPage() {
       <DetailDescSection
         id="help-us"
         title="Make a real difference by fundraising for Siblings Reunited"
-        text1="On a Tuesday and we keep this day free for the upkeep, maintenance, help with the animals, garden section and for the development of new projects. The bell rings at 12.30 for soup and cake and we all gather around the kitchen table and have a good chat and catch up."
-        text2="Find out more below.."
+        text="On a Tuesday and we keep this day free for the upkeep, maintenance, help with the animals, 
+              garden section and for the development of new projects. The bell rings at 12.30 for soup and 
+              cake and we all gather around the kitchen table and have a good chat and catch up. 
+              <br><br> Find out more below."
       />
       <SubHeading id="fundraising-pack">
         Download our fundraising pack
@@ -38,7 +41,11 @@ function FundraisingPage() {
             <Button text="Download our pack"></Button>
           </ButtonWrapper>
         </TextSection>
-        <MediaSection></MediaSection>
+        <MediaSection>
+          <div>
+            <Spline scene="https://prod.spline.design/oSt-U9ICTRCUU3jn/scene.splinecode" />
+          </div>
+        </MediaSection>
       </FundraisePackSection>
 
       <SubHeading>Or use our individual downloads</SubHeading>

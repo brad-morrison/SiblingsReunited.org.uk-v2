@@ -1,7 +1,8 @@
 import React from "react"
-import styled from "styled-components"
+import styled, { keyframes } from "styled-components"
 import { H3, BodyMain } from "../styles/TextStyles"
 import LazyLoad from "react-lazy-load"
+import PhotoGallery from "./PhotoGallery"
 
 export default function SeasonalEventsSection() {
   return (
@@ -16,18 +17,29 @@ export default function SeasonalEventsSection() {
                 lots of special animals here at STAR Siblings Reunited.
                 </Text>
             </TextBlock>
+            <PhotoGallery />
       </ContentWrapper>
     </Wrapper>
     </LazyLoad>
   )
 }
 
-const Wrapper = styled.div``
+const slideDown = keyframes`
+  from { opacity: 0; transform: translateY(80px); filter: blur(10px)}
+  to { opacity: 1;  transform: translateY(0px);  filter: blur(0px)}
+`
+
+const Wrapper = styled.div`
+    // animations
+    opacity: 0;
+    animation: ${slideDown} 1s forwards;`
 
 const ContentWrapper = styled.div`
     display: grid;
     gap: 50px;
     margin-bottom: 50px;
+
+    
 `
 
 const SubHeading = styled(H3)`
