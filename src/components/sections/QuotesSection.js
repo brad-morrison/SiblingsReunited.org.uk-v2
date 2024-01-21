@@ -8,8 +8,9 @@ import { BodyIntro, H1, MediumText } from "../styles/TextStyles"
 
 function QuotesSection(props) {
   return (
+    <LazyLoad>
     <Wrapper>
-      <LazyLoad>
+      
       <ContentWrapper>
         <MainTitle>{props.title}</MainTitle>
         <QuoteCards>
@@ -28,8 +29,9 @@ function QuotesSection(props) {
           />
         </QuoteCards>
       </ContentWrapper>
-      </LazyLoad>
+      
     </Wrapper>
+    </LazyLoad>
   )
 }
 

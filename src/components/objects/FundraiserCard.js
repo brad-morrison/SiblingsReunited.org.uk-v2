@@ -1,5 +1,5 @@
 import React from "react"
-import styled from "styled-components"
+import styled, { keyframes } from "styled-components"
 import { breaks } from "../styles/BreakStyles"
 import { themes } from "../styles/ColorStyles"
 import {
@@ -11,9 +11,11 @@ import {
   SmallText,
   SmallText2,
 } from "../styles/TextStyles"
+import LazyLoad from "react-lazy-load"
 
 export default function FundraiserCard(props) {
   return (
+    <LazyLoad>
     <Wrapper>
       <CardWrapper>
         <Image img={props.image}></Image>
@@ -26,8 +28,20 @@ export default function FundraiserCard(props) {
         </AmountWrapper>
       </TextWrapper>
     </Wrapper>
+    </LazyLoad>
   )
 }
+
+// animations
+const slideLeft = keyframes`
+  from { opacity: 0; transform: translateX(-20px); filter: blur(10px)}
+  to { opacity: 1;  transform: translateX(0px);  filter: blur(0px)}
+`
+
+const slideRight = keyframes`
+  from { opacity: 0;  transform: translateX(50px); filter: blur(10px); }
+  to { opacity: 1;   transform: translateX(0px);  filter: blur(0px)}
+`
 
 const Wrapper = styled.div`
   width: fit-content;
@@ -47,6 +61,10 @@ const Wrapper = styled.div`
 const CardWrapper = styled.div`
   box-shadow: 0px 7px 22px rgba(0, 0, 0, 0.3);
   margin: auto;
+
+  // animations
+  opacity: 0;
+  animation: ${slideLeft} 1s forwards;
 `
 
 const TextWrapper = styled.div`
@@ -57,6 +75,10 @@ const TextWrapper = styled.div`
 
   @media (max-width: 800px) {
   }
+
+  // animations
+  opacity: 0;
+  animation: ${slideRight} 1s forwards;
 `
 
 const Text = styled(BodyMain)``

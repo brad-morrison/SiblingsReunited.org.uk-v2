@@ -4,15 +4,18 @@ import styled from "styled-components"
 import PostCard from "../objects/PostCard"
 import { themes } from "../styles/ColorStyles"
 import { H1, MediumText } from "../styles/TextStyles"
+import LazyLoad from "react-lazy-load"
 
 function QuoteCard(props) {
   return (
+    <LazyLoad>
     <Wrapper>
       <ContentWrapper>
         <Text>{props.quote}</Text>
         <Author>{props.author}</Author>
       </ContentWrapper>
     </Wrapper>
+    </LazyLoad>
   )
 }
 
