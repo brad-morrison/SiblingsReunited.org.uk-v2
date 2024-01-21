@@ -35,14 +35,11 @@ function FundraisingPage() {
       <TriplePostSection title="Or use our individual downloads" />
 
       <FundraiserSection />
-
     </Layout>
   )
 }
 
 export default FundraisingPage
-
-
 
 const TripleWrapper = styled.div`
   max-width: 1200px;

@@ -20,40 +20,39 @@ export default function VolunteerPage() {
       <Seo title="Volunteer" />
       <TopicPageTitle title="Volunteer" img="/images/teacher.jpg" />
       <ContentWrapper>
-      <DetailDescSection
-        id="help-us"
-        title="Come and join our amazing team!"
-        text="On a Tuesday and we keep this day free for the upkeep, maintenance, help with the animals, 
+        <DetailDescSection
+          id="help-us"
+          title="Come and join our amazing team!"
+          text="On a Tuesday and we keep this day free for the upkeep, maintenance, help with the animals, 
               garden section and for the development of new projects. <br><br>The bell rings at 12.30 for soup and 
               cake and we all gather around the kitchen table and have a good chat and catch up. 
               <br><br> Find out more below."
-      />
+        />
 
-      <OurRolesSection />
+        <OurRolesSection />
 
-      
-      <QuotesSection title={"What our Volunteers"}></QuotesSection>
-      <QuotesSection hideTitle="true"></QuotesSection>
+        <QuotesSection title={"What our Volunteers"}></QuotesSection>
+        <QuotesSection hideTitle="true"></QuotesSection>
 
-      <Block>
-        <SubHeading id="the-team">Meet our volunteers</SubHeading>
-        <Text>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s.
-        </Text>
-        <Team>
-          {teamMembers.map((member, index) => (
-            <TeamCard
-              key={index}
-              firstName={member.firstName}
-              lastName={member.lastName}
-              role={member.role}
-              image={member.image}
-            ></TeamCard>
-          ))}
-        </Team>
-      </Block>
+        <Block>
+          <SubHeading id="the-team">Meet our volunteers</SubHeading>
+          <Text>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s.
+          </Text>
+          <Team>
+            {teamMembers.map((member, index) => (
+              <TeamCard
+                key={index}
+                firstName={member.firstName}
+                lastName={member.lastName}
+                role={member.role}
+                image={member.image}
+              ></TeamCard>
+            ))}
+          </Team>
+        </Block>
       </ContentWrapper>
     </Layout>
   )
@@ -72,8 +71,6 @@ const CarouselWrapper = styled.div`
   width: 800px;
   height: 400px;
 `
-
-
 
 const Team = styled.div`
   width: 100%;

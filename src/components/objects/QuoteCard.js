@@ -9,12 +9,12 @@ import LazyLoad from "react-lazy-load"
 function QuoteCard(props) {
   return (
     <LazyLoad>
-    <Wrapper>
-      <ContentWrapper>
-        <Text>{props.quote}</Text>
-        <Author>{props.author}</Author>
-      </ContentWrapper>
-    </Wrapper>
+      <Wrapper>
+        <ContentWrapper>
+          <Text>{props.quote}</Text>
+          <Author>{props.author}</Author>
+        </ContentWrapper>
+      </Wrapper>
     </LazyLoad>
   )
 }

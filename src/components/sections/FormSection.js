@@ -1,6 +1,6 @@
 import * as React from "react"
 import { useForm } from "react-hook-form"
-import styled from "styled-components"
+import styled, { keyframes } from "styled-components"
 import Button from "../objects/Button"
 import { themes } from "../styles/ColorStyles"
 import {
@@ -16,22 +16,36 @@ import {
 } from "../styles/TextStyles"
 import Form from "../objects/Form"
 import { breaks } from "../styles/BreakStyles"
+import LazyLoad from "react-lazy-load"
 
 export default function FormSection() {
   return (
-    <Wrapper>
-      <ContentWrapper>
-        <FormInfo>
-          <Title>We'd love to hear from you!</Title>
-          <SubTitle>
-            We aim to respond to your enquiry within 24 hours.
-          </SubTitle>
-        </FormInfo>
-        <Form></Form>
-      </ContentWrapper>
-    </Wrapper>
+    <LazyLoad>
+      <Wrapper>
+        <ContentWrapper>
+          <FormInfo>
+            <Title>We'd love to hear from you!</Title>
+            <SubTitle>
+              We aim to respond to your enquiry within 24 hours.
+            </SubTitle>
+          </FormInfo>
+          <Form className="d"></Form>
+        </ContentWrapper>
+      </Wrapper>
+    </LazyLoad>
   )
 }
+
+// animations
+const slideLeft = keyframes`
+  from { opacity: 0; transform: translateX(-80px); filter: blur(10px)}
+  to { opacity: 1;  transform: translateX(0px);  filter: blur(0px)}
+`
+
+const slideRight = keyframes`
+  from { opacity: 0;  transform: translateX(80px); filter: blur(10px); }
+  to { opacity: 1;   transform: translateX(0px);  filter: blur(0px)}
+`
 
 const Wrapper = styled.div`
   max-width: 1300px;
@@ -50,7 +64,7 @@ const ContentWrapper = styled.div`
   }
 `
 
-// right section
+// left section
 const FormInfo = styled.div`
   width: 100%;
   height: 100%;
@@ -62,6 +76,10 @@ const FormInfo = styled.div`
   justify-content: start;
   align-content: start;
   gap: 40px;
+
+  // animations
+  opacity: 0;
+  animation: ${slideLeft} 1s forwards;
 `
 
 const Title = styled(H3)``

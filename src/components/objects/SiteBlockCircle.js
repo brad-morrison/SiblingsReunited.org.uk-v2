@@ -6,19 +6,21 @@ import LazyLoad from "react-lazy-load"
 export default function SiteBlockCircle(props) {
   return (
     <LazyLoad>
-    <Wrapper>
-      <ContentWrapper flipped={props.flipped}>
-        <ImageWrapper flipped={props.flipped}>
-          <Image src={props.image} />
-        </ImageWrapper>
-        <TextWrapper>
-          <Text>
-            <Title>{props.title}</Title>
-            <Paragraph>{<p dangerouslySetInnerHTML={{ __html: props.text1}}></p>}</Paragraph>
-          </Text>
-        </TextWrapper>
-      </ContentWrapper>
-    </Wrapper>
+      <Wrapper>
+        <ContentWrapper flipped={props.flipped}>
+          <ImageWrapper flipped={props.flipped}>
+            <Image src={props.image} />
+          </ImageWrapper>
+          <TextWrapper>
+            <Text>
+              <Title>{props.title}</Title>
+              <Paragraph>
+                {<p dangerouslySetInnerHTML={{ __html: props.text1 }}></p>}
+              </Paragraph>
+            </Text>
+          </TextWrapper>
+        </ContentWrapper>
+      </Wrapper>
     </LazyLoad>
   )
 }
@@ -65,7 +67,7 @@ const ImageWrapper = styled.div`
 
   //animation
   opacity: 0;
-    animation: ${zoomIn} 1s 0.2s forwards;
+  animation: ${zoomIn} 1s 0.2s forwards;
 `
 
 const Image = styled.img`

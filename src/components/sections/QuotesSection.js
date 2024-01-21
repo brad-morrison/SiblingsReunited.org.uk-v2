@@ -9,28 +9,26 @@ import { BodyIntro, H1, MediumText } from "../styles/TextStyles"
 function QuotesSection(props) {
   return (
     <LazyLoad>
-    <Wrapper>
-      
-      <ContentWrapper>
-        <MainTitle>{props.title}</MainTitle>
-        <QuoteCards>
-          <QuoteCard
-            quote="I just wanted to thank you for a brilliant visit to STAR today. Your
+      <Wrapper>
+        <ContentWrapper>
+          <MainTitle>{props.title}</MainTitle>
+          <QuoteCards>
+            <QuoteCard
+              quote="I just wanted to thank you for a brilliant visit to STAR today. Your
                   vision is amazing and the setting is perfect"
-            author="Children's panel member"
-          />
-          <QuoteCard
-            quote="I found it to be a magical place for Christopher to meet his siblings, with no one assessing or judging them"
-            author="Kinship carer"
-          />
-          <QuoteCard
-            quote="Most importantly for the girls, it was a carefree environment. Two hours of quality uninterrupted sister time."
-            author="Foster carer"
-          />
-        </QuoteCards>
-      </ContentWrapper>
-      
-    </Wrapper>
+              author="Children's panel member"
+            />
+            <QuoteCard
+              quote="I found it to be a magical place for Christopher to meet his siblings, with no one assessing or judging them"
+              author="Kinship carer"
+            />
+            <QuoteCard
+              quote="Most importantly for the girls, it was a carefree environment. Two hours of quality uninterrupted sister time."
+              author="Foster carer"
+            />
+          </QuoteCards>
+        </ContentWrapper>
+      </Wrapper>
     </LazyLoad>
   )
 }
@@ -79,21 +77,20 @@ const QuoteCards = styled.div`
   }
 
   > * {
-  // animations
-  opacity: 0;
-  animation: ${zoomIn} 1s forwards;
+    // animations
+    opacity: 0;
+    animation: ${zoomIn} 1s forwards;
 
-  :nth-child(1) {
-    animation-delay: 0;
-  }
+    :nth-child(1) {
+      animation-delay: 0;
+    }
 
-  :nth-child(2) {
-    animation-delay: 0.2s;
-  }
+    :nth-child(2) {
+      animation-delay: 0.2s;
+    }
 
-  :nth-child(3) {
-    animation-delay: 0.4s;
-  }
-
+    :nth-child(3) {
+      animation-delay: 0.4s;
+    }
   }
 `

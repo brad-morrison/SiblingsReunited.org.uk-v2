@@ -8,33 +8,30 @@ import LazyLoad from "react-lazy-load"
 export default function OurRolesSection() {
   return (
     <LazyLoad>
-    <Wrapper>
+      <Wrapper>
         <SubHeading id="roles">Our Roles</SubHeading>
         <ContentWrapper>
-            
-            <SiteBlockCircle
-                title="Contact Supervisor"
-                text1="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. <br><br>
+          <SiteBlockCircle
+            title="Contact Supervisor"
+            text1="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. <br><br>
                 The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
-            ></SiteBlockCircle>
-            <SiteBlockCircle
-                flipped="1"
-                title="General Volunteer"
-                text1="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. <br><br>
+          ></SiteBlockCircle>
+          <SiteBlockCircle
+            flipped="1"
+            title="General Volunteer"
+            text1="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. <br><br>
                 The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
-            ></SiteBlockCircle>
-            <SiteBlockCircle
-                title="Contact Supervisor"
-                text1="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. <br><br>
+          ></SiteBlockCircle>
+          <SiteBlockCircle
+            title="Contact Supervisor"
+            text1="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. <br><br>
                 The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
-            ></SiteBlockCircle>
-
-            <ButtonWrapper>
-                <Button text="Enquire now"></Button>
-            </ButtonWrapper>
-
+          ></SiteBlockCircle>
+          <ButtonWrapper>
+            <Button text="Enquire now"></Button>
+          </ButtonWrapper>
         </ContentWrapper>
-    </Wrapper>
+      </Wrapper>
     </LazyLoad>
   )
 }
