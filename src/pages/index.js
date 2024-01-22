@@ -11,6 +11,7 @@ import SubHero from "../components/sections/SubHero"
 import TriplePostCards from "../components/sections/TriplePostCards"
 import Quotes from "../components/sections/Quotes"
 import StayInTouch from "../components/sections/StayInTouch"
+import Block from "../components/objects/Block"
 
 function IndexPage() {
   return (
@@ -41,6 +42,17 @@ function IndexPage() {
                                     lifelong consequences.
                                     <br><br>
                                     Click below to read the full article."
+        />
+        <Block
+          image="/images/news.jpg"
+          introTitle="Featured Post"
+          title="Brothers and sisters split up by the care system"
+          text="A major review of Scotland's care system has said the pain of
+          brothers and sisters being separated often has profound and
+          lifelong consequences.
+          <br><br>
+          Click below to read the full article."
+          button="Read more"
         />
         <TriplePostCards title="Recent Posts" />
         {/* <StoreSection /> */}
