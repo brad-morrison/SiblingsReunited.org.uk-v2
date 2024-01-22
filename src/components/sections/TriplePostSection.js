@@ -1,7 +1,7 @@
 import React from "react"
 import styled, { keyframes } from "styled-components"
 import PostCard from "../objects/PostCard"
-import { BodyIntro } from "../styles/TextStyles"
+import { BodyIntro, H1, H3, H4 } from "../styles/TextStyles"
 import LazyLoad from "react-lazy-load"
 
 function TriplePostSection(props) {
@@ -51,7 +51,7 @@ const Wrapper = styled.div`
   position: relative;
 `
 
-const MainTitle = styled(BodyIntro)`
+const MainTitle = styled(H4)`
   text-align: center;
   margin-bottom: 30px;
   animation: ${slideDown} 1s;
@@ -77,7 +77,7 @@ const PostCards = styled.div`
     padding: 0 20px;
     gap: 20px;
   }
-  
+
   // small
   @media (max-width: 688px) {
     grid-template-columns: auto;
@@ -102,6 +102,4 @@ const PostCards = styled.div`
       animation-delay: 0.5s;
     }
   }
-
-
 `

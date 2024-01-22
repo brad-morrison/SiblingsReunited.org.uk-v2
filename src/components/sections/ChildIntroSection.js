@@ -10,32 +10,33 @@ import {
   H1,
   H2,
   H3,
+  H4,
   MediumText,
 } from "../styles/TextStyles"
 
 function ChildIntroSection() {
   return (
     <LazyLoad>
-    <Wrapper>
-      <ContentWrapper>
-        <TextWrapper>
-          <Text>
-            <Title>Are you a child coming to STAR Siblings Reunited?</Title>
-            <Paragraph>
-              We can’t wait to welcome you and your siblings! Click below to
-              open our child page and see what fun activities you can do
-              together.
-            </Paragraph>
-          </Text>
-          <ButtonWrapper>
-            <Button text="What can I do at STAR?" />
-          </ButtonWrapper>
-        </TextWrapper>
-        <ImageWrapper>
-          <Image src="/images/kids.jpeg" />
-        </ImageWrapper>
-      </ContentWrapper>
-    </Wrapper>
+      <Wrapper>
+        <ContentWrapper>
+          <TextWrapper>
+            <Text>
+              <Title>Are you a child coming to STAR Siblings Reunited?</Title>
+              <Paragraph>
+                We can’t wait to welcome you and your siblings! Click below to
+                open our child page and see what fun activities you can do
+                together.
+              </Paragraph>
+            </Text>
+            <ButtonWrapper>
+              <Button text="What can I do at STAR?" />
+            </ButtonWrapper>
+          </TextWrapper>
+          <ImageWrapper>
+            <Image src="/images/kids.jpeg" />
+          </ImageWrapper>
+        </ContentWrapper>
+      </Wrapper>
     </LazyLoad>
   )
 }
@@ -76,7 +77,7 @@ const ImageWrapper = styled.div`
 
   // animations
   opacity: 0;
-  animation: ${slideRight} 1s 0.2s forwards
+  animation: ${slideRight} 1s 0.2s forwards;
 `
 
 const Image = styled.img`
@@ -95,7 +96,7 @@ const TextWrapper = styled.div`
 
   // animations
   opacity: 0;
-  animation: ${slideLeft} 1s 0.2s forwards
+  animation: ${slideLeft} 1s 0.2s forwards;
 `
 
 const Text = styled.div`

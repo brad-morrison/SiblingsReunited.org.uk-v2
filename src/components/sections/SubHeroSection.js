@@ -1,7 +1,7 @@
 import { stripLineComment } from "babel-plugin-styled-components/lib/minify"
 import React from "react"
 import styled, { keyframes } from "styled-components"
-import { BodyMain, H1, H4, MediumText } from "../styles/TextStyles"
+import { BodyMain, H1, H2, H3, H4, MediumText } from "../styles/TextStyles"
 import LazyLoad from "react-lazy-load"
 
 function SubHeroSection(props) {
@@ -17,7 +17,9 @@ function SubHeroSection(props) {
           <TextWrapper>
             <Text>
               <Title>{props.title}</Title>
-              <Paragraph>{<p dangerouslySetInnerHTML={{ __html: props.text}}></p>}</Paragraph>
+              <Paragraph>
+                {<p dangerouslySetInnerHTML={{ __html: props.text }}></p>}
+              </Paragraph>
             </Text>
           </TextWrapper>
         </ContentWrapper>
@@ -101,8 +103,7 @@ const Text = styled.div`
 
 const Paragraph = styled(BodyMain)``
 
-const Title = styled(H4)``
-
+const Title = styled(H2)``
 
 const SVGImage = styled.img`
   position: absolute;

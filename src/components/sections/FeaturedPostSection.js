@@ -4,29 +4,38 @@ import styled, { keyframes } from "styled-components"
 import Button from "../objects/Button"
 import PostCard from "../objects/PostCard"
 import { themes } from "../styles/ColorStyles"
-import { BodyIntro, BodyMain, H1, H3, MediumText } from "../styles/TextStyles"
+import {
+  BodyIntro,
+  BodyMain,
+  H1,
+  H3,
+  H4,
+  MediumText,
+} from "../styles/TextStyles"
 import LazyLoad from "react-lazy-load"
 
 function FeaturedPostSection(props) {
   return (
     <LazyLoad>
-    <Wrapper>
-      <MainTitle>Featured Post</MainTitle>
-      <ContentWrapper>
-        <ImageWrapper>
-          <Image src={props.image} />
-        </ImageWrapper>
-        <TextWrapper>
-          <Text>
-            <Title>{props.title}</Title>
-            <Paragraph>{<p dangerouslySetInnerHTML={{ __html: props.text}}></p>}</Paragraph>
-          </Text>
-          <ButtonWrapper>
-            <Button text="Read more" />
-          </ButtonWrapper>
-        </TextWrapper>
-      </ContentWrapper>
-    </Wrapper>
+      <Wrapper>
+        <MainTitle>Featured Post</MainTitle>
+        <ContentWrapper>
+          <ImageWrapper>
+            <Image src={props.image} />
+          </ImageWrapper>
+          <TextWrapper>
+            <Text>
+              <Title>{props.title}</Title>
+              <Paragraph>
+                {<p dangerouslySetInnerHTML={{ __html: props.text }}></p>}
+              </Paragraph>
+            </Text>
+            <ButtonWrapper>
+              <Button text="Read more" />
+            </ButtonWrapper>
+          </TextWrapper>
+        </ContentWrapper>
+      </Wrapper>
     </LazyLoad>
   )
 }
@@ -57,7 +66,7 @@ const Wrapper = styled.div`
   background-color: ${themes.secondaryBackground};
 `
 
-const MainTitle = styled(BodyIntro)`
+const MainTitle = styled(H4)`
   text-align: center;
   animation: ${slideDown} 1s;
 `
@@ -80,7 +89,7 @@ const ImageWrapper = styled.div`
 
   // animations
   opacity: 0;
-  animation: ${slideLeft} 1s 0.2s forwards
+  animation: ${slideLeft} 1s 0.2s forwards;
 `
 
 const Image = styled.img`
@@ -99,7 +108,7 @@ const TextWrapper = styled.div`
 
   // animations
   opacity: 0;
-  animation: ${slideRight} 1s 0.2s forwards
+  animation: ${slideRight} 1s 0.2s forwards;
 `
 
 const Text = styled.div`

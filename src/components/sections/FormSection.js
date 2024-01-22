@@ -29,7 +29,7 @@ export default function FormSection() {
               We aim to respond to your enquiry within 24 hours.
             </SubTitle>
           </FormInfo>
-          <Form className="d"></Form>
+          <Form></Form>
         </ContentWrapper>
       </Wrapper>
     </LazyLoad>

@@ -31,8 +31,8 @@ export default function AboutUsPage() {
             </Text>
             <Text>
               Follow us on social media to keep up with the latest news or find
-              out more. We love letting everyone know what our sibling groups have
-              been up to!
+              out more. We love letting everyone know what our sibling groups
+              have been up to!
             </Text>
           </ContentBlock>
         </LazyLoad>
@@ -41,29 +41,31 @@ export default function AboutUsPage() {
           <ContentBlock>
             <SubHeading id="what-we-do">What we do</SubHeading>
             <Text>
-              It was popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of Lorem
-              Ipsum.
+              It was popularised in the 1960s with the release of Letraset
+              sheets containing Lorem Ipsum passages, and more recently with
+              desktop publishing software like Aldus PageMaker including
+              versions of Lorem Ipsum.
             </Text>
             <WideImage></WideImage>
             <Text>
               Follow us on social media to keep up with the latest news or find
-              out more. We love letting everyone know what our sibling groups have
-              been up to!
+              out more. We love letting everyone know what our sibling groups
+              have been up to!
             </Text>
           </ContentBlock>
         </LazyLoad>
 
         <LazyLoad>
           <ContentBlock>
-            <SubHeadingCenter>A message from our Founder & Owner</SubHeadingCenter>
+            <SubHeadingCenter>
+              A message from our Founder & Owner
+            </SubHeadingCenter>
             <SiteBlockCircle
               title="Why I created STAR Siblings Reunited"
               text1="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. <br> <br>  
               The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
               image="/images/people/Karen.jpg"
-          ></SiteBlockCircle>
+            ></SiteBlockCircle>
           </ContentBlock>
         </LazyLoad>
 
@@ -124,8 +126,7 @@ const ContentBlock = styled.div`
   animation: ${slideDown} 1s forwards;
 `
 
-const SubHeading = styled(H3)`
-`
+const SubHeading = styled(H3)``
 
 const SubHeadingCenter = styled(H3)`
   text-align: center;

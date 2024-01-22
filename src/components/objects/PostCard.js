@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { themes } from "../styles/ColorStyles"
-import { H4, MediumText, BodyIntro, BodyMain } from "../styles/TextStyles"
+import { H4, BodyMain } from "../styles/TextStyles"
 
 function PostCard(props) {
   return (
