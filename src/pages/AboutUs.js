@@ -9,9 +9,7 @@ import SiteBlockCircle from "../components/objects/SiteBlockCircle"
 import LazyLoad from "react-lazy-load"
 import TriplePostCards from "../components/sections/TriplePostCards"
 import StayInTouch from "../components/sections/StayInTouch"
-import { teamMembers } from "../data/TeamMembers"
-import TeamMemberCard from "../components/objects/TeamMemberCard"
-import { breaks } from "../components/styles/BreakStyles"
+import Team from "../components/sections/Team"
 
 export default function AboutUsPage() {
   return (
@@ -67,27 +65,7 @@ export default function AboutUsPage() {
           </ContentBlock>
         </LazyLoad>
 
-        <ContentBlock>
-          <SubHeading id="meet-the-team">
-            Meet the Siblings Reunited team
-          </SubHeading>
-          <Text>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s.
-          </Text>
-          <Team>
-            {teamMembers.map((member, index) => (
-              <TeamMemberCard
-                key={index}
-                firstName={member.firstName}
-                lastName={member.lastName}
-                role={member.role}
-                image={member.image}
-              ></TeamMemberCard>
-            ))}
-          </Team>
-        </ContentBlock>
+        <Team />
 
         <ContentBlock>
           <SubHeading id="who-we-are">In the News</SubHeading>
@@ -143,21 +121,4 @@ const WideImage = styled.img`
   background-size: cover;
   background-position: 0% 70%;
   margin: 10px 0px;
-`
-
-const Team = styled.div`
-  width: 100%;
-  display: grid;
-  justify-content: space-evenly;
-  gap: 40px;
-  grid-template-columns: auto auto auto auto;
-  //margin: 50px 0px;
-
-  @media (max-width: ${breaks.tablet}) {
-    grid-template-columns: auto auto auto;
-  }
-
-  @media (max-width: 770px) {
-    grid-template-columns: auto auto;
-  }
 `

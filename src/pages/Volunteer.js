@@ -5,9 +5,9 @@ import TopicPageTitle from "../components/sections/TopicPageTitle"
 import DetailDescSection from "../components/sections/DetailDescSection"
 import styled from "styled-components"
 import { BodyMain, H3 } from "../components/styles/TextStyles"
-import { breaks } from "../components/styles/BreakStyles"
 import OurRolesSection from "../components/sections/OurRolesSection"
 import Quotes from "../components/sections/Quotes"
+import Team from "../components/sections/Team"
 
 export default function VolunteerPage() {
   return (
@@ -28,49 +28,17 @@ export default function VolunteerPage() {
 
         <Quotes title={"What our Volunteers"} />
         <Quotes hideTitle="true" />
+
+        <Team />
       </ContentWrapper>
     </Layout>
   )
 }
 
 const ContentWrapper = styled.div`
+  max-width: 1200px;
+  margin: 0 auto;
   display: grid;
   gap: 120px;
 `
-
-const SubHeading = styled(H3)`
-  text-align: center;
-`
-
-const CarouselWrapper = styled.div`
-  width: 800px;
-  height: 400px;
-`
-
-const Team = styled.div`
-  width: 100%;
-  display: grid;
-  justify-content: space-evenly;
-  gap: 30px;
-  grid-template-columns: auto auto auto auto;
-  margin: 50px 0px;
-
-  @media (max-width: ${breaks.tablet}) {
-    grid-template-columns: auto auto auto;
-  }
-
-  @media (max-width: 770px) {
-    grid-template-columns: auto auto;
-  }
-`
-
 const Text = styled(BodyMain)``
-
-const Block = styled.div`
-  max-width: 1200px;
-  display: grid;
-  gap: 40px;
-  justify-content: center;
-  margin: auto;
-  padding: 30px;
-`
