@@ -54,6 +54,9 @@ const ContentWrapper = styled.div`
   gap: 20px;
   max-width: 1300px;
   margin: 0 auto;
+
+  opacity: 0;
+  animation: ${slideLeft} 1s forwards;
 `
 
 const ImageWrapper = styled.div`
@@ -69,6 +72,18 @@ const ContentWrapperWithImage = styled.div`
   max-width: 1300px;
   max-height: 400px;
   margin: 30px auto;
+
+  > * {
+    opacity: 0;
+
+    :nth-child(${props => (props.flipped === "1" ? "2" : "1")}) {
+      animation: ${slideLeft} 1s forwards;
+    }
+
+    :nth-child(${props => (props.flipped === "1" ? "1" : "2")}) {
+      animation: ${slideRight} 1s forwards;
+    }
+  }
 `
 
 const Image = styled.img`
@@ -83,13 +98,15 @@ const Image = styled.img`
 const DetailWrapper = styled.div`
   padding: ${props => (props.image ? "0" : "20px")};
   display: grid;
-  gap: 20px;
+  align-content: center;
+  gap: 40px;
+  vertical-align: middle;
 `
 
 const DetailWrapperNoImage = styled.div`
   padding: 0;
   display: grid;
-  gap: 20px;
+  gap: 60px;
 `
 
 const Paragraph = styled(BodyMain)``

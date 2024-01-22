@@ -12,6 +12,7 @@ export default function Team() {
       <ContentWrapper>
         <Block
           title="Meet the Siblings Reunited Team"
+          titleAlign="center"
           text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
         />
         <TeamCards>
@@ -40,7 +41,7 @@ const Wrapper = styled.div``
 const ContentWrapper = styled.div`
   display: grid;
   grid-template-columns: auto;
-  gap: 40px; // gap between elements in each block
+  gap: 120px; // gap between elements in each block
 
   // animation
   opacity: 0;

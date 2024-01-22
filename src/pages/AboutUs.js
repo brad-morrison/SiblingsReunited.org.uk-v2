@@ -10,6 +10,8 @@ import StayInTouch from "../components/sections/StayInTouch"
 import Team from "../components/sections/Team"
 import NewsList from "../components/sections/NewsList"
 import Block from "../components/objects/Block"
+import { zoomIn } from "../components/styles/Animations"
+import Spacer from "../components/layout/Spacer"
 
 export default function AboutUsPage() {
   return (
@@ -19,20 +21,20 @@ export default function AboutUsPage() {
       <PageContent>
         <Block
           title="Who We Are"
-          text="A major review of Scotland's care system has said the pain of brothers and sisters being seperated has profound and lifelong consequences.
+          text="A major review of Scotland's care system has said the pain of brothers and sisters being seperated has profound and lifelong consequences. A major review of Scotland's care system has said the pain of brothers and sisters being seperated has profound and lifelong consequences.
                 <br><br>
                 Follow us on social media to keep up with the latest news or find out more. We love letting everyone know what our siblings groups have been up to!"
         />
 
-        <Block
-          title="What We Do"
-          text="It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-        />
-
-        <WideImage></WideImage>
-
-        <Block text="Follow us on social media to keep up with the latest news or find out more. We love letting everyone know what our sibling groups have been up to!" />
-
+        <div>
+          <Block
+            title="What We Do"
+            text="It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+          />
+          <Spacer size="sm" />
+          <WideImage></WideImage>
+          <Block text="Follow us on social media to keep up with the latest news or find out more. We love letting everyone know what our sibling groups have been up to!" />
+        </div>
         <Block
           introTitle="A message from our Founder & Chair"
           title="Why I created STAR Siblings Reunited"
@@ -60,9 +62,10 @@ const slideDown = keyframes`
 `
 
 const PageContent = styled.div`
-  max-width: 1200px;
-  margin: auto;
-  padding: 40px;
+  max-width: 1300px;
+  margin: 80px auto;
+  display: grid;
+  gap: 120px;
 `
 
 const SubHeading = styled(H3)``
@@ -84,4 +87,7 @@ const WideImage = styled.img`
   background-size: cover;
   background-position: 0% 70%;
   margin: 10px 0px;
+
+  opacity: 0;
+  animation: ${zoomIn} 1s forwards;
 `

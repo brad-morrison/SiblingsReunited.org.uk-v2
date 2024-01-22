@@ -3,12 +3,13 @@ import styled from "styled-components"
 import { H3 } from "../styles/TextStyles"
 import NewsCard from "../objects/NewsCard"
 import { newsArticles } from "../../data/News"
+import Block from "../objects/Block"
 
 function NewsList() {
   return (
     <Wrapper>
       <ContentWrapper>
-        <SubHeading id="who-we-are">In the News</SubHeading>
+        <Block title="In the News" titleAlign="center" />
         <NewsCards>
           {newsArticles.map((article, index) => (
             <NewsCard

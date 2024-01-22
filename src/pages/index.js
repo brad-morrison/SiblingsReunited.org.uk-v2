@@ -41,15 +41,6 @@ function IndexPage() {
           button="What can I do at STAR?"
         />
 
-        <Block
-          image="/images/kids.jpeg"
-          title="Are you a child coming to STAR Siblings Reunited?"
-          text="We can’t wait to welcome you and your siblings! Click below to open our child page and see what fun activities you can do together.
-          <br><br>
-          Click below to see what you can do!"
-          button="What can I do at STAR?"
-        />
-
         <Quotes />
 
         <Block

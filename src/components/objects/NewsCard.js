@@ -66,7 +66,7 @@ const ImageWrapper = styled.div`
 const TextWrapper = styled.div`
   display: grid;
   padding: 10px 20px;
-  justify-content: space-around;
+  justify-content: start;
   align-items: center;
 
   // mobile

@@ -2,7 +2,7 @@ import React from "react"
 import styled, { keyframes } from "styled-components"
 import QuoteCard from "../objects/QuoteCard"
 import LazyLoad from "react-lazy-load"
-import { BodyIntro, H1, MediumText } from "../styles/TextStyles"
+import { BodyIntro, H1, H4, MediumText } from "../styles/TextStyles"
 
 function Quotes(props) {
   return (
@@ -42,8 +42,10 @@ const Wrapper = styled.div`
   position: relative;
 `
 
-const MainTitle = styled(BodyIntro)`
+const MainTitle = styled(H4)`
+  font-weight: 700;
   text-align: center;
+  margin-bottom: 50px;
 `
 
 const ContentWrapper = styled.div`
