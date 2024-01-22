@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { themes } from "../styles/ColorStyles"
 import LazyLoad from "react-lazy-load"
+import { MediumText } from "../styles/TextStyles"
 
 function QuoteCard(props) {
   return (
@@ -31,19 +32,8 @@ const ContentWrapper = styled.div`
   background-color: ${themes.secondaryBackground};
 `
 
-const Text = styled.p`
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 20px;
+const Text = styled(MediumText)`
+  font-weight: bold;
 `
 
-const Author = styled.p`
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-`
+const Author = styled(MediumText)``
