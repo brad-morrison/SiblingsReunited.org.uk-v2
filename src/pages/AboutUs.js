@@ -9,7 +9,9 @@ import SiteBlockCircle from "../components/objects/SiteBlockCircle"
 import LazyLoad from "react-lazy-load"
 import TriplePostCards from "../components/sections/TriplePostCards"
 import StayInTouch from "../components/sections/StayInTouch"
-import Team from "../components/sections/Team"
+import { teamMembers } from "../data/TeamMembers"
+import TeamMemberCard from "../components/objects/TeamMemberCard"
+import { breaks } from "../components/styles/BreakStyles"
 
 export default function AboutUsPage() {
   return (
@@ -142,7 +144,6 @@ const WideImage = styled.img`
   background-position: 0% 70%;
   margin: 10px 0px;
 `
-const SubHeading = styled(H3)``
 
 const Team = styled.div`
   width: 100%;
