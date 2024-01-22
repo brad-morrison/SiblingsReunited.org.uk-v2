@@ -54,7 +54,8 @@ const Wrapper = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  max-height: fit-content;
+  //max-height: fit-content;
+  height: 100%;
 
   animation: ${BackgroundImage} 1s forwards;
 `
