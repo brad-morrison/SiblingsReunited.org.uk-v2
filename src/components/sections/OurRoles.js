@@ -5,7 +5,7 @@ import Button from "../objects/Button"
 import { H3 } from "../styles/TextStyles"
 import LazyLoad from "react-lazy-load"
 
-export default function OurRolesSection() {
+export default function OurRoles() {
   return (
     <LazyLoad>
       <Wrapper>

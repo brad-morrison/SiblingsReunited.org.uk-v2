@@ -4,7 +4,7 @@ import { H3, BodyMain } from "../styles/TextStyles"
 import LazyLoad from "react-lazy-load"
 import Gallery from "./Gallery"
 
-export default function SeasonalEventsSection() {
+export default function Events() {
   return (
     <LazyLoad>
       <Wrapper>

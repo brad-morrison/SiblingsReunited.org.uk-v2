@@ -4,9 +4,9 @@ import Seo from "../components/seo"
 import TopicPageTitle from "../components/sections/TopicPageTitle"
 import DetailDescSection from "../components/sections/DetailDescSection"
 import styled from "styled-components"
-import FundraiserSection from "../components/sections/FundraiserSection"
-import FundraisePackSection from "../components/sections/FundraisePackSection"
 import TriplePostCards from "../components/sections/TriplePostCards"
+import FundraisePack from "../components/sections/FundraisePack"
+import FundraiserList from "../components/sections/FundraiserList"
 
 function FundraisingPage() {
   return (
@@ -23,13 +23,13 @@ function FundraisingPage() {
               <br><br> Find out more below."
       />
 
-      <FundraisePackSection />
+      <FundraisePack />
 
       {/* <SubHeading>Or use our individual downloads</SubHeading> */}
 
       <TriplePostCards title="Or use our individual downloads" />
 
-      <FundraiserSection />
+      <FundraiserList />
     </Layout>
   )
 }

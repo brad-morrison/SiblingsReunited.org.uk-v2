@@ -5,11 +5,11 @@ import TopicPageTitle from "../components/sections/TopicPageTitle"
 import DetailDescSection from "../components/sections/DetailDescSection"
 import { BodyMain, H3 } from "../components/styles/TextStyles"
 import styled from "styled-components"
-import OurSiteSection from "../components/sections/OurSiteSection"
-import SupervisorSection from "../components/sections/SupervisorSection"
-import SeasonalEventsSection from "../components/sections/SeasonalEventsSection"
 import Quotes from "../components/sections/Quotes"
 import Animals from "../components/sections/Animals"
+import OurSite from "../components/sections/OurSite"
+import Supervisors from "../components/sections/Supervisors"
+import Events from "../components/sections/Events"
 
 function WhatWeProvidePage() {
   return (
@@ -25,16 +25,16 @@ function WhatWeProvidePage() {
               Run from its unique farmland setting it provides a safe, fun and exhilarating learning environment where children."
         ></DetailDescSection>
 
-        <OurSiteSection />
+        <OurSite />
 
         <Quotes title={"What the children say"} />
         <Quotes />
 
         <Animals />
 
-        <SupervisorSection />
+        <Supervisors />
 
-        <SeasonalEventsSection />
+        <Events />
       </ContentWrapper>
     </Layout>
   )

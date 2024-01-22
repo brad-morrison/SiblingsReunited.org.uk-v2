@@ -6,7 +6,7 @@ import { BodyIntro } from "../styles/TextStyles"
 import { breaks } from "../styles/BreakStyles"
 import ContactDetailCard from "../objects/ContactDetailCard"
 
-export default function ContactDetailsSection() {
+export default function ContactDetails() {
   return (
     <Wrapper>
       <DetailsTitle>Our Details</DetailsTitle>

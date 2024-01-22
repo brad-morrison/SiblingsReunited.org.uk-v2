@@ -4,9 +4,9 @@ import TopicPageTitle from "../components/sections/TopicPageTitle"
 import Seo from "../components/seo"
 import styled from "styled-components"
 import FormSection from "../components/sections/FormSection"
-import ContactDetailsSection from "../components/sections/ContactDetailsSection"
 import TriplePostCards from "../components/sections/TriplePostCards"
 import StayInTouch from "../components/sections/StayInTouch"
+import ContactDetails from "../components/sections/ContactDetails"
 
 export default function ContactPage() {
   return (
@@ -14,7 +14,7 @@ export default function ContactPage() {
       <Seo title="Contact" />
       <TopicPageTitle title="Contact" img="/images/wellies.png" />
       <ContentWrapper>
-        <ContactDetailsSection />
+        <ContactDetails />
 
         <FormSection></FormSection>
 

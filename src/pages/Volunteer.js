@@ -5,9 +5,9 @@ import TopicPageTitle from "../components/sections/TopicPageTitle"
 import DetailDescSection from "../components/sections/DetailDescSection"
 import styled from "styled-components"
 import { BodyMain, H3 } from "../components/styles/TextStyles"
-import OurRolesSection from "../components/sections/OurRolesSection"
 import Quotes from "../components/sections/Quotes"
 import Team from "../components/sections/Team"
+import OurRoles from "../components/sections/OurRoles"
 
 export default function VolunteerPage() {
   return (
@@ -24,7 +24,7 @@ export default function VolunteerPage() {
               <br><br> Find out more below."
         />
 
-        <OurRolesSection />
+        <OurRoles />
 
         <Quotes title={"What our Volunteers"} />
         <Quotes hideTitle="true" />

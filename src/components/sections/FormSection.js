@@ -1,19 +1,7 @@
 import * as React from "react"
-import { useForm } from "react-hook-form"
 import styled, { keyframes } from "styled-components"
-import Button from "../objects/Button"
 import { themes } from "../styles/ColorStyles"
-import {
-  BodyIntro,
-  BodyMain,
-  Caption,
-  H1,
-  H2,
-  H3,
-  H4,
-  SmallText,
-  SmallText2,
-} from "../styles/TextStyles"
+import { BodyMain, H3 } from "../styles/TextStyles"
 import Form from "../objects/Form"
 import { breaks } from "../styles/BreakStyles"
 import LazyLoad from "react-lazy-load"
