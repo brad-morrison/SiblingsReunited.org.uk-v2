@@ -3,14 +3,14 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import ChildIntroSection from "../components/sections/ChildIntroSection"
 import FeaturedPostSection from "../components/sections/FeaturedPostSection"
-import QuotesSection from "../components/sections/Quotes"
-import StayInTouchSection from "../components/sections/StayInTouchSection"
 import FunderSection from "../components/sections/FunderSection"
 import PartnerSection from "../components/sections/PartnerSection"
 import styled from "styled-components"
 import Hero from "../components/sections/Hero"
 import SubHero from "../components/sections/SubHero"
 import TriplePostCards from "../components/sections/TriplePostCards"
+import Quotes from "../components/sections/Quotes"
+import StayInTouch from "../components/sections/StayInTouch"
 
 function IndexPage() {
   return (
@@ -32,7 +32,7 @@ function IndexPage() {
         />
         <TriplePostCards title="Get Involved" />
         <ChildIntroSection />
-        <QuotesSection />
+        <Quotes />
         <FeaturedPostSection
           image="/images/news.jpg"
           title="Brothers and sisters split up by the care system"
@@ -44,7 +44,7 @@ function IndexPage() {
         />
         <TriplePostCards title="Recent Posts" />
         {/* <StoreSection /> */}
-        <StayInTouchSection />
+        <StayInTouch />
         <FunderSection title="Funded by" />
         <PartnerSection title="In Partnership with" />
       </Content>

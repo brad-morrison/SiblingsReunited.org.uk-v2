@@ -5,11 +5,11 @@ import TopicPageTitle from "../components/sections/TopicPageTitle"
 import DetailDescSection from "../components/sections/DetailDescSection"
 import styled from "styled-components"
 import { BodyMain, H3 } from "../components/styles/TextStyles"
-import QuotesSection from "../components/sections/QuotesSection"
 import { teamMembers } from "../data/TeamMembers"
 import TeamMemberCard from "../components/objects/TeamMemberCard"
 import { breaks } from "../components/styles/BreakStyles"
 import OurRolesSection from "../components/sections/OurRolesSection"
+import Quotes from "../components/sections/Quotes"
 
 export default function VolunteerPage() {
   return (
@@ -27,9 +27,6 @@ export default function VolunteerPage() {
         />
 
         <OurRolesSection />
-
-        <QuotesSection title={"What our Volunteers"}></QuotesSection>
-        <QuotesSection hideTitle="true"></QuotesSection>
 
         <Block>
           <SubHeading id="the-team">Meet our volunteers</SubHeading>
@@ -50,6 +47,8 @@ export default function VolunteerPage() {
             ))}
           </Team>
         </Block>
+        <Quotes title={"What our Volunteers"} />
+        <Quotes hideTitle="true" />
       </ContentWrapper>
     </Layout>
   )

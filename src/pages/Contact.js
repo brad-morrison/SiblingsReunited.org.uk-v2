@@ -3,10 +3,10 @@ import Layout from "../components/layout"
 import TopicPageTitle from "../components/sections/TopicPageTitle"
 import Seo from "../components/seo"
 import styled from "styled-components"
-import StayInTouchSection from "../components/sections/StayInTouchSection"
 import FormSection from "../components/sections/FormSection"
 import ContactDetailsSection from "../components/sections/ContactDetailsSection"
 import TriplePostCards from "../components/sections/TriplePostCards"
+import StayInTouch from "../components/sections/StayInTouch"
 
 export default function ContactPage() {
   return (
@@ -20,7 +20,7 @@ export default function ContactPage() {
 
         <TriplePostCards title="You might also be interested in"></TriplePostCards>
 
-        <StayInTouchSection></StayInTouchSection>
+        <StayInTouch></StayInTouch>
       </ContentWrapper>
     </Layout>
   )

@@ -1,53 +1,50 @@
-import { stripLineComment } from "babel-plugin-styled-components/lib/minify"
 import React from "react"
 import styled, { keyframes } from "styled-components"
-import Button from "../objects/Button"
-import PostCard from "../objects/PostCard"
 import SocialMediaButton from "../objects/SocialMediaButton"
 import { themes } from "../styles/ColorStyles"
 import { BodyMain, H3, MediumText } from "../styles/TextStyles"
 import LazyLoad from "react-lazy-load"
 
-function StayInTouchSection() {
+function StayInTouch() {
   const buttonSize = "75px"
   return (
     <LazyLoad>
-    <Wrapper>
-      <ContentWrapper>
-        <ImageWrapper>
-          <Image src="/images/wellies.png" />
-        </ImageWrapper>
-        <TextWrapper>
-          <Text>
-            <Title>Stay in touch</Title>
-            <Paragraph>
-              Follow us on social media to keep up with the latest news or find
-              out more. We love letting everyone know what our sibling groups
-              have been up to!
-            </Paragraph>
-          </Text>
-          <ButtonWrapper>
-            <SocialMediaButton
-              type="/images/icons/face.svg"
-              width={buttonSize}
-            />
-            <SocialMediaButton
-              type="/images/icons/twit.svg"
-              width={buttonSize}
-            />
-            <SocialMediaButton
-              type="/images/icons/inst.svg"
-              width={buttonSize}
-            />
-          </ButtonWrapper>
-        </TextWrapper>
-      </ContentWrapper>
-    </Wrapper>
+      <Wrapper>
+        <ContentWrapper>
+          <ImageWrapper>
+            <Image src="/images/wellies.png" />
+          </ImageWrapper>
+          <TextWrapper>
+            <Text>
+              <Title>Stay in touch</Title>
+              <Paragraph>
+                Follow us on social media to keep up with the latest news or
+                find out more. We love letting everyone know what our sibling
+                groups have been up to!
+              </Paragraph>
+            </Text>
+            <ButtonWrapper>
+              <SocialMediaButton
+                type="/images/icons/face.svg"
+                width={buttonSize}
+              />
+              <SocialMediaButton
+                type="/images/icons/twit.svg"
+                width={buttonSize}
+              />
+              <SocialMediaButton
+                type="/images/icons/inst.svg"
+                width={buttonSize}
+              />
+            </ButtonWrapper>
+          </TextWrapper>
+        </ContentWrapper>
+      </Wrapper>
     </LazyLoad>
   )
 }
 
-export default StayInTouchSection
+export default StayInTouch
 
 const zoomIn = keyframes`
   from { opacity: 0; transform: scale(0.8); filter: blur(10px)}

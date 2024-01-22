@@ -1,12 +1,10 @@
-import { stripLineComment } from "babel-plugin-styled-components/lib/minify"
 import React from "react"
 import styled, { keyframes } from "styled-components"
-import PostCard from "../objects/PostCard"
 import QuoteCard from "../objects/QuoteCard"
 import LazyLoad from "react-lazy-load"
 import { BodyIntro, H1, MediumText } from "../styles/TextStyles"
 
-function QuotesSection(props) {
+function Quotes(props) {
   return (
     <LazyLoad>
       <Wrapper>
@@ -33,7 +31,7 @@ function QuotesSection(props) {
   )
 }
 
-export default QuotesSection
+export default Quotes
 
 const zoomIn = keyframes`
   from { opacity: 0; transform: scale(0.8); filter: blur(10px)}

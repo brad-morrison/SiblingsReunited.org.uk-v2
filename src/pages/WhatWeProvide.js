@@ -5,15 +5,11 @@ import TopicPageTitle from "../components/sections/TopicPageTitle"
 import DetailDescSection from "../components/sections/DetailDescSection"
 import { BodyMain, H3 } from "../components/styles/TextStyles"
 import styled from "styled-components"
-import SiteBlock from "../components/objects/SiteBlock"
-import QuotesSection from "../components/sections/QuotesSection"
-import AnimalCard from "../components/objects/AnimalCard"
-import { animals } from "../data/Animals"
-import SupervisorCard from "../components/objects/SupervisorCard"
 import OurSiteSection from "../components/sections/OurSiteSection"
 import AnimalSection from "../components/sections/AnimalSection"
 import SupervisorSection from "../components/sections/SupervisorSection"
 import SeasonalEventsSection from "../components/sections/SeasonalEventsSection"
+import Quotes from "../components/sections/Quotes"
 
 function WhatWeProvidePage() {
   return (
@@ -31,8 +27,8 @@ function WhatWeProvidePage() {
 
         <OurSiteSection />
 
-        <QuotesSection title={"What the children say"}></QuotesSection>
-        <QuotesSection></QuotesSection>
+        <Quotes title={"What the children say"} />
+        <Quotes />
 
         <AnimalSection />
 

@@ -1,17 +1,15 @@
 import * as React from "react"
 import styled, { keyframes } from "styled-components"
 import Layout from "../components/layout"
-import TeamMemberCard from "../components/objects/TeamMemberCard"
 import TopicPageTitle from "../components/sections/TopicPageTitle"
 import Seo from "../components/seo"
-import { breaks } from "../components/styles/BreakStyles"
 import { BodyMain, H2, H3 } from "../components/styles/TextStyles"
-import { teamMembers } from "../data/TeamMembers"
-import StayInTouchSection from "../components/sections/StayInTouchSection"
 import NewsSection from "../components/sections/NewsSection"
 import SiteBlockCircle from "../components/objects/SiteBlockCircle"
 import LazyLoad from "react-lazy-load"
 import TriplePostCards from "../components/sections/TriplePostCards"
+import StayInTouch from "../components/sections/StayInTouch"
+import Team from "../components/sections/Team"
 
 export default function AboutUsPage() {
   return (
@@ -95,7 +93,7 @@ export default function AboutUsPage() {
         </ContentBlock>
 
         <TriplePostCards title="You may be interested in"></TriplePostCards>
-        <StayInTouchSection></StayInTouchSection>
+        <StayInTouch />
       </PageContent>
     </Layout>
   )
@@ -144,6 +142,7 @@ const WideImage = styled.img`
   background-position: 0% 70%;
   margin: 10px 0px;
 `
+const SubHeading = styled(H3)``
 
 const Team = styled.div`
   width: 100%;
