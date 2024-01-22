@@ -6,10 +6,10 @@ import DetailDescSection from "../components/sections/DetailDescSection"
 import { BodyMain, H3 } from "../components/styles/TextStyles"
 import styled from "styled-components"
 import OurSiteSection from "../components/sections/OurSiteSection"
-import AnimalSection from "../components/sections/AnimalSection"
 import SupervisorSection from "../components/sections/SupervisorSection"
 import SeasonalEventsSection from "../components/sections/SeasonalEventsSection"
 import Quotes from "../components/sections/Quotes"
+import Animals from "../components/sections/Animals"
 
 function WhatWeProvidePage() {
   return (
@@ -30,7 +30,7 @@ function WhatWeProvidePage() {
         <Quotes title={"What the children say"} />
         <Quotes />
 
-        <AnimalSection />
+        <Animals />
 
         <SupervisorSection />
 

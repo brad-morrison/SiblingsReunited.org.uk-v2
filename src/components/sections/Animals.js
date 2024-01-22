@@ -5,31 +5,31 @@ import LazyLoad from "react-lazy-load"
 import AnimalCard from "../objects/AnimalCard"
 import { animals } from "../../data/Animals"
 
-export default function AnimalSection() {
+export default function Animals() {
   return (
     <LazyLoad>
-        <Wrapper>
-            <ContentWrapper>
-                <SubHeading id="animals">Meet the animals..</SubHeading>
-                <TextBlock>
-                    <Text>
-                    We have lots of special animals here at STAR Siblings Reunited. We
-                    have lots of special animals here at STAR Siblings Reunited. We have
-                    lots of special animals here at STAR Siblings Reunited.
-                    </Text>
-                </TextBlock>
-                <AnimalCards>
-                    {animals.map((animal, index) => (
-                    <AnimalCard
-                        key={index}
-                        name={animal.name}
-                        type={animal.type}
-                        image={animal.image}
-                    ></AnimalCard>
-                    ))}
-                </AnimalCards>
-            </ContentWrapper>
-        </Wrapper>
+      <Wrapper>
+        <ContentWrapper>
+          <SubHeading id="animals">Meet the animals..</SubHeading>
+          <TextBlock>
+            <Text>
+              We have lots of special animals here at STAR Siblings Reunited. We
+              have lots of special animals here at STAR Siblings Reunited. We
+              have lots of special animals here at STAR Siblings Reunited.
+            </Text>
+          </TextBlock>
+          <AnimalCards>
+            {animals.map((animal, index) => (
+              <AnimalCard
+                key={index}
+                name={animal.name}
+                type={animal.type}
+                image={animal.image}
+              ></AnimalCard>
+            ))}
+          </AnimalCards>
+        </ContentWrapper>
+      </Wrapper>
     </LazyLoad>
   )
 }

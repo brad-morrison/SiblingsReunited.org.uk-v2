@@ -1,15 +1,16 @@
 import React from "react"
 import styled from "styled-components"
-import { BodyIntro, BodyMain, H1, H2, MediumText } from "../styles/TextStyles"
+import { H3 } from "../styles/TextStyles"
 import { themes } from "../styles/ColorStyles"
-import FeaturedPostSection from "../sections/FeaturedPostSection"
+import FeaturedPostSection from "./FeaturedPostSection"
 import NewsCard from "../objects/NewsCard"
 import { newsArticles } from "../../data/News"
 
-function NewsSection() {
+function NewsList() {
   return (
     <Wrapper>
       <ContentWrapper>
+        <SubHeading id="who-we-are">In the News</SubHeading>
         <NewsCards>
           {newsArticles.map((article, index) => (
             <NewsCard
@@ -27,7 +28,7 @@ function NewsSection() {
   )
 }
 
-export default NewsSection
+export default NewsList
 
 const Wrapper = styled.div``
 
@@ -37,3 +38,4 @@ const NewsCards = styled.div`
   display: grid;
   gap: 30px;
 `
+const SubHeading = styled(H3)``

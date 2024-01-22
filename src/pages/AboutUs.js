@@ -4,12 +4,12 @@ import Layout from "../components/layout"
 import TopicPageTitle from "../components/sections/TopicPageTitle"
 import Seo from "../components/seo"
 import { BodyMain, H2, H3 } from "../components/styles/TextStyles"
-import NewsSection from "../components/sections/NewsSection"
 import SiteBlockCircle from "../components/objects/SiteBlockCircle"
 import LazyLoad from "react-lazy-load"
 import TriplePostCards from "../components/sections/TriplePostCards"
 import StayInTouch from "../components/sections/StayInTouch"
 import Team from "../components/sections/Team"
+import NewsList from "../components/sections/NewsList"
 
 export default function AboutUsPage() {
   return (
@@ -67,10 +67,7 @@ export default function AboutUsPage() {
 
         <Team />
 
-        <ContentBlock>
-          <SubHeading id="who-we-are">In the News</SubHeading>
-          <NewsSection />
-        </ContentBlock>
+        <NewsList />
 
         <TriplePostCards title="You may be interested in"></TriplePostCards>
         <StayInTouch />
