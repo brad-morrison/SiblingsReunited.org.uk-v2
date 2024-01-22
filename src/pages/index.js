@@ -54,6 +54,7 @@ function IndexPage() {
           Click below to read the full article."
           button="Read more"
         />
+
         <TriplePostCards title="Recent Posts" />
         {/* <StoreSection /> */}
         <StayInTouch />

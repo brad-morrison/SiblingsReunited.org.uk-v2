@@ -12,7 +12,7 @@ function Block(props) {
       {props.image ? (
         <ContentWrapperWithImage>
           <ImageWrapper flipped={props.flipped}>
-            <Image src={props.image} />
+            <Image src={props.image} round={props.round} />
           </ImageWrapper>
           <DetailWrapper>
             <Title>{props.title}</Title>
@@ -41,45 +41,49 @@ export default Block
 
 const Wrapper = styled.div`
   position: relative;
+  margin: 0 auto;
+  align-items: center;
+  max-height: 500px;
+  min-height: 300px;
 `
 
 const ContentWrapperWithImage = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 20px;
   max-width: 1300px;
-  margin: 0 auto;
+  margin: 30px auto;
 `
 
 const ContentWrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr;
+  gap: 20px;
   max-width: 1300px;
   margin: 0 auto;
 `
 
-ContentWrapper.defaultProps = {
-  image: "",
-}
-
 const ImageWrapper = styled.div`
-  //max-height: 400px;
-  height: 400px;
-  padding: 30px;
+  max-height: 400px;
+  height: 100%;
+  display: flex;
   order: ${props => props.flipped};
+  justify-self: center;
+  overflow: hidden;
 `
 
 const Image = styled.img`
-  width: 100%;
-  height: 100%;
   object-fit: cover;
-  vertical-align: middle;
   border: 0.5px lightgray solid;
+  width: ${props => (props.round ? "400px" : "auto")};
+  aspect-ratio: ${props => (props.round ? "1/1" : "auto")};
+  border-radius: ${props => (props.round ? "50%" : "0")};
 `
 
 const DetailWrapper = styled.div`
-  padding: 30px;
+  padding: 20px;
   display: grid;
-  gap: 30px;
+  gap: 20px;
 `
 
 const Paragraph = styled(BodyMain)``
