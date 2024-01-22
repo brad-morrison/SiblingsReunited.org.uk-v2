@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
-function FunderCard(props) {
+function LogoCard(props) {
   return (
     <Wrapper>
       <ContentWrapper>
@@ -11,7 +11,7 @@ function FunderCard(props) {
   )
 }
 
-export default FunderCard
+export default LogoCard
 
 const Wrapper = styled.div`
   background-color: white;

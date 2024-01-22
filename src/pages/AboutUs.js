@@ -1,19 +1,17 @@
 import * as React from "react"
 import styled, { keyframes } from "styled-components"
 import Layout from "../components/layout"
-import TeamCard from "../components/objects/TeamCard"
+import TeamMemberCard from "../components/objects/TeamMemberCard"
 import TopicPageTitle from "../components/sections/TopicPageTitle"
 import Seo from "../components/seo"
 import { breaks } from "../components/styles/BreakStyles"
 import { BodyMain, H2, H3 } from "../components/styles/TextStyles"
 import { teamMembers } from "../data/TeamMembers"
-import TriplePostSection from "../components/sections/TriplePostSection"
 import StayInTouchSection from "../components/sections/StayInTouchSection"
-import DetailDescSection from "../components/sections/DetailDescSection"
 import NewsSection from "../components/sections/NewsSection"
-import FeaturedPostSection from "../components/sections/FeaturedPostSection"
 import SiteBlockCircle from "../components/objects/SiteBlockCircle"
 import LazyLoad from "react-lazy-load"
+import TriplePostCards from "../components/sections/TriplePostCards"
 
 export default function AboutUsPage() {
   return (
@@ -80,13 +78,13 @@ export default function AboutUsPage() {
           </Text>
           <Team>
             {teamMembers.map((member, index) => (
-              <TeamCard
+              <TeamMemberCard
                 key={index}
                 firstName={member.firstName}
                 lastName={member.lastName}
                 role={member.role}
                 image={member.image}
-              ></TeamCard>
+              ></TeamMemberCard>
             ))}
           </Team>
         </ContentBlock>
@@ -96,7 +94,7 @@ export default function AboutUsPage() {
           <NewsSection />
         </ContentBlock>
 
-        <TriplePostSection title="You may be interested in"></TriplePostSection>
+        <TriplePostCards title="You may be interested in"></TriplePostCards>
         <StayInTouchSection></StayInTouchSection>
       </PageContent>
     </Layout>

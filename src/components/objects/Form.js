@@ -1,9 +1,7 @@
 import * as React from "react"
 import { useForm } from "react-hook-form"
 import styled, { keyframes } from "styled-components"
-import Button from "../objects/Button"
 import { themes } from "../styles/ColorStyles"
-import { Caption, SmallText, SmallText2 } from "../styles/TextStyles"
 import LazyLoad from "react-lazy-load"
 
 export default function Form() {

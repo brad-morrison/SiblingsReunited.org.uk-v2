@@ -23,6 +23,7 @@ const Wrapper = styled.div`
   z-index: 80;
 `
 const ContentWrapper = styled.div``
+
 const Text = styled(ButtonText)`
   background-color: ${themes.yellow};
   color: ${themes.text1};

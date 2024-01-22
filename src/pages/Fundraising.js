@@ -3,15 +3,10 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import TopicPageTitle from "../components/sections/TopicPageTitle"
 import DetailDescSection from "../components/sections/DetailDescSection"
-import { BodyMain, H3, H4 } from "../components/styles/TextStyles"
 import styled from "styled-components"
-import Button from "../components/objects/Button"
-import TriplePostSection from "../components/sections/TriplePostSection"
-import { themes } from "../components/styles/ColorStyles"
-import FundraiserCard from "../components/objects/FundraiserCard"
-import Spline from "@splinetool/react-spline"
 import FundraiserSection from "../components/sections/FundraiserSection"
 import FundraisePackSection from "../components/sections/FundraisePackSection"
+import TriplePostCards from "../components/sections/TriplePostCards"
 
 function FundraisingPage() {
   return (
@@ -32,7 +27,7 @@ function FundraisingPage() {
 
       {/* <SubHeading>Or use our individual downloads</SubHeading> */}
 
-      <TriplePostSection title="Or use our individual downloads" />
+      <TriplePostCards title="Or use our individual downloads" />
 
       <FundraiserSection />
     </Layout>

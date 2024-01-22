@@ -3,14 +3,11 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import TopicPageTitle from "../components/sections/TopicPageTitle"
 import DetailDescSection from "../components/sections/DetailDescSection"
-import Carousel from "../components/objects/Carousel"
 import styled from "styled-components"
 import { BodyMain, H3 } from "../components/styles/TextStyles"
-import SiteBlockCircle from "../components/objects/SiteBlockCircle"
-import Button from "../components/objects/Button"
 import QuotesSection from "../components/sections/QuotesSection"
 import { teamMembers } from "../data/TeamMembers"
-import TeamCard from "../components/objects/TeamCard"
+import TeamMemberCard from "../components/objects/TeamMemberCard"
 import { breaks } from "../components/styles/BreakStyles"
 import OurRolesSection from "../components/sections/OurRolesSection"
 
@@ -43,13 +40,13 @@ export default function VolunteerPage() {
           </Text>
           <Team>
             {teamMembers.map((member, index) => (
-              <TeamCard
+              <TeamMemberCard
                 key={index}
                 firstName={member.firstName}
                 lastName={member.lastName}
                 role={member.role}
                 image={member.image}
-              ></TeamCard>
+              ></TeamMemberCard>
             ))}
           </Team>
         </Block>

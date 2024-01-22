@@ -1,12 +1,11 @@
 import React from "react"
 import styled, { keyframes } from "styled-components"
-import { BodyIntro, BodyMain, H1, H2, MediumText } from "../styles/TextStyles"
+import { BodyIntro, H1 } from "../styles/TextStyles"
 import Button from "../objects/Button"
 import SocialMediaBar from "../objects/SocialMediaBar"
 import { themes } from "../styles/ColorStyles"
-import LazyLoad from "react-lazy-load"
 
-function HeroSection() {
+function Hero() {
   return (
     <Wrapper>
       <Content>
@@ -32,7 +31,7 @@ function HeroSection() {
   )
 }
 
-export default HeroSection
+export default Hero
 
 const slideInRight = keyframes`
   from { opacity: 0; transform: translateX(50px); filter: blur(10px)}
@@ -119,7 +118,7 @@ const TextWrapper = styled.div`
   // animation
   opacity: 0;
   animation: ${slideDown} 1.5s forwards;
-  
+
   // children animation
   > * {
     opacity: 0;
@@ -133,8 +132,6 @@ const TextWrapper = styled.div`
       animation-delay: 0.5s;
     }
   }
-  
-  
 `
 
 /*
@@ -155,5 +152,4 @@ const Title = styled(H1)`
   color: ${themes.text1};
 `
 
-const Description = styled(BodyIntro)`
-  `
+const Description = styled(BodyIntro)``

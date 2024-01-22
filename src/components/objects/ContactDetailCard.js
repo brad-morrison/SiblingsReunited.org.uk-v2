@@ -1,10 +1,10 @@
 import React from "react"
 import styled from "styled-components"
 import { themes } from "../styles/ColorStyles"
-import { BodyIntro, BodyMain, Caption } from "../styles/TextStyles"
+import { Caption } from "../styles/TextStyles"
 import { FaEnvelope, FaFacebook, FaHome, FaMail, FaPhone } from "react-icons/fa"
 
-export default function ContactCard(props) {
+export default function ContactDetailCard(props) {
   function Icon() {
     switch (props.icon) {
       case "home":

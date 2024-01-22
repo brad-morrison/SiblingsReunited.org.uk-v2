@@ -2,19 +2,19 @@ import React from "react"
 import styled, { keyframes } from "styled-components"
 import { breaks } from "../styles/BreakStyles"
 import { themes } from "../styles/ColorStyles"
-import { BodyIntro, Caption, Caption2, SmallText } from "../styles/TextStyles"
+import { Caption2, SmallText } from "../styles/TextStyles"
 import LazyLoad from "react-lazy-load"
 
-export default function TeamCard(props) {
+export default function TeamMemberCard(props) {
   return (
     <LazyLoad>
-    <Wrapper>
-      <Image img={props.image}></Image>
-      <Details>
-        <MemberName>{props.firstName}</MemberName>
-        <MemberRole>{props.role}</MemberRole>
-      </Details>
-    </Wrapper>
+      <Wrapper>
+        <Image img={props.image}></Image>
+        <Details>
+          <MemberName>{props.firstName}</MemberName>
+          <MemberRole>{props.role}</MemberRole>
+        </Details>
+      </Wrapper>
     </LazyLoad>
   )
 }

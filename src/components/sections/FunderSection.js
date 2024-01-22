@@ -1,6 +1,6 @@
 import React from "react"
 import styled, { keyframes } from "styled-components"
-import FunderCard from "../objects/FunderCard"
+import FunderCard from "../objects/LogoCard"
 import { themes } from "../styles/ColorStyles"
 import { BodyIntro } from "../styles/TextStyles"
 import LazyLoad from "react-lazy-load"
@@ -8,15 +8,15 @@ import LazyLoad from "react-lazy-load"
 function FunderSection(props) {
   return (
     <LazyLoad>
-    <Wrapper>
-      <ContentWrapper>
-        <MainTitle>{props.title}</MainTitle>
-        <FunderCards>
-          <FunderCard logo="/images/logos/lottery.png" />
-          <FunderCard logo="/images/logos/corra.png" />
-        </FunderCards>
-      </ContentWrapper>
-    </Wrapper>
+      <Wrapper>
+        <ContentWrapper>
+          <MainTitle>{props.title}</MainTitle>
+          <FunderCards>
+            <FunderCard logo="/images/logos/lottery.png" />
+            <FunderCard logo="/images/logos/corra.png" />
+          </FunderCards>
+        </ContentWrapper>
+      </Wrapper>
     </LazyLoad>
   )
 }

@@ -2,24 +2,24 @@ import React from "react"
 import styled, { keyframes } from "styled-components"
 import { H3, BodyMain } from "../styles/TextStyles"
 import LazyLoad from "react-lazy-load"
-import PhotoGallery from "./PhotoGallery"
+import Gallery from "./Gallery"
 
 export default function SeasonalEventsSection() {
   return (
     <LazyLoad>
-    <Wrapper>
+      <Wrapper>
         <SubHeading id="events">Our Seasonal Events</SubHeading>
         <ContentWrapper>
-            <TextBlock>
-                <Text>
-                We have lots of special animals here at STAR Siblings Reunited. We
-                have lots of special animals here at STAR Siblings Reunited. We have
-                lots of special animals here at STAR Siblings Reunited.
-                </Text>
-            </TextBlock>
-            <PhotoGallery />
-      </ContentWrapper>
-    </Wrapper>
+          <TextBlock>
+            <Text>
+              We have lots of special animals here at STAR Siblings Reunited. We
+              have lots of special animals here at STAR Siblings Reunited. We
+              have lots of special animals here at STAR Siblings Reunited.
+            </Text>
+          </TextBlock>
+          <Gallery />
+        </ContentWrapper>
+      </Wrapper>
     </LazyLoad>
   )
 }
@@ -30,16 +30,15 @@ const slideDown = keyframes`
 `
 
 const Wrapper = styled.div`
-    // animations
-    opacity: 0;
-    animation: ${slideDown} 1s forwards;`
+  // animations
+  opacity: 0;
+  animation: ${slideDown} 1s forwards;
+`
 
 const ContentWrapper = styled.div`
-    display: grid;
-    gap: 50px;
-    margin-bottom: 50px;
-
-    
+  display: grid;
+  gap: 50px;
+  margin-bottom: 50px;
 `
 
 const SubHeading = styled(H3)`

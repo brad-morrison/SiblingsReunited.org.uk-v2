@@ -1,35 +1,32 @@
 import React from "react"
 import styled, { keyframes } from "styled-components"
-import { breaks } from "../styles/BreakStyles"
 import { themes } from "../styles/ColorStyles"
 import LazyLoad from "react-lazy-load"
 import {
   BodyMain,
   Caption,
-  Caption2,
   H4,
   MediumText,
   SmallText,
-  SmallText2,
 } from "../styles/TextStyles"
 
 export default function SupervisorCard(props) {
   return (
     <LazyLoad>
-    <Wrapper>
-      <CardWrapper>
-        <Image img={props.image}></Image>
-        <Details>
-          <MemberName>{props.name}</MemberName>
-          <MemberRole>{props.role}</MemberRole>
-        </Details>
-      </CardWrapper>
-      <TextWrapper>
-        <Title>{props.name}</Title>
-        <Text>{props.text}</Text>
-        <Quote>"{props.quote}"</Quote>
-      </TextWrapper>
-    </Wrapper>
+      <Wrapper>
+        <CardWrapper>
+          <Image img={props.image}></Image>
+          <Details>
+            <MemberName>{props.name}</MemberName>
+            <MemberRole>{props.role}</MemberRole>
+          </Details>
+        </CardWrapper>
+        <TextWrapper>
+          <Title>{props.name}</Title>
+          <Text>{props.text}</Text>
+          <Quote>"{props.quote}"</Quote>
+        </TextWrapper>
+      </Wrapper>
     </LazyLoad>
   )
 }

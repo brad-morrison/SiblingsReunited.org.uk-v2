@@ -1,33 +1,30 @@
 import React from "react"
 import styled, { keyframes } from "styled-components"
-import { breaks } from "../styles/BreakStyles"
 import { themes } from "../styles/ColorStyles"
 import {
   BodyMain,
   Caption,
   Caption2,
   H4,
-  MediumText,
   SmallText,
-  SmallText2,
 } from "../styles/TextStyles"
 import LazyLoad from "react-lazy-load"
 
 export default function FundraiserCard(props) {
   return (
     <LazyLoad>
-    <Wrapper>
-      <CardWrapper>
-        <Image img={props.image}></Image>
-      </CardWrapper>
-      <TextWrapper>
-        <Title>{props.name}</Title>
-        <Text>{props.text}</Text>
-        <AmountWrapper>
-          <Amount>£{props.raised} Raised</Amount>
-        </AmountWrapper>
-      </TextWrapper>
-    </Wrapper>
+      <Wrapper>
+        <CardWrapper>
+          <Image img={props.image}></Image>
+        </CardWrapper>
+        <TextWrapper>
+          <Title>{props.name}</Title>
+          <Text>{props.text}</Text>
+          <AmountWrapper>
+            <Amount>£{props.raised} Raised</Amount>
+          </AmountWrapper>
+        </TextWrapper>
+      </Wrapper>
     </LazyLoad>
   )
 }

@@ -1,10 +1,10 @@
 import React from "react"
 import styled, { keyframes } from "styled-components"
 import PostCard from "../objects/PostCard"
-import { BodyIntro, H1, H3, H4 } from "../styles/TextStyles"
+import { H4 } from "../styles/TextStyles"
 import LazyLoad from "react-lazy-load"
 
-function TriplePostSection(props) {
+function TriplePostCards(props) {
   return (
     <Wrapper>
       <LazyLoad>
@@ -35,7 +35,7 @@ function TriplePostSection(props) {
   )
 }
 
-export default TriplePostSection
+export default TriplePostCards
 
 const slideUp = keyframes`
   from { opacity: 0; transform: translateY(50px); filter: blur(2px)}

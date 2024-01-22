@@ -1,10 +1,10 @@
 import React from "react"
 import styled, { keyframes } from "styled-components"
 import { themes } from "../styles/ColorStyles"
-import Map from "./Map"
-import ContactCard from "../objects/ContactCard"
+import Map from "../objects/Map"
 import { BodyIntro } from "../styles/TextStyles"
 import { breaks } from "../styles/BreakStyles"
+import ContactDetailCard from "../objects/ContactDetailCard"
 
 export default function ContactDetailsSection() {
   return (
@@ -16,13 +16,19 @@ export default function ContactDetailsSection() {
             <Map />
           </MapWrapper>
           <ContactCards>
-            <ContactCard
+            <ContactDetailCard
               icon="home"
               text="East Flisk Farm, Newburgh, Fife, KY146HP"
             />
-            <ContactCard icon="mail" text="karen@siblingsreunited.co.uk" />
-            <ContactCard icon="phone" text="07398721366" />
-            <ContactCard icon="facebook" text="facebook.com/SiblingsReunited" />
+            <ContactDetailCard
+              icon="mail"
+              text="karen@siblingsreunited.co.uk"
+            />
+            <ContactDetailCard icon="phone" text="07398721366" />
+            <ContactDetailCard
+              icon="facebook"
+              text="facebook.com/SiblingsReunited"
+            />
           </ContactCards>
         </DetailsSection>
       </ContentWrapper>

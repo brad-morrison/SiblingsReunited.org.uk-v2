@@ -1,10 +1,9 @@
-import { stripLineComment } from "babel-plugin-styled-components/lib/minify"
 import React from "react"
 import styled, { keyframes } from "styled-components"
 import { BodyMain, H1, H2, H3, H4, MediumText } from "../styles/TextStyles"
 import LazyLoad from "react-lazy-load"
 
-function SubHeroSection(props) {
+function SubHero(props) {
   return (
     <Wrapper>
       <LazyLoad>
@@ -28,7 +27,7 @@ function SubHeroSection(props) {
   )
 }
 
-export default SubHeroSection
+export default SubHero
 
 // animations
 const slideLeft = keyframes`

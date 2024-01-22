@@ -2,9 +2,6 @@ import React from "react"
 import Layout from "../components/layout"
 import styled from "styled-components"
 import Seo from "../components/seo"
-import TopicPageTitle from "../components/sections/TopicPageTitle"
-import { H1 } from "../components/styles/TextStyles"
-import { ImCloud } from "react-icons/im"
 import ChildHero from "../components/childpage/ChildHero"
 
 export default function ChildPage() {

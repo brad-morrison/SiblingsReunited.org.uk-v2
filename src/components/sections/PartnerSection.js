@@ -1,7 +1,6 @@
 import React from "react"
 import styled, { keyframes } from "styled-components"
-import FunderCard from "../objects/FunderCard"
-import { breaks } from "../styles/BreakStyles"
+import LogoCard from "../objects/LogoCard"
 import { themes } from "../styles/ColorStyles"
 import { BodyIntro } from "../styles/TextStyles"
 import LazyLoad from "react-lazy-load"
@@ -9,17 +8,17 @@ import LazyLoad from "react-lazy-load"
 function PartnerSection(props) {
   return (
     <LazyLoad>
-    <Wrapper>
-      <ContentWrapper>
-        <MainTitle>{props.title}</MainTitle>
-        <FunderCards>
-          <FunderCard logo="/images/logos/afka.png" />
-          <FunderCard logo="/images/logos/sufs.png" />
-          <FunderCard logo="/images/logos/promise.png" />
-          <FunderCard logo="/images/logos/corra.png" />
-        </FunderCards>
-      </ContentWrapper>
-    </Wrapper>
+      <Wrapper>
+        <ContentWrapper>
+          <MainTitle>{props.title}</MainTitle>
+          <LogoCards>
+            <LogoCard logo="/images/logos/afka.png" />
+            <LogoCard logo="/images/logos/sufs.png" />
+            <LogoCard logo="/images/logos/promise.png" />
+            <LogoCard logo="/images/logos/corra.png" />
+          </LogoCards>
+        </ContentWrapper>
+      </Wrapper>
     </LazyLoad>
   )
 }
@@ -44,7 +43,7 @@ const ContentWrapper = styled.div`
   //padding: 30px 30px;
 `
 
-const FunderCards = styled.div`
+const LogoCards = styled.div`
   display: flex;
   justify-content: center;
   gap: 20px;

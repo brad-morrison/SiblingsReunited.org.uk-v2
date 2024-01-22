@@ -1,41 +1,32 @@
 import { Link } from "gatsby"
 import React from "react"
 import styled, { keyframes } from "styled-components"
-import { themes } from "../styles/ColorStyles"
 import LazyLoad from "react-lazy-load"
 
-import {
-  BodyIntro,
-  BodyMain,
-  H1,
-  H3,
-  MediumText,
-  SmallText2,
-  Caption,
-} from "../styles/TextStyles"
+import { BodyMain, H3, Caption } from "../styles/TextStyles"
 
 function NewsCard(props) {
   return (
     <LazyLoad>
-    <Wrapper>
-      <ContentWrapper>
-        <ImageWrapper>
-          <Link to={props.link}>
-            <Image src={props.image} />
-          </Link>
-        </ImageWrapper>
-        <TextWrapper>
-          <Date>{props.date}</Date>
-          <Link to={props.link}>
-            <Title>{props.title}</Title>
-          </Link>
-          <Paragraph>{props.subTitle}</Paragraph>
-          <Link to={props.link}>
-            <SmallLink>Read Article</SmallLink>
-          </Link>
-        </TextWrapper>
-      </ContentWrapper>
-    </Wrapper>
+      <Wrapper>
+        <ContentWrapper>
+          <ImageWrapper>
+            <Link to={props.link}>
+              <Image src={props.image} />
+            </Link>
+          </ImageWrapper>
+          <TextWrapper>
+            <Date>{props.date}</Date>
+            <Link to={props.link}>
+              <Title>{props.title}</Title>
+            </Link>
+            <Paragraph>{props.subTitle}</Paragraph>
+            <Link to={props.link}>
+              <SmallLink>Read Article</SmallLink>
+            </Link>
+          </TextWrapper>
+        </ContentWrapper>
+      </Wrapper>
     </LazyLoad>
   )
 }
