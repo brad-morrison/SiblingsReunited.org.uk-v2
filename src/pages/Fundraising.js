@@ -7,6 +7,7 @@ import styled from "styled-components"
 import TriplePostCards from "../components/sections/TriplePostCards"
 import FundraisePack from "../components/sections/FundraisePack"
 import FundraiserList from "../components/sections/FundraiserList"
+import Block from "../components/objects/Block"
 
 function FundraisingPage() {
   return (
@@ -14,13 +15,12 @@ function FundraisingPage() {
       <Seo title="Fundraising" />
       <TopicPageTitle title="Fundraise" img="/images/kids.jpeg" />
 
-      <DetailDescSection
-        id="help-us"
+      <Block
         title="Make a real difference by fundraising for Siblings Reunited"
-        text="On a Tuesday and we keep this day free for the upkeep, maintenance, help with the animals, 
-              garden section and for the development of new projects. The bell rings at 12.30 for soup and 
-              cake and we all gather around the kitchen table and have a good chat and catch up. 
-              <br><br> Find out more below."
+        text="On a Tuesday and we keep this day free for the upkeep, maintenance, help with the animals, garden section and for the development of new projects.
+              <br><br>
+              The bell rings at 12.30 for soup and cake and we all gather around the kitchen table and have a good chat and catch up. "
+        image="/images/birdHouse.jpg"
       />
 
       <FundraisePack />

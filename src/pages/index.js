@@ -1,8 +1,6 @@
 import * as React from "react"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import ChildIntroSection from "../components/sections/ChildIntroSection"
-import FeaturedPostSection from "../components/sections/FeaturedPostSection"
 import FunderSection from "../components/sections/FunderSection"
 import PartnerSection from "../components/sections/PartnerSection"
 import styled from "styled-components"
@@ -32,17 +30,28 @@ function IndexPage() {
           image="/images/site.jpg"
         />
         <TriplePostCards title="Get Involved" />
-        <ChildIntroSection />
-        <Quotes />
-        <FeaturedPostSection
-          image="/images/news.jpg"
-          title="Brothers and sisters split up by the care system"
-          text="A major review of Scotland's care system has said the pain of
-                                    brothers and sisters being separated often has profound and
-                                    lifelong consequences.
-                                    <br><br>
-                                    Click below to read the full article."
+
+        <Block
+          image="/images/kids.jpeg"
+          flipped="1"
+          title="Are you a child coming to STAR Siblings Reunited?"
+          text="We can’t wait to welcome you and your siblings! Click below to open our child page and see what fun activities you can do together.
+          <br><br>
+          Click below to see what you can do!"
+          button="What can I do at STAR?"
         />
+
+        <Block
+          image="/images/kids.jpeg"
+          title="Are you a child coming to STAR Siblings Reunited?"
+          text="We can’t wait to welcome you and your siblings! Click below to open our child page and see what fun activities you can do together.
+          <br><br>
+          Click below to see what you can do!"
+          button="What can I do at STAR?"
+        />
+
+        <Quotes />
+
         <Block
           image="/images/news.jpg"
           introTitle="Featured Post"

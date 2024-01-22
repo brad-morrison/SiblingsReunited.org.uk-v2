@@ -4,19 +4,16 @@ import { teamMembers } from "../../data/TeamMembers"
 import TeamMemberCard from "../objects/TeamMemberCard"
 import { breaks } from "../styles/BreakStyles"
 import { H3, BodyMain } from "../styles/TextStyles"
+import Block from "../objects/Block"
 
 export default function Team() {
   return (
     <Wrapper>
       <ContentWrapper>
-        <SubHeading id="meet-the-team">
-          Meet the Siblings Reunited team
-        </SubHeading>
-        <Text>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s.
-        </Text>
+        <Block
+          title="Meet the Siblings Reunited Team"
+          text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
+        />
         <TeamCards>
           {teamMembers.map((member, index) => (
             <TeamMemberCard

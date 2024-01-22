@@ -3,20 +3,18 @@ import styled, { keyframes } from "styled-components"
 import { H3, BodyMain } from "../styles/TextStyles"
 import LazyLoad from "react-lazy-load"
 import Gallery from "./Gallery"
+import Block from "../objects/Block"
 
 export default function Events() {
   return (
     <LazyLoad>
       <Wrapper>
-        <SubHeading id="events">Our Seasonal Events</SubHeading>
+        <Block
+          title="Our Seasonal Events"
+          titleAlign="center"
+          text="We have lots of special animals here at STAR Siblings Reunited. We have lots of special animals here at STAR Siblings Reunited. We have lots of special animals here at STAR Siblings Reunited."
+        />
         <ContentWrapper>
-          <TextBlock>
-            <Text>
-              We have lots of special animals here at STAR Siblings Reunited. We
-              have lots of special animals here at STAR Siblings Reunited. We
-              have lots of special animals here at STAR Siblings Reunited.
-            </Text>
-          </TextBlock>
           <Gallery />
         </ContentWrapper>
       </Wrapper>

@@ -5,11 +5,12 @@ import Map from "../objects/Map"
 import { BodyIntro } from "../styles/TextStyles"
 import { breaks } from "../styles/BreakStyles"
 import ContactDetailCard from "../objects/ContactDetailCard"
+import Block from "../objects/Block"
 
 export default function ContactDetails() {
   return (
     <Wrapper>
-      <DetailsTitle>Our Details</DetailsTitle>
+      <Block introTitle="Our Details" />
       <ContentWrapper>
         <DetailsSection>
           <MapWrapper>
@@ -123,9 +124,4 @@ const ContactCards = styled.div`
       animation-delay: 0.8s;
     }
   }
-`
-
-const DetailsTitle = styled(BodyIntro)`
-  text-align: center;
-  margin-bottom: 24px;
 `

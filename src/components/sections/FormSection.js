@@ -5,6 +5,7 @@ import { BodyMain, H3 } from "../styles/TextStyles"
 import Form from "../objects/Form"
 import { breaks } from "../styles/BreakStyles"
 import LazyLoad from "react-lazy-load"
+import Block from "../objects/Block"
 
 export default function FormSection() {
   return (
@@ -12,10 +13,10 @@ export default function FormSection() {
       <Wrapper>
         <ContentWrapper>
           <FormInfo>
-            <Title>We'd love to hear from you!</Title>
-            <SubTitle>
-              We aim to respond to your enquiry within 24 hours.
-            </SubTitle>
+            <Block
+              title="We'd love to hear from you!"
+              text="We aim to repond to your enquiry within 24 hours."
+            />
           </FormInfo>
           <Form></Form>
         </ContentWrapper>

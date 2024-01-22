@@ -4,6 +4,7 @@ import SiteBlockCircle from "../objects/SiteBlockCircle"
 import Button from "../objects/Button"
 import { H3 } from "../styles/TextStyles"
 import LazyLoad from "react-lazy-load"
+import Block from "../objects/Block"
 
 export default function OurRoles() {
   return (
@@ -11,22 +12,31 @@ export default function OurRoles() {
       <Wrapper>
         <SubHeading id="roles">Our Roles</SubHeading>
         <ContentWrapper>
-          <SiteBlockCircle
+          <Block
             title="Contact Supervisor"
-            text1="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. <br><br>
-                The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
-          ></SiteBlockCircle>
-          <SiteBlockCircle
-            flipped="1"
+            text="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. 
+                  <br><br>
+                  The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
+            image="/images/teacher.jpg"
+            round={true}
+          />
+          <Block
             title="General Volunteer"
-            text1="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. <br><br>
-                The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
-          ></SiteBlockCircle>
-          <SiteBlockCircle
+            text="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. 
+                  <br><br>
+                  The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
+            image="/images/teacher.jpg"
+            round={true}
+            flipped="1"
+          />
+          <Block
             title="Contact Supervisor"
-            text1="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. <br><br>
-                The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
-          ></SiteBlockCircle>
+            text="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. 
+                  <br><br>
+                  The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
+            image="/images/teacher.jpg"
+            round={true}
+          />
           <ButtonWrapper>
             <Button text="Enquire now"></Button>
           </ButtonWrapper>

@@ -3,22 +3,18 @@ import styled, { keyframes } from "styled-components"
 import { H3, BodyMain } from "../styles/TextStyles"
 import SupervisorCard from "../objects/SupervisorCard"
 import LazyLoad from "react-lazy-load"
+import Block from "../objects/Block"
 
 export default function Supervisors() {
   return (
     <LazyLoad>
       <Wrapper>
         <ContentWrapper>
-          <SubHeading id="supervisors">
-            ..and our amazing supervisors
-          </SubHeading>
-          <TextBlock>
-            <Text>
-              We have lots of special animals here at STAR Siblings Reunited. We
-              have lots of special animals here at STAR Siblings Reunited. We
-              have lots of special animals here at STAR Siblings Reunited.
-            </Text>
-          </TextBlock>
+          <Block
+            title="...and our amazing supervisors"
+            titleAlign="center"
+            text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
+          />
           <SupervisorCards>
             <SupervisorCard
               name="Claire Smith"

@@ -10,6 +10,7 @@ import Animals from "../components/sections/Animals"
 import OurSite from "../components/sections/OurSite"
 import Supervisors from "../components/sections/Supervisors"
 import Events from "../components/sections/Events"
+import Block from "../components/objects/Block"
 
 function WhatWeProvidePage() {
   return (
@@ -18,12 +19,14 @@ function WhatWeProvidePage() {
       <ContentWrapper>
         <TopicPageTitle title="What We Provide" img="/images/birdHouse.jpg" />
 
-        <DetailDescSection
-          flipped="1"
+        <Block
           title="What makes us special?"
-          text="Run from its unique farmland setting it provides a safe, fun and exhilarating learning environment where children. <br><br> 
-              Run from its unique farmland setting it provides a safe, fun and exhilarating learning environment where children."
-        ></DetailDescSection>
+          text="Run from its unique farmland setting it provides a safe, fun and exhilarating learning environment where children. 
+                <br><br>
+                Run from its unique farmland setting it provides a safe, fun and exhilarating learning environment where children. "
+          image="/images/site.jpg"
+          flipped="1"
+        />
 
         <OurSite />
 

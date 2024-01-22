@@ -1,8 +1,6 @@
 import React from "react"
 import styled from "styled-components"
 import { H3 } from "../styles/TextStyles"
-import { themes } from "../styles/ColorStyles"
-import FeaturedPostSection from "./FeaturedPostSection"
 import NewsCard from "../objects/NewsCard"
 import { newsArticles } from "../../data/News"
 
