@@ -14,22 +14,23 @@ function FundraisingPage() {
     <Layout>
       <Seo title="Fundraising" />
       <TopicPageTitle title="Fundraise" img="/images/kids.jpeg" />
-
-      <Block
-        title="Make a real difference by fundraising for Siblings Reunited"
-        text="On a Tuesday and we keep this day free for the upkeep, maintenance, help with the animals, garden section and for the development of new projects.
+      <PageContent>
+        <Block
+          title="Make a real difference by fundraising for Siblings Reunited"
+          text="On a Tuesday and we keep this day free for the upkeep, maintenance, help with the animals, garden section and for the development of new projects.
               <br><br>
               The bell rings at 12.30 for soup and cake and we all gather around the kitchen table and have a good chat and catch up. "
-        image="/images/birdHouse.jpg"
-      />
+          image="/images/birdHouse.jpg"
+        />
 
-      <FundraisePack />
+        <FundraisePack />
 
-      {/* <SubHeading>Or use our individual downloads</SubHeading> */}
+        {/* <SubHeading>Or use our individual downloads</SubHeading> */}
 
-      <TriplePostCards title="Or use our individual downloads" />
+        <TriplePostCards title="Or use our individual downloads" />
 
-      <FundraiserList />
+        <FundraiserList />
+      </PageContent>
     </Layout>
   )
 }
@@ -39,4 +40,9 @@ export default FundraisingPage
 const TripleWrapper = styled.div`
   max-width: 1200px;
   margin: auto;
+`
+const PageContent = styled.div`
+  display: grid;
+  gap: 100px;
+  margin: 80px auto;
 `
