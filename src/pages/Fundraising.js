@@ -37,10 +37,6 @@ function FundraisingPage() {
 
 export default FundraisingPage
 
-const TripleWrapper = styled.div`
-  max-width: 1200px;
-  margin: auto;
-`
 const PageContent = styled.div`
   display: grid;
   gap: 100px;

@@ -5,13 +5,14 @@ import LazyLoad from "react-lazy-load"
 import AnimalCard from "../objects/AnimalCard"
 import { animals } from "../../data/Animals"
 import Block from "../objects/Block"
+import BlockText from "../objects/BlockText"
 
 export default function Animals() {
   return (
     <LazyLoad>
       <Wrapper>
         <ContentWrapper>
-          <Block
+          <BlockText
             title="Meet the Animals!"
             titleAlign="center"
             text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."

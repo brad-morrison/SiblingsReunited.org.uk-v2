@@ -1,10 +1,10 @@
 import React from "react"
 import styled, { keyframes } from "styled-components"
-import SiteBlockCircle from "../objects/SiteBlockCircle"
 import Button from "../objects/Button"
 import { H3 } from "../styles/TextStyles"
 import LazyLoad from "react-lazy-load"
 import Block from "../objects/Block"
+import { zoomIn } from "../styles/Animations"
 
 export default function OurRoles() {
   return (
@@ -46,11 +46,6 @@ export default function OurRoles() {
   )
 }
 
-const zoomIn = keyframes`
-  from { opacity: 0; transform: scale(0.8); filter: blur(10px)}
-  to { opacity: 1;  transform: scale(1);  filter: blur(0px)}
-`
-
 const Wrapper = styled.div``
 
 const ContentWrapper = styled.div`
@@ -60,6 +55,10 @@ const ContentWrapper = styled.div`
 
 const SubHeading = styled(H3)`
   text-align: center;
+
+  //animation
+  opacity: 0;
+  animation: ${zoomIn} 1s forwards;
 `
 
 const ButtonWrapper = styled.div`

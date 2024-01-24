@@ -12,6 +12,7 @@ import NewsList from "../components/sections/NewsList"
 import Block from "../components/objects/Block"
 import { zoomIn } from "../components/styles/Animations"
 import Spacer from "../components/layout/Spacer"
+import BlockText from "../components/objects/BlockText"
 
 export default function AboutUsPage() {
   return (
@@ -19,7 +20,8 @@ export default function AboutUsPage() {
       <Seo title="AboutUs" />
       <TopicPageTitle title="About Us" img="/images/volunteer.jpg" />
       <PageContent>
-        <Block
+        <BlockText
+          animation="slideDown"
           title="Who We Are"
           text="A major review of Scotland's care system has said the pain of brothers and sisters being seperated has profound and lifelong consequences. A major review of Scotland's care system has said the pain of brothers and sisters being seperated has profound and lifelong consequences.
                 <br><br>
@@ -27,13 +29,17 @@ export default function AboutUsPage() {
         />
 
         <div>
-          <Block
+          <BlockText
+            animation="slideDown"
             title="What We Do"
             text="It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
           />
           <Spacer size="sm" />
           <WideImage></WideImage>
-          <Block text="Follow us on social media to keep up with the latest news or find out more. We love letting everyone know what our sibling groups have been up to!" />
+          <BlockText
+            animation="slideDown"
+            text="Follow us on social media to keep up with the latest news or find out more. We love letting everyone know what our sibling groups have been up to!"
+          />
         </div>
         <Block
           introTitle="A message from our Founder & Chair"

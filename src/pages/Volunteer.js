@@ -15,7 +15,7 @@ export default function VolunteerPage() {
     <Layout>
       <Seo title="Volunteer" />
       <TopicPageTitle title="Volunteer" img="/images/teacher.jpg" />
-      <ContentWrapper>
+      <PageContent>
         <Block
           title="Come and join our amazing team!"
           text="On a Tuesday and we keep this day free for the upkeep, maintenance, help with the animals, garden section and for the development of new projects. 
@@ -29,18 +29,20 @@ export default function VolunteerPage() {
 
         <OurRoles />
 
-        <Quotes title={"What our Volunteers say 👇"} />
-        <Quotes hideTitle="true" />
+        <div>
+          <Quotes title={"What our Volunteers say 👇"} />
+          <Quotes hideTitle="true" />
+        </div>
 
         <Team />
-      </ContentWrapper>
+      </PageContent>
     </Layout>
   )
 }
 
-const ContentWrapper = styled.div`
+const PageContent = styled.div`
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 100px auto;
   display: grid;
   gap: 120px;
 `

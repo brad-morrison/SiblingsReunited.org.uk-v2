@@ -20,6 +20,7 @@ function WhatWeProvidePage() {
         <TopicPageTitle title="What We Provide" img="/images/birdHouse.jpg" />
 
         <Block
+          animation="slideIn"
           title="What makes us special?"
           text="Run from its unique farmland setting it provides a safe, fun and exhilarating learning environment where children. 
                 <br><br>

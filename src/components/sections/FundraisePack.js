@@ -5,36 +5,38 @@ import Spline from "@splinetool/react-spline"
 import { themes } from "../styles/ColorStyles"
 import { H3, H4, BodyMain } from "../styles/TextStyles"
 import LazyLoad from "react-lazy-load"
+import animations, { zoomIn } from "../styles/Animations"
 
 export default function FundraisePack() {
   return (
     <LazyLoad>
       <Wrapper>
+        <SubHeading id="fundraising-pack">
+          Download our fundraising pack
+        </SubHeading>
         <LazyLoad>
-          <SubHeading id="fundraising-pack">
-            Download our fundraising pack
-          </SubHeading>
+          <ContentWrapper>
+            <TextSection>
+              <Title>
+                Our fundraising pack has everything you need to start a
+                fundraiser
+              </Title>
+              <Text>
+                Our pack contains our logo, leaflet, flyer and a fundraising
+                form. We also threw in a few extras such as stickers and bunting
+                print-outs.
+              </Text>
+              <ButtonWrapper>
+                <Button text="Download our pack"></Button>
+              </ButtonWrapper>
+            </TextSection>
+            <MediaSection>
+              <div>
+                <Spline scene="https://prod.spline.design/oSt-U9ICTRCUU3jn/scene.splinecode" />
+              </div>
+            </MediaSection>
+          </ContentWrapper>
         </LazyLoad>
-        <ContentWrapper>
-          <TextSection>
-            <Title>
-              Our fundraising pack has everything you need to start a fundraiser
-            </Title>
-            <Text>
-              Our pack contains our logo, leaflet, flyer and a fundraising form.
-              We also threw in a few extras such as stickers and bunting
-              print-outs.
-            </Text>
-            <ButtonWrapper>
-              <Button text="Download our pack"></Button>
-            </ButtonWrapper>
-          </TextSection>
-          <MediaSection>
-            <div>
-              <Spline scene="https://prod.spline.design/oSt-U9ICTRCUU3jn/scene.splinecode" />
-            </div>
-          </MediaSection>
-        </ContentWrapper>
       </Wrapper>
     </LazyLoad>
   )
@@ -82,6 +84,10 @@ const TextSection = styled.div`
 
 const SubHeading = styled(H3)`
   text-align: center;
+
+  //animation
+  opacity: 0;
+  animation: ${zoomIn} 1s forwards;
 `
 
 const MediaSection = styled.div`

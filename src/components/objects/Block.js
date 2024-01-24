@@ -3,38 +3,34 @@ import styled, { keyframes } from "styled-components"
 import { BodyMain, H1, H3, H4, MediumText } from "../styles/TextStyles"
 import LazyLoad from "react-lazy-load"
 import Button from "./Button"
-import { slideLeft, slideRight } from "../styles/Animations"
+import {
+  fadeIn,
+  none,
+  slideDown,
+  slideLeft,
+  slideRight,
+  slideUp,
+  zoomIn,
+  zoomOut,
+} from "../styles/Animations"
 
 function Block(props) {
   return (
-    <LazyLoad>
+    <LazyLoad height={props.lazyLoadHeight}>
       <Wrapper>
         <IntroTitle>{props.introTitle}</IntroTitle>
-        {/* if image passed in */}
-        {props.image ? (
-          <ContentWrapperWithImage>
-            <ImageWrapper flipped={props.flipped}>
-              <Image src={props.image} round={props.round} />
-            </ImageWrapper>
-            <DetailWrapper>
-              <Title titleAlign={props.titleAlign}>{props.title}</Title>
-              <Paragraph>
-                {<p dangerouslySetInnerHTML={{ __html: props.text }}></p>}
-              </Paragraph>
-              {props.button && <OptionalButton text={props.button} />}
-            </DetailWrapper>
-          </ContentWrapperWithImage>
-        ) : (
-          <ContentWrapper>
-            <DetailWrapperNoImage>
-              <Title titleAlign={props.titleAlign}>{props.title}</Title>
-              <Paragraph>
-                {<p dangerouslySetInnerHTML={{ __html: props.text }}></p>}
-              </Paragraph>
-              {props.button && <OptionalButton text={props.button} />}
-            </DetailWrapperNoImage>
-          </ContentWrapper>
-        )}
+        <ContentWrapper animation={props.animation}>
+          <ImageWrapper flipped={props.flipped}>
+            <Image src={props.image} round={props.round} />
+          </ImageWrapper>
+          <DetailWrapper>
+            <Title titleAlign={props.titleAlign}>{props.title}</Title>
+            <Paragraph>
+              {<p dangerouslySetInnerHTML={{ __html: props.text }}></p>}
+            </Paragraph>
+            {props.button && <OptionalButton text={props.button} />}
+          </DetailWrapper>
+        </ContentWrapper>
       </Wrapper>
     </LazyLoad>
   )
@@ -48,24 +44,11 @@ const Wrapper = styled.div`
   align-items: center;
 `
 
-const ContentWrapper = styled.div`
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
-  max-width: 1300px;
-  margin: 0 auto;
-
-  opacity: 0;
-  animation: ${slideLeft} 1s forwards;
-`
-
-const ImageWrapper = styled.div`
+const IntroTitle = styled(H4)`
   text-align: center;
-  order: ${props => props.flipped};
-  overflow: hidden;
 `
 
-const ContentWrapperWithImage = styled.div`
+const ContentWrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
@@ -77,13 +60,63 @@ const ContentWrapperWithImage = styled.div`
     opacity: 0;
 
     :nth-child(${props => (props.flipped === "1" ? "2" : "1")}) {
-      animation: ${slideLeft} 1s forwards;
+      animation: ${
+          props =>
+            props.animation === "slideRight"
+              ? slideRight
+              : props.animation === "slideLeft"
+              ? slideLeft
+              : props.animation === "slideDown"
+              ? slideDown
+              : props.animation === "slideUp"
+              ? slideUp
+              : props.animation === "zoomIn"
+              ? zoomIn
+              : props.animation === "zoomOut"
+              ? zoomOut
+              : props.animation === "fadeIn"
+              ? fadeIn
+              : props.animation === "slideIn"
+              ? slideRight
+              : props.animation === "slideOut"
+              ? slideLeft
+              : none /* default animation if none of the conditions match */
+        }
+        1s forwards;
     }
 
     :nth-child(${props => (props.flipped === "1" ? "1" : "2")}) {
-      animation: ${slideRight} 1s forwards;
+      animation: ${
+          props =>
+            props.animation === "slideRight"
+              ? slideRight
+              : props.animation === "slideLeft"
+              ? slideLeft
+              : props.animation === "slideDown"
+              ? slideDown
+              : props.animation === "slideUp"
+              ? slideUp
+              : props.animation === "zoomIn"
+              ? zoomIn
+              : props.animation === "zoomOut"
+              ? zoomOut
+              : props.animation === "fadeIn"
+              ? fadeIn
+              : props.animation === "slideIn"
+              ? slideLeft
+              : props.animation === "slideOut"
+              ? slideRight
+              : none /* default animation if none of the conditions match */
+        }
+        1s forwards;
     }
   }
+`
+
+const ImageWrapper = styled.div`
+  text-align: center;
+  order: ${props => props.flipped};
+  overflow: hidden;
 `
 
 const Image = styled.img`
@@ -103,14 +136,6 @@ const DetailWrapper = styled.div`
   vertical-align: middle;
 `
 
-const DetailWrapperNoImage = styled.div`
-  padding: 0;
-  display: grid;
-  gap: 60px;
-`
-
-const Paragraph = styled(BodyMain)``
-
 const Title = styled(H3)`
   text-align: ${props =>
     props.titleAlign === "left"
@@ -122,8 +147,6 @@ const Title = styled(H3)`
       : "left"};
 `
 
-const IntroTitle = styled(H4)`
-  text-align: center;
-`
+const Paragraph = styled(BodyMain)``
 
 const OptionalButton = styled(Button)``
