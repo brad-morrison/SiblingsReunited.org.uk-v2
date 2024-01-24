@@ -4,12 +4,13 @@ import { H3 } from "../styles/TextStyles"
 import NewsCard from "../objects/NewsCard"
 import { newsArticles } from "../../data/News"
 import Block from "../objects/Block"
+import BlockText from "../objects/BlockText"
 
 function NewsList() {
   return (
     <Wrapper>
       <ContentWrapper>
-        <Block title="In the News" titleAlign="center" />
+        <BlockText animation="zoomIn" title="In the News" titleAlign="center" />
         <NewsCards>
           {newsArticles.map((article, index) => (
             <NewsCard

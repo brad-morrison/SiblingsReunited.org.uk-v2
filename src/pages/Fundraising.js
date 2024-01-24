@@ -16,6 +16,7 @@ function FundraisingPage() {
       <TopicPageTitle title="Fundraise" img="/images/kids.jpeg" />
       <PageContent>
         <Block
+          animation="slideOut"
           title="Make a real difference by fundraising for Siblings Reunited"
           text="On a Tuesday and we keep this day free for the upkeep, maintenance, help with the animals, garden section and for the development of new projects.
               <br><br>
@@ -24,8 +25,6 @@ function FundraisingPage() {
         />
 
         <FundraisePack />
-
-        {/* <SubHeading>Or use our individual downloads</SubHeading> */}
 
         <TriplePostCards title="Or use our individual downloads" />
 
@@ -40,5 +39,5 @@ export default FundraisingPage
 const PageContent = styled.div`
   display: grid;
   gap: 100px;
-  margin: 80px auto;
+  margin: 100px auto;
 `

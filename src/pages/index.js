@@ -32,6 +32,7 @@ function IndexPage() {
         <TriplePostCards title="Get Involved" />
 
         <Block
+          animation="slideIn"
           image="/images/kids.jpeg"
           flipped="1"
           title="Are you a child coming to STAR Siblings Reunited?"
@@ -44,6 +45,7 @@ function IndexPage() {
         <Quotes />
 
         <Block
+          animation="slideOut"
           image="/images/news.jpg"
           introTitle="Featured Post"
           title="Brothers and sisters split up by the care system"

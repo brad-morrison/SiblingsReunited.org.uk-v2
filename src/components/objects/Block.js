@@ -59,7 +59,7 @@ const ContentWrapper = styled.div`
   > * {
     opacity: 0;
 
-    :nth-child(${props => (props.flipped === "1" ? "2" : "1")}) {
+    :nth-child(1) {
       animation: ${
           props =>
             props.animation === "slideRight"
@@ -85,7 +85,7 @@ const ContentWrapper = styled.div`
         1s forwards;
     }
 
-    :nth-child(${props => (props.flipped === "1" ? "1" : "2")}) {
+    :nth-child(2) {
       animation: ${
           props =>
             props.animation === "slideRight"
