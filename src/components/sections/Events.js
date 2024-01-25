@@ -4,12 +4,14 @@ import { H3, BodyMain } from "../styles/TextStyles"
 import LazyLoad from "react-lazy-load"
 import Gallery from "./Gallery"
 import Block from "../objects/Block"
+import BlockText from "../objects/BlockText"
 
 export default function Events() {
   return (
     <LazyLoad>
       <Wrapper>
-        <Block
+        <BlockText
+          animation="slideUp"
           title="Our Seasonal Events"
           titleAlign="center"
           text="We have lots of special animals here at STAR Siblings Reunited. We have lots of special animals here at STAR Siblings Reunited. We have lots of special animals here at STAR Siblings Reunited."

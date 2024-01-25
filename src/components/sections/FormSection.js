@@ -1,19 +1,21 @@
 import * as React from "react"
 import styled, { keyframes } from "styled-components"
 import { themes } from "../styles/ColorStyles"
-import { BodyMain, H3 } from "../styles/TextStyles"
+import { BodyMain, H3, H4 } from "../styles/TextStyles"
 import Form from "../objects/Form"
 import { breaks } from "../styles/BreakStyles"
 import LazyLoad from "react-lazy-load"
 import Block from "../objects/Block"
+import BlockText from "../objects/BlockText"
 
 export default function FormSection() {
   return (
     <LazyLoad>
       <Wrapper>
+        <Title>Get in Touch</Title>
         <ContentWrapper>
           <FormInfo>
-            <Block
+            <BlockText
               title="We'd love to hear from you!"
               text="We aim to repond to your enquiry within 24 hours."
             />
@@ -58,9 +60,10 @@ const FormInfo = styled.div`
   width: 100%;
   height: 100%;
   background-color: ${themes.secondaryBackground};
-  border: 0.5px solid rgba(0, 0, 0, 0.05);
+  border: 0.5px solid rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
   box-shadow: 0px 7px 22px rgba(0, 0, 0, 0.1);
-  padding: 50px;
+  padding: 70px;
   display: grid;
   justify-content: start;
   align-content: start;
@@ -71,6 +74,9 @@ const FormInfo = styled.div`
   animation: ${slideLeft} 1s forwards;
 `
 
-const Title = styled(H3)``
+const Title = styled(H4)`
+  text-align: center;
+  margin-bottom: 15px;
+`
 
 const SubTitle = styled(BodyMain)``

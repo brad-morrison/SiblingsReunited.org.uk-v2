@@ -36,6 +36,6 @@ const ContentWrapper = styled.div``
 
 const NewsCards = styled.div`
   display: grid;
-  gap: 30px;
+  gap: 60px;
 `
 const SubHeading = styled(H3)``

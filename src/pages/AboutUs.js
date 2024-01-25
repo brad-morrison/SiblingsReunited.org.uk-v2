@@ -71,7 +71,7 @@ const PageContent = styled.div`
   max-width: 1300px;
   margin: 80px auto;
   display: grid;
-  gap: 120px;
+  gap: 160px;
 `
 
 const SubHeading = styled(H3)``

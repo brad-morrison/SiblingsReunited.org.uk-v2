@@ -46,9 +46,6 @@ const IntroTitle = styled(H4)`
 `
 
 const ContentWrapper = styled.div`
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
   max-width: 1300px;
   margin: 0 auto;
 `

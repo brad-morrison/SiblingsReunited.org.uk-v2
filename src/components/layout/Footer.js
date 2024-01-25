@@ -88,6 +88,7 @@ export default Footer
 const Wrapper = styled.div`
   display: grid;
   background-color: ${themes.darkBackground};
+  margin-top: 120px;
 `
 
 const ContentWrapper = styled.div`

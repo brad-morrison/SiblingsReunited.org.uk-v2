@@ -1,8 +1,6 @@
 import * as React from "react"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import FunderSection from "../components/sections/FunderSection"
-import PartnerSection from "../components/sections/PartnerSection"
 import styled from "styled-components"
 import Hero from "../components/sections/Hero"
 import SubHero from "../components/sections/SubHero"
@@ -10,6 +8,7 @@ import TriplePostCards from "../components/sections/TriplePostCards"
 import Quotes from "../components/sections/Quotes"
 import StayInTouch from "../components/sections/StayInTouch"
 import Block from "../components/objects/Block"
+import LogoList from "../components/sections/LogoList"
 
 function IndexPage() {
   return (
@@ -60,8 +59,7 @@ function IndexPage() {
         <TriplePostCards title="Recent Posts" />
         {/* <StoreSection /> */}
         <StayInTouch />
-        <FunderSection title="Funded by" />
-        <PartnerSection title="In Partnership with" />
+        <LogoList title="In Partnership with" />
       </Content>
     </Layout>
   )

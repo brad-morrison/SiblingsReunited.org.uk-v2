@@ -2,15 +2,17 @@ import React from "react"
 import styled, { keyframes } from "styled-components"
 import { themes } from "../styles/ColorStyles"
 import Map from "../objects/Map"
-import { BodyIntro } from "../styles/TextStyles"
+import { BodyIntro, H3, H4 } from "../styles/TextStyles"
 import { breaks } from "../styles/BreakStyles"
 import ContactDetailCard from "../objects/ContactDetailCard"
 import Block from "../objects/Block"
+import BlockText from "../objects/BlockText"
+import { fadeIn } from "../styles/Animations"
 
 export default function ContactDetails() {
   return (
     <Wrapper>
-      <Block introTitle="Our Details" />
+      <Title>Our Details</Title>
       <ContentWrapper>
         <DetailsSection>
           <MapWrapper>
@@ -53,13 +55,15 @@ const zoomIn = keyframes`
   to { opacity: 1;  transform: scale(1);  filter: blur(0px)}
 `
 
-const Wrapper = styled.div``
+const Wrapper = styled.div`
+  padding-top: 25px;
+`
 
 const ContentWrapper = styled.div`
   background-color: ${themes.secondaryBackground};
   width: 100%;
   padding: 40px 20px;
-  padding-top: 25px;
+  padding-top: 30px;
 
   @media (max-width: ${breaks.phone}) {
     padding: 30px 0px;
@@ -76,6 +80,13 @@ const DetailsSection = styled.div`
   @media (max-width: 900px) {
     grid-template-columns: auto;
   }
+`
+const Title = styled(H4)`
+  text-align: center;
+  opacity: 0;
+  animation: ${fadeIn} 1s forwards;
+  margin-top: 20px;
+  margin-bottom: 15px;
 `
 
 const MapWrapper = styled.div`

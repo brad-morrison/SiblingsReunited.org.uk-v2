@@ -58,7 +58,7 @@ const Wrapper = styled.div``
 
 const ContentWrapper = styled.div`
   display: grid;
-  gap: 80px;
+  gap: 160px;
 `
 
 const SubHeading = styled(H3)`

@@ -88,6 +88,7 @@ const ContentWrapper = styled.div``
 const SupervisorCards = styled.div`
   display: grid;
   gap: 80px;
+  margin-top: 100px;
 `
 
 const Text = styled(BodyMain)`

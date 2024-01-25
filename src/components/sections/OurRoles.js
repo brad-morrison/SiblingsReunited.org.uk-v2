@@ -13,6 +13,7 @@ export default function OurRoles() {
         <SubHeading id="roles">Our Roles</SubHeading>
         <ContentWrapper>
           <Block
+            animation="slideOut"
             title="Contact Supervisor"
             text="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. 
                   <br><br>
@@ -21,6 +22,7 @@ export default function OurRoles() {
             round={true}
           />
           <Block
+            animation="slideIn"
             title="General Volunteer"
             text="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. 
                   <br><br>
@@ -30,6 +32,7 @@ export default function OurRoles() {
             flipped="1"
           />
           <Block
+            animation="slideOut"
             title="Contact Supervisor"
             text="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. 
                   <br><br>

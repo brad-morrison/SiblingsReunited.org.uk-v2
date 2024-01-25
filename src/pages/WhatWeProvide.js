@@ -2,7 +2,6 @@ import * as React from "react"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import TopicPageTitle from "../components/sections/TopicPageTitle"
-import DetailDescSection from "../components/sections/DetailDescSection"
 import { BodyMain, H3 } from "../components/styles/TextStyles"
 import styled from "styled-components"
 import Quotes from "../components/sections/Quotes"
@@ -31,8 +30,10 @@ function WhatWeProvidePage() {
 
         <OurSite />
 
-        <Quotes title={"What the children say"} />
-        <Quotes />
+        <div>
+          <Quotes title={"What the children say"} />
+          <Quotes />
+        </div>
 
         <Animals />
 
@@ -48,7 +49,7 @@ export default WhatWeProvidePage
 
 const ContentWrapper = styled.div`
   display: grid;
-  gap: 80px;
+  gap: 160px;
 `
 
 const SubHeading = styled(H3)`

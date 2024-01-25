@@ -43,6 +43,8 @@ const ContentWrapper = styled.div`
   // animation
   opacity: 0;
   animation: ${slideDown} 1s forwards;
+  display: grid;
+  gap: 80px;
 `
 
 const TeamCards = styled.div`
