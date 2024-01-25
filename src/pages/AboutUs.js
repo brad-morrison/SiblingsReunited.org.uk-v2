@@ -10,7 +10,7 @@ import StayInTouch from "../components/sections/StayInTouch"
 import Team from "../components/sections/Team"
 import NewsList from "../components/sections/NewsList"
 import Block from "../components/objects/Block"
-import { zoomIn } from "../components/styles/Animations"
+import { fadeIn, speed, zoomIn } from "../components/styles/Animations"
 import Spacer from "../components/layout/Spacer"
 import BlockText from "../components/objects/BlockText"
 
@@ -41,7 +41,9 @@ export default function AboutUsPage() {
             text="Follow us on social media to keep up with the latest news or find out more. We love letting everyone know what our sibling groups have been up to!"
           />
         </div>
+
         <Block
+          animation="slideIn"
           introTitle="A message from our Founder & Chair"
           title="Why I created STAR Siblings Reunited"
           text="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. 
@@ -95,5 +97,5 @@ const WideImage = styled.img`
   margin: 10px 0px;
 
   opacity: 0;
-  animation: ${zoomIn} 1s forwards;
+  animation: ${fadeIn} ${speed} forwards;
 `

@@ -5,7 +5,12 @@ import Spline from "@splinetool/react-spline"
 import { themes } from "../styles/ColorStyles"
 import { H3, H4, BodyMain } from "../styles/TextStyles"
 import LazyLoad from "react-lazy-load"
-import animations, { zoomIn } from "../styles/Animations"
+import animations, {
+  slideLeft,
+  slideRight,
+  speed,
+  zoomIn,
+} from "../styles/Animations"
 
 export default function FundraisePack() {
   return (
@@ -42,17 +47,6 @@ export default function FundraisePack() {
   )
 }
 
-// animations
-const slideLeft = keyframes`
-  from { opacity: 0; transform: translateX(-300px); filter: blur(10px)}
-  to { opacity: 1;  transform: translateX(0px);  filter: blur(0px)}
-`
-
-const slideRight = keyframes`
-  from { opacity: 0;  transform: translateX(300px); filter: blur(10px); }
-  to { opacity: 1;   transform: translateX(0px);  filter: blur(0px)}
-`
-
 const Wrapper = styled.div``
 
 const ContentWrapper = styled.div`
@@ -79,7 +73,7 @@ const TextSection = styled.div`
 
   // animations
   opacity: 0;
-  animation: ${slideLeft} 1s forwards;
+  animation: ${slideLeft} ${speed} forwards;
 `
 
 const SubHeading = styled(H3)`
@@ -87,13 +81,13 @@ const SubHeading = styled(H3)`
 
   //animation
   opacity: 0;
-  animation: ${zoomIn} 1s forwards;
+  animation: ${zoomIn} ${speed} forwards;
 `
 
 const MediaSection = styled.div`
   // animations
   opacity: 0;
-  animation: ${slideRight} 1s forwards;
+  animation: ${slideRight} ${speed} forwards;
 `
 
 const Title = styled(H4)``

@@ -5,6 +5,7 @@ import SupervisorCard from "../objects/SupervisorCard"
 import LazyLoad from "react-lazy-load"
 import Block from "../objects/Block"
 import BlockText from "../objects/BlockText"
+import { fadeIn, slideDown } from "../styles/Animations"
 
 export default function Supervisors() {
   return (
@@ -51,16 +52,6 @@ export default function Supervisors() {
     </LazyLoad>
   )
 }
-
-const slideDown = keyframes`
-  from { opacity: 0; transform: translateY(-20px); filter: blur(10px)}
-  to { opacity: 1;  transform: translateY(0px);  filter: blur(0px)}
-`
-
-const fadeIn = keyframes`
-  from { opacity: 0; filter: blur(3px)}
-  to { opacity: 1; filter: blur(0px)}
-`
 
 const SubHeading = styled(H3)`
   text-align: center;

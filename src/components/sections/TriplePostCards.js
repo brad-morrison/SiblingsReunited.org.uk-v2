@@ -3,6 +3,7 @@ import styled, { keyframes } from "styled-components"
 import PostCard from "../objects/PostCard"
 import { H4 } from "../styles/TextStyles"
 import LazyLoad from "react-lazy-load"
+import { slideDown, slideUp, speed } from "../styles/Animations"
 
 function TriplePostCards(props) {
   return (
@@ -37,16 +38,6 @@ function TriplePostCards(props) {
 
 export default TriplePostCards
 
-const slideUp = keyframes`
-  from { opacity: 0; transform: translateY(50px); filter: blur(2px)}
-  to { opacity: 1;  transform: translateY(0px);  filter: blur(0px)}
-`
-
-const slideDown = keyframes`
-  from { opacity: 0; transform: translateY(-20px); filter: blur(2px)}
-  to { opacity: 1;  transform: translateY(0px);  filter: blur(0px)}
-`
-
 const Wrapper = styled.div`
   position: relative;
 `
@@ -54,7 +45,9 @@ const Wrapper = styled.div`
 const MainTitle = styled(H4)`
   text-align: center;
   margin-bottom: 30px;
-  animation: ${slideDown} 1s;
+
+  opacity: 0;
+  animation: ${slideDown} ${speed} forwards;
 `
 
 const ContentWrapper = styled.div`
@@ -88,7 +81,7 @@ const PostCards = styled.div`
   // animations
   > * {
     opacity: 0;
-    animation: ${slideUp} 1s forwards;
+    animation: ${slideUp} ${speed} forwards;
 
     :nth-child(1) {
       animation-delay: 0.1s;

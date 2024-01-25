@@ -3,6 +3,7 @@ import styled, { keyframes } from "styled-components"
 import { MediumText } from "../styles/TextStyles"
 import { themes } from "../styles/ColorStyles"
 import LazyLoad from "react-lazy-load"
+import { slideDown, speed } from "../styles/Animations"
 
 export default function AnimalCard(props) {
   return (
@@ -18,11 +19,6 @@ export default function AnimalCard(props) {
   )
 }
 
-const slideDown = keyframes`
-  from { opacity: 0; transform: translateY(-20px); filter: blur(10px)}
-  to { opacity: 1;  transform: translateY(0px);  filter: blur(0px)}
-`
-
 const Wrapper = styled.div`
   background-color: ${themes.background};
   height: auto;
@@ -30,7 +26,7 @@ const Wrapper = styled.div`
 
   // animation
   opacity: 0;
-  animation: ${slideDown} 1s forwards;
+  animation: ${slideDown} ${speed} forwards;
 `
 
 const ContentWrapper = styled.div`

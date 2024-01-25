@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import PhotoAlbum from "react-photo-album"
 import LazyLoad from "react-lazy-load"
-import { fadeIn } from "../styles/Animations"
+import { fadeIn, speed } from "../styles/Animations"
 
 const photos = [
   { src: "/images/new/1.jpg", width: 5616, height: 3744 },
@@ -40,5 +40,5 @@ const ContentWrapper = styled.div`
   padding: 50px;
 
   opacity: 0;
-  animation: ${fadeIn} 1s forwards;
+  animation: ${fadeIn} ${speed} forwards;
 `

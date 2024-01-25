@@ -4,6 +4,13 @@ import { BodyIntro, H1 } from "../styles/TextStyles"
 import Button from "../objects/Button"
 import SocialMediaBar from "../objects/SocialMediaBar"
 import { themes } from "../styles/ColorStyles"
+import {
+  blurIn,
+  fadeIn,
+  slideDown,
+  slideRight,
+  speed,
+} from "../styles/Animations"
 
 function Hero() {
   return (
@@ -22,7 +29,6 @@ function Hero() {
               </Description>
             </TextWrapper>
             <Button text="find out more"></Button>
-            {/*<SVGImage src="/images/svg/kids.svg"></SVGImage>*/}
           </LeftSection>
           <RightSection></RightSection>
         </ContentWrapper>
@@ -33,31 +39,17 @@ function Hero() {
 
 export default Hero
 
-const slideInRight = keyframes`
-  from { opacity: 0; transform: translateX(50px); filter: blur(10px)}
-  to { opacity: 1;  transform: translateX(0px);  filter: blur(0px)}
-`
-
-const slideDown = keyframes`
-  from { opacity: 0; transform: translateY(-20px); filter: blur(10px)}
-  to { opacity: 1;  transform: translateY(0px);  filter: blur(0px)}
-`
-
-const BackgroundImage = keyframes`
-  from { transform: translateX(-10px); filter: blur(10px)}
-  to { transform: translateX(0px);  filter: blur(0px)}
-`
-
 const Wrapper = styled.div`
   position: relative;
   background: url("/images/sib.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  //max-height: fit-content;
   height: 100%;
 
-  animation: ${BackgroundImage} 1s forwards;
+  animation: ${slideDown} ${speed} forwards;
+
+  z-index: 10;
 `
 
 const ContentWrapper = styled.div`
@@ -87,7 +79,7 @@ const LeftSection = styled.div`
   > * {
     :nth-child(2) {
       opacity: 0;
-      animation: ${slideDown} 1s 0.7s forwards;
+      animation: ${slideDown} ${speed} 0.7s forwards;
     }
   }
 `
@@ -105,7 +97,7 @@ const SocialMediaBarWrapper = styled.div`
 
   // animation
   opacity: 0;
-  animation: ${slideInRight} 1s 0.8s forwards;
+  animation: ${slideRight} ${speed} 0.8s forwards;
 `
 
 const TextWrapper = styled.div`
@@ -118,12 +110,12 @@ const TextWrapper = styled.div`
 
   // animation
   opacity: 0;
-  animation: ${slideDown} 1.5s forwards;
+  animation: ${slideDown} ${speed} forwards;
 
   // children animation
   > * {
     opacity: 0;
-    animation: ${slideDown} 1s forwards;
+    animation: ${slideDown} ${speed} forwards;
 
     :nth-child(1) {
       animation-delay: 0.3s;

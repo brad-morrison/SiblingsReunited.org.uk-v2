@@ -4,6 +4,7 @@ import styled, { keyframes } from "styled-components"
 import LazyLoad from "react-lazy-load"
 
 import { BodyMain, H3, Caption } from "../styles/TextStyles"
+import { slideDown, speed, zoomIn } from "../styles/Animations"
 
 function NewsCard(props) {
   return (
@@ -32,16 +33,6 @@ function NewsCard(props) {
 }
 
 export default NewsCard
-
-const slideDown = keyframes`
-  from { opacity: 0; transform: translateY(-20px); filter: blur(10px)}
-  to { opacity: 1;  transform: translateY(0px);  filter: blur(0px)}
-`
-
-const zoomIn = keyframes`
-  from { opacity: 0; transform: scale(0.8); filter: blur(10px)}
-  to { opacity: 1;  transform: scale(1);  filter: blur(0px)}
-`
 
 const Wrapper = styled.div`
   width: 100%;
@@ -76,7 +67,7 @@ const TextWrapper = styled.div`
 
   // animation
   opacity: 0;
-  animation: ${slideDown} 1s forwards;
+  animation: ${slideDown} ${speed} forwards;
 `
 
 const Image = styled.img`
@@ -91,7 +82,7 @@ const Image = styled.img`
 
   // animation
   opacity: 0;
-  animation: ${zoomIn} 1s forwards;
+  animation: ${zoomIn} ${speed} forwards;
 `
 
 // text styles

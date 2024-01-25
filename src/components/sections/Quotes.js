@@ -3,6 +3,7 @@ import styled, { keyframes } from "styled-components"
 import QuoteCard from "../objects/QuoteCard"
 import LazyLoad from "react-lazy-load"
 import { BodyIntro, H1, H4, MediumText } from "../styles/TextStyles"
+import { fadeIn, speed, zoomIn } from "../styles/Animations"
 
 function Quotes(props) {
   return (
@@ -33,11 +34,6 @@ function Quotes(props) {
 
 export default Quotes
 
-const zoomIn = keyframes`
-  from { opacity: 0; transform: scale(0.8); filter: blur(10px)}
-  to { opacity: 1;  transform: scale(1);  filter: blur(0px)}
-`
-
 const Wrapper = styled.div`
   position: relative;
 `
@@ -46,6 +42,10 @@ const MainTitle = styled(H4)`
   font-weight: 700;
   text-align: center;
   margin-bottom: 50px;
+
+  // animations
+  opacity: 0;
+  animation: ${fadeIn} ${speed} forwards;
 `
 
 const ContentWrapper = styled.div`
@@ -79,7 +79,7 @@ const QuoteCards = styled.div`
   > * {
     // animations
     opacity: 0;
-    animation: ${zoomIn} 1s forwards;
+    animation: ${zoomIn} ${speed} forwards;
 
     :nth-child(1) {
       animation-delay: 0;

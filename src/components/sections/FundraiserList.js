@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { H3, BodyMain } from "../styles/TextStyles"
 import LazyLoad from "react-lazy-load"
 import FundraiserCard from "../objects/FundraiserCard"
-import { zoomIn } from "../styles/Animations"
+import { speed, zoomIn } from "../styles/Animations"
 
 export default function FundraiserList() {
   return (
@@ -60,5 +60,5 @@ const SubHeading = styled(H3)`
   text-align: center;
 
   opacity: 0;
-  animation: ${zoomIn} 1s forwards;
+  animation: ${zoomIn} ${speed} forwards;
 `

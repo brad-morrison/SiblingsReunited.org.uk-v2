@@ -3,6 +3,7 @@ import styled, { keyframes } from "styled-components"
 import SiteBlock from "../objects/SiteBlock"
 import { H3 } from "../styles/TextStyles"
 import LazyLoad from "react-lazy-load"
+import { slideDown, speed } from "../styles/Animations"
 
 export default function OurSite() {
   return (
@@ -49,11 +50,6 @@ export default function OurSite() {
   )
 }
 
-const slideDown = keyframes`
-  from { opacity: 0; transform: translateY(-20px); filter: blur(10px)}
-  to { opacity: 1;  transform: translateY(0px);  filter: blur(0px)}
-`
-
 const Wrapper = styled.div``
 
 const ContentWrapper = styled.div`
@@ -66,5 +62,5 @@ const SubHeading = styled(H3)`
 
   // animation
   opacity: 0;
-  animation: ${slideDown} 1s forwards;
+  animation: ${slideDown} ${speed} forwards;
 `

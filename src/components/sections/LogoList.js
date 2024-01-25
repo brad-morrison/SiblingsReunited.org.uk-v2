@@ -5,7 +5,7 @@ import { themes } from "../styles/ColorStyles"
 import { BodyIntro } from "../styles/TextStyles"
 import LazyLoad from "react-lazy-load"
 import LogoCard from "../objects/LogoCard"
-import { slideDown, zoomIn } from "../styles/Animations"
+import { slideDown, speed, zoomIn } from "../styles/Animations"
 
 function LogoList(props) {
   return (
@@ -45,7 +45,7 @@ const FunderCards = styled.div`
   * {
     //animation
     opacity: 0;
-    animation: ${zoomIn} 1s 0.2s forwards;
+    animation: ${zoomIn} ${speed} 0.2s forwards;
   }
 `
 
@@ -54,5 +54,5 @@ const MainTitle = styled(BodyIntro)`
 
   //animation
   opacity: 0;
-  animation: ${slideDown} 1s forwards;
+  animation: ${slideDown} ${speed} forwards;
 `

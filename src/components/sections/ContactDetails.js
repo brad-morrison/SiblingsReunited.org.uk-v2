@@ -7,7 +7,7 @@ import { breaks } from "../styles/BreakStyles"
 import ContactDetailCard from "../objects/ContactDetailCard"
 import Block from "../objects/Block"
 import BlockText from "../objects/BlockText"
-import { fadeIn } from "../styles/Animations"
+import { fadeIn, slideRight, speed, zoomIn } from "../styles/Animations"
 
 export default function ContactDetails() {
   return (
@@ -39,22 +39,6 @@ export default function ContactDetails() {
   )
 }
 
-// animations
-const slideLeft = keyframes`
-  from { opacity: 0; transform: translateX(-20px); filter: blur(10px)}
-  to { opacity: 1;  transform: translateX(0px);  filter: blur(0px)}
-`
-
-const slideRight = keyframes`
-  from { opacity: 0;  transform: translateX(50px); filter: blur(10px); }
-  to { opacity: 1;   transform: translateX(0px);  filter: blur(0px)}
-`
-
-const zoomIn = keyframes`
-  from { opacity: 0; transform: scale(0.8); filter: blur(10px)}
-  to { opacity: 1;  transform: scale(1);  filter: blur(0px)}
-`
-
 const Wrapper = styled.div`
   padding-top: 25px;
 `
@@ -84,7 +68,7 @@ const DetailsSection = styled.div`
 const Title = styled(H4)`
   text-align: center;
   opacity: 0;
-  animation: ${fadeIn} 1s forwards;
+  animation: ${fadeIn} ${speed} forwards;
   margin-top: 20px;
   margin-bottom: 15px;
 `
@@ -103,7 +87,7 @@ const MapWrapper = styled.div`
 
   // animations
   opacity: 0;
-  animation: ${zoomIn} 1s forwards;
+  animation: ${zoomIn} ${speed} forwards;
 `
 
 const ContactCards = styled.div`
@@ -118,7 +102,7 @@ const ContactCards = styled.div`
   // animations
   > * {
     opacity: 0;
-    animation: ${slideRight} 1s forwards;
+    animation: ${slideRight} ${speed} forwards;
 
     :nth-child(1) {
       animation-delay: 0.2s;

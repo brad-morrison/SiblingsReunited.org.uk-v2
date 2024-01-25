@@ -7,6 +7,7 @@ import { breaks } from "../styles/BreakStyles"
 import LazyLoad from "react-lazy-load"
 import Block from "../objects/Block"
 import BlockText from "../objects/BlockText"
+import { fadeIn, slideLeft, speed } from "../styles/Animations"
 
 export default function FormSection() {
   return (
@@ -26,17 +27,6 @@ export default function FormSection() {
     </LazyLoad>
   )
 }
-
-// animations
-const slideLeft = keyframes`
-  from { opacity: 0; transform: translateX(-80px); filter: blur(10px)}
-  to { opacity: 1;  transform: translateX(0px);  filter: blur(0px)}
-`
-
-const slideRight = keyframes`
-  from { opacity: 0;  transform: translateX(80px); filter: blur(10px); }
-  to { opacity: 1;   transform: translateX(0px);  filter: blur(0px)}
-`
 
 const Wrapper = styled.div`
   max-width: 1300px;
@@ -71,12 +61,16 @@ const FormInfo = styled.div`
 
   // animations
   opacity: 0;
-  animation: ${slideLeft} 1s forwards;
+  animation: ${slideLeft} ${speed} forwards;
 `
 
 const Title = styled(H4)`
   text-align: center;
   margin-bottom: 15px;
+
+  // animations
+  opacity: 0;
+  animation: ${fadeIn} ${speed} forwards;
 `
 
 const SubTitle = styled(BodyMain)``

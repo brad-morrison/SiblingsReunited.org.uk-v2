@@ -5,6 +5,7 @@ import LazyLoad from "react-lazy-load"
 import Gallery from "./Gallery"
 import Block from "../objects/Block"
 import BlockText from "../objects/BlockText"
+import { slideDown } from "../styles/Animations"
 
 export default function Events() {
   return (
@@ -23,11 +24,6 @@ export default function Events() {
     </LazyLoad>
   )
 }
-
-const slideDown = keyframes`
-  from { opacity: 0; transform: translateY(80px); filter: blur(10px)}
-  to { opacity: 1;  transform: translateY(0px);  filter: blur(0px)}
-`
 
 const Wrapper = styled.div`
   // animations

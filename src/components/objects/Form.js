@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form"
 import styled, { keyframes } from "styled-components"
 import { themes } from "../styles/ColorStyles"
 import LazyLoad from "react-lazy-load"
+import { speed } from "../styles/Animations"
 
 export default function Form() {
   // destructure react-hook-form hook into functinos that we need -> register, handleSubmit, errors and watch
@@ -88,7 +89,7 @@ const FormWrapper = styled.div`
     100px 100px 80px rgba(0, 0, 0, 0.07);
 
   opacity: 0;
-  animation: ${slideRight} 1s forwards;
+  animation: ${slideRight} ${speed} forwards;
 
   form {
     display: grid;
@@ -103,7 +104,7 @@ const FormWrapper = styled.div`
     font-size: 15px;
 
     opacity: 0;
-    animation: ${slideRight} 1s 0.6s forwards;
+    animation: ${slideRight} ${speed} 0.6s forwards;
   }
 
   .inputField-Large {
@@ -116,7 +117,7 @@ const FormWrapper = styled.div`
     font-size: 15px;
 
     opacity: 0;
-    animation: ${slideRight} 1s 0.6s forwards;
+    animation: ${slideRight} ${speed} 0.6s forwards;
   }
 
   .formButton {
@@ -132,7 +133,7 @@ const FormWrapper = styled.div`
     border: 0;
 
     opacity: 0;
-    animation: ${slideRight} 1s 0.6s forwards;
+    animation: ${slideRight} ${speed} 0.6s forwards;
 
     :hover {
       box-shadow: 0px 13px 30px rgba(0, 0, 0, 0.2);
@@ -146,7 +147,7 @@ const FormWrapper = styled.div`
     font-weight: 600;
 
     opacity: 0;
-    animation: ${slideRight} 1s 0.2s forwards;
+    animation: ${slideRight} ${speed} 0.2s forwards;
   }
 
   .error {

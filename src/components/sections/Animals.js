@@ -6,6 +6,7 @@ import AnimalCard from "../objects/AnimalCard"
 import { animals } from "../../data/Animals"
 import Block from "../objects/Block"
 import BlockText from "../objects/BlockText"
+import { fadeIn, slideDown, speed } from "../styles/Animations"
 
 export default function Animals() {
   return (
@@ -33,16 +34,6 @@ export default function Animals() {
   )
 }
 
-const slideDown = keyframes`
-  from { opacity: 0; transform: translateY(-20px); filter: blur(10px)}
-  to { opacity: 1;  transform: translateY(0px);  filter: blur(0px)}
-`
-
-const fadeIn = keyframes`
-  from { opacity: 0; filter: blur(3px)}
-  to { opacity: 1; filter: blur(0px)}
-`
-
 const Wrapper = styled.div``
 
 const ContentWrapper = styled.div``
@@ -52,7 +43,7 @@ const SubHeading = styled(H3)`
 
   // animation
   opacity: 0;
-  animation: ${slideDown} 1s forwards;
+  animation: ${slideDown} ${speed} forwards;
 `
 
 const TextBlock = styled.div`

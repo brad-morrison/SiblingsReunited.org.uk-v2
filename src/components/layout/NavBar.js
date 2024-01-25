@@ -26,8 +26,10 @@ export default function NavBar() {
         </Items>
       </ContentWrapper>
       <SecondaryBar>
-        <Link to="/ChildPage
-        ">
+        <Link
+          to="/ChildPage
+        "
+        >
           <SecondaryContent>View our child friendly page</SecondaryContent>
         </Link>
       </SecondaryBar>
@@ -36,6 +38,7 @@ export default function NavBar() {
 }
 
 const Wrapper = styled.div`
+  position: relative;
   overflow-x: hidden;
   max-width: 100%;
   background-color: ${themes.background};
@@ -47,7 +50,7 @@ const ContentWrapper = styled.div`
   grid-template-columns: 250px auto;
   max-width: 1400px;
   margin: auto;
-  `
+`
 
 const LogoWrapper = styled.div`
   position: relative;
@@ -91,7 +94,7 @@ const SecondaryBar = styled.div`
   margin: auto;
   background-color: ${themes.purple};
   height: auto;
-  z-index: 100;
+  z-index: 56;
 `
 
 const SecondaryContent = styled(Caption)`

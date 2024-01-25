@@ -9,6 +9,7 @@ import {
   SmallText,
 } from "../styles/TextStyles"
 import LazyLoad from "react-lazy-load"
+import { slideLeft, slideRight, speed } from "../styles/Animations"
 
 export default function FundraiserCard(props) {
   return (
@@ -28,17 +29,6 @@ export default function FundraiserCard(props) {
     </LazyLoad>
   )
 }
-
-// animations
-const slideLeft = keyframes`
-  from { opacity: 0; transform: translateX(-20px); filter: blur(10px)}
-  to { opacity: 1;  transform: translateX(0px);  filter: blur(0px)}
-`
-
-const slideRight = keyframes`
-  from { opacity: 0;  transform: translateX(50px); filter: blur(10px); }
-  to { opacity: 1;   transform: translateX(0px);  filter: blur(0px)}
-`
 
 const Wrapper = styled.div`
   width: fit-content;
@@ -61,7 +51,7 @@ const CardWrapper = styled.div`
 
   // animations
   opacity: 0;
-  animation: ${slideLeft} 1s forwards;
+  animation: ${slideLeft} ${speed} forwards;
 `
 
 const TextWrapper = styled.div`
@@ -75,7 +65,7 @@ const TextWrapper = styled.div`
 
   // animations
   opacity: 0;
-  animation: ${slideRight} 1s forwards;
+  animation: ${slideRight} ${speed} forwards;
 `
 
 const Text = styled(BodyMain)``

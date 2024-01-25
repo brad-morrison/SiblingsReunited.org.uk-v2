@@ -4,6 +4,7 @@ import SocialMediaButton from "../objects/SocialMediaButton"
 import { themes } from "../styles/ColorStyles"
 import { BodyMain, H3, MediumText } from "../styles/TextStyles"
 import LazyLoad from "react-lazy-load"
+import { speed, zoomIn } from "../styles/Animations"
 
 function StayInTouch() {
   const buttonSize = "75px"
@@ -46,11 +47,6 @@ function StayInTouch() {
 
 export default StayInTouch
 
-const zoomIn = keyframes`
-  from { opacity: 0; transform: scale(0.8); filter: blur(10px)}
-  to { opacity: 1;  transform: scale(1);  filter: blur(0px)}
-`
-
 const Wrapper = styled.div`
   position: relative;
   overflow: hidden;
@@ -71,7 +67,7 @@ const ContentWrapper = styled.div`
 
   // animations
   opacity: 0;
-  animation: ${zoomIn} 1s forwards;
+  animation: ${zoomIn} ${speed} forwards;
 `
 
 const ImageWrapper = styled.div`
@@ -110,7 +106,7 @@ const ButtonWrapper = styled.div`
   // animations
   > * {
     opacity: 0;
-    animation: ${zoomIn} 1s forwards;
+    animation: ${zoomIn} ${speed} forwards;
 
     :nth-child(1) {
       animation-delay: 0.3s;

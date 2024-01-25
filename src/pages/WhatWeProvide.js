@@ -10,6 +10,7 @@ import OurSite from "../components/sections/OurSite"
 import Supervisors from "../components/sections/Supervisors"
 import Events from "../components/sections/Events"
 import Block from "../components/objects/Block"
+import LazyLoad from "react-lazy-load"
 
 function WhatWeProvidePage() {
   return (
@@ -30,10 +31,12 @@ function WhatWeProvidePage() {
 
         <OurSite />
 
-        <div>
-          <Quotes title={"What the children say"} />
-          <Quotes />
-        </div>
+        <LazyLoad>
+          <div>
+            <Quotes title={"What the children say"} />
+            <Quotes />
+          </div>
+        </LazyLoad>
 
         <Animals />
 

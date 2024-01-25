@@ -12,6 +12,7 @@ import {
   zoomIn,
   zoomOut,
   fadeIn,
+  speed,
 } from "../styles/Animations"
 
 function BlockText(props) {
@@ -43,6 +44,10 @@ const Wrapper = styled.div`
 
 const IntroTitle = styled(H4)`
   text-align: center;
+
+  // animations
+  opacity: 0;
+  animation: ${zoomIn} ${speed} forwards;
 `
 
 const ContentWrapper = styled.div`
@@ -75,7 +80,7 @@ const DetailWrapper = styled.div`
           ? fadeIn
           : none /* default animation if none of the conditions match */
     }
-    1s forwards;
+    ${speed} forwards;
 `
 
 const Title = styled(H3)`
@@ -87,8 +92,16 @@ const Title = styled(H3)`
       : props.titleAlign === "right"
       ? "end"
       : "left"};
+
+  // animations
+  opacity: 0;
+  animation: ${zoomIn} ${speed} forwards;
 `
 
-const Paragraph = styled(BodyMain)``
+const Paragraph = styled(BodyMain)`
+  // animations
+  opacity: 0;
+  animation: ${zoomIn} ${speed} forwards;
+`
 
 const OptionalButton = styled(Button)``

@@ -10,6 +10,7 @@ import {
   slideLeft,
   slideRight,
   slideUp,
+  speed,
   zoomIn,
   zoomOut,
 } from "../styles/Animations"
@@ -46,6 +47,9 @@ const Wrapper = styled.div`
 
 const IntroTitle = styled(H4)`
   text-align: center;
+
+  opacity: 0;
+  animation: ${fadeIn} ${speed} forwards;
 `
 
 const ContentWrapper = styled.div`
@@ -82,7 +86,7 @@ const ContentWrapper = styled.div`
               ? slideLeft
               : none /* default animation if none of the conditions match */
         }
-        1s forwards;
+        ${speed} forwards;
     }
 
     :nth-child(2) {
@@ -108,7 +112,7 @@ const ContentWrapper = styled.div`
               ? slideRight
               : none /* default animation if none of the conditions match */
         }
-        1s forwards;
+        ${speed} forwards;
     }
   }
 `

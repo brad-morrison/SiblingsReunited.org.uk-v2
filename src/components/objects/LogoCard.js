@@ -1,12 +1,15 @@
 import React from "react"
+import LazyLoad from "react-lazy-load"
 import styled from "styled-components"
 
 function LogoCard(props) {
   return (
     <Wrapper>
-      <ContentWrapper>
-        <Logo src={props.logo}></Logo>
-      </ContentWrapper>
+      <LazyLoad>
+        <ContentWrapper>
+          <Logo src={props.logo}></Logo>
+        </ContentWrapper>
+      </LazyLoad>
     </Wrapper>
   )
 }

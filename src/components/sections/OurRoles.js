@@ -4,7 +4,7 @@ import Button from "../objects/Button"
 import { H3 } from "../styles/TextStyles"
 import LazyLoad from "react-lazy-load"
 import Block from "../objects/Block"
-import { zoomIn } from "../styles/Animations"
+import { speed, zoomIn } from "../styles/Animations"
 
 export default function OurRoles() {
   return (
@@ -61,7 +61,7 @@ const SubHeading = styled(H3)`
 
   //animation
   opacity: 0;
-  animation: ${zoomIn} 1s forwards;
+  animation: ${zoomIn} ${speed} forwards;
 `
 
 const ButtonWrapper = styled.div`
