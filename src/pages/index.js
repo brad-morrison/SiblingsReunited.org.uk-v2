@@ -9,6 +9,7 @@ import Quotes from "../components/sections/Quotes"
 import StayInTouch from "../components/sections/StayInTouch"
 import Block from "../components/objects/Block"
 import LogoList from "../components/sections/LogoList"
+import { breaks } from "../components/styles/BreakStyles"
 
 function IndexPage() {
   return (
@@ -16,7 +17,7 @@ function IndexPage() {
       <Seo title="Home" />
       <Content>
         <Hero />
-        {/*
+
         <SubHero
           title="Reunited siblings is what we do"
           text="Siblings Reunited (STAR) reunites Brothers and Sisters separated
@@ -29,6 +30,7 @@ function IndexPage() {
                 separated."
           image="/images/site.jpg"
         />
+        {/*
         <TriplePostCards title="Get Involved" />
 
         <Block
@@ -71,4 +73,8 @@ export default IndexPage
 const Content = styled.div`
   display: grid;
   gap: 150px;
+
+  @media (max-width: ${breaks.phone}) {
+    gap: 0;
+  }
 `

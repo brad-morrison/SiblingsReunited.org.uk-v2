@@ -3,6 +3,7 @@ import styled, { keyframes } from "styled-components"
 import { BodyMain, H1, H2, H3, H4, MediumText } from "../styles/TextStyles"
 import LazyLoad from "react-lazy-load"
 import { slideDown, slideLeft, slideRight, speed } from "../styles/Animations"
+import { breaks } from "../styles/BreakStyles"
 
 function SubHero(props) {
   return (
@@ -46,17 +47,26 @@ const ContentWrapper = styled.div`
   max-width: 1300px;
   margin: 0 auto;
 
-  // mid
-  @media (max-width: 1034px) {
-    grid-template-columns: auto;
+  @media (max-width: ${breaks.phone}) {
+    width: 100%;
+    grid-template-columns: 1fr;
+    position: relative;
   }
 `
 
 const ImageWrapper = styled.div`
   max-height: 400px;
   padding: 30px;
-  order: ${props => props.flipped};
   position: relative;
+  width: 100%;
+  height: 100vh; /* You can adjust the height as needed */
+
+  @media (max-width: ${breaks.phone}) {
+    width: 100%;
+    height: 300px;
+    grid-template-columns: 1fr;
+    order: 2;
+  }
 `
 
 const Image = styled.img`
@@ -81,36 +91,49 @@ const Text = styled.div`
   gap: 30px;
 `
 
-const Paragraph = styled(BodyMain)``
+const Paragraph = styled(BodyMain)`
+  @media (max-width: ${breaks.phone}) {
+    font-size: large;
+  }
+`
 
-const Title = styled(H2)``
+const Title = styled(H2)`
+  @media (max-width: ${breaks.phone}) {
+    font-size: x-large;
+  }
+`
 
 const SVGImage = styled.img`
   position: absolute;
   z-index: 100;
-  width: 400px;
-  height: 400px;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  top: 0;
+  top: 50%;
+  left: 50%;
 
   // animation
   opacity: 0;
   animation: ${slideLeftRotate} ${speed} 0.2s forwards;
+
+  @media (max-width: ${breaks.phone}) {
+    height: 160px;
+    left: -10px;
+  }
 `
 
 const SVGImage2 = styled.img`
   position: absolute;
   z-index: 100;
-  width: 400px;
-  height: 400px;
-  left: 200px;
-  bottom: 0;
-  right: 0;
-  top: 0;
+  top: 50%;
+  left: 50%;
 
   // animation
   opacity: 0;
   animation: ${slideRight} ${speed} 0.2s forwards;
+
+  @media (max-width: ${breaks.phone}) {
+    height: 180px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+  }
 `

@@ -8,7 +8,7 @@ import SideMenu from "./layout/SideMenu"
 function Layout({ children }) {
   return (
     <Site>
-      <SideMenu />
+      {/*<SideMenu />*/}
       <NavBar />
       <main>{children}</main>
       {/*<Footer />*/}

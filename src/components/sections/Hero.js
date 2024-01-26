@@ -88,7 +88,8 @@ const LeftSection = styled.div`
   }
 
   @media (max-width: ${breaks.phone}) {
-    padding: 20px 20px;
+    padding: 30px 30px;
+    gap: 20px;
   }
 `
 
