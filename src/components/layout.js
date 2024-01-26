@@ -11,7 +11,7 @@ function Layout({ children }) {
       <SideMenu />
       <NavBar />
       <main>{children}</main>
-      <Footer />
+      {/*<Footer />*/}
     </Site>
   )
 }

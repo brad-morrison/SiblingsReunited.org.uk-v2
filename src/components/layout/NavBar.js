@@ -26,12 +26,14 @@ export default function NavBar() {
         </Items>
       </ContentWrapper>
       <SecondaryBar>
+        {/*}
         <Link
           to="/ChildPage
         "
         >
           <SecondaryContent>View our child friendly page</SecondaryContent>
         </Link>
+          */}
       </SecondaryBar>
     </Wrapper>
   )
@@ -56,6 +58,10 @@ const LogoWrapper = styled.div`
   position: relative;
   height: 100px;
   padding: 10px 30px;
+
+  @media (max-width: ${breaks.phone}) {
+    height: 80px;
+  }
 `
 
 const Logo = styled.div`
@@ -93,7 +99,7 @@ const SecondaryBar = styled.div`
   width: 100%;
   margin: auto;
   background-color: ${themes.purple};
-  height: auto;
+  height: 20px;
   z-index: 56;
 `
 

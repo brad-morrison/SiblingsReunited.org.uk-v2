@@ -4,6 +4,7 @@ import styled from "styled-components"
 import PostCard from "../objects/PostCard"
 import { themes } from "../styles/ColorStyles"
 import { ButtonText, H1, MediumText } from "../styles/TextStyles"
+import { breaks } from "../styles/BreakStyles"
 
 function Button(props) {
   return (
@@ -33,5 +34,9 @@ const Text = styled(ButtonText)`
   :hover {
     box-shadow: 0px 13px 30px rgba(0, 0, 0, 0.2);
     cursor: pointer;
+  }
+
+  @media (max-width: ${breaks.phone}) {
+    font-size: large;
   }
 `

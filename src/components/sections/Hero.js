@@ -11,13 +11,14 @@ import {
   slideRight,
   speed,
 } from "../styles/Animations"
+import { breaks } from "../styles/BreakStyles"
 
 function Hero() {
   return (
     <Wrapper>
       <Content>
         <SocialMediaBarWrapper>
-          <SocialMediaBar />
+          <SocialMediaBar id="hideOnMobile" />
         </SocialMediaBarWrapper>
         <ContentWrapper>
           <LeftSection>
@@ -55,8 +56,10 @@ const Wrapper = styled.div`
 const ContentWrapper = styled.div`
   display: grid;
   grid-template-columns: 600px auto;
+  width: 100%;
+  min-width: 100%;
 
-  @media (max-width: 688px) {
+  @media (max-width: ${breaks.phone}) {
     grid-template-columns: auto;
   }
 `
@@ -80,7 +83,12 @@ const LeftSection = styled.div`
     :nth-child(2) {
       opacity: 0;
       animation: ${slideDown} ${speed} 0.7s forwards;
+      padding: 0px 0px;
     }
+  }
+
+  @media (max-width: ${breaks.phone}) {
+    padding: 20px 20px;
   }
 `
 
@@ -98,6 +106,14 @@ const SocialMediaBarWrapper = styled.div`
   // animation
   opacity: 0;
   animation: ${slideRight} ${speed} 0.8s forwards;
+
+  @media (max-width: ${breaks.phone}) {
+    visibility: hidden;
+  }
+
+  #hideInMobile {
+    visibility: hidden;
+  }
 `
 
 const TextWrapper = styled.div`
@@ -125,6 +141,11 @@ const TextWrapper = styled.div`
       animation-delay: 0.5s;
     }
   }
+
+  @media (max-width: ${breaks.phone}) {
+    padding: 20px;
+    margin-right: 100px;
+  }
 `
 
 /*
@@ -143,6 +164,14 @@ position: absolute;
 
 const Title = styled(H1)`
   color: ${themes.text1};
+
+  @media (max-width: ${breaks.phone}) {
+    font-size: xx-large;
+  }
 `
 
-const Description = styled(BodyIntro)``
+const Description = styled(BodyIntro)`
+  @media (max-width: ${breaks.phone}) {
+    font-size: large;
+  }
+`

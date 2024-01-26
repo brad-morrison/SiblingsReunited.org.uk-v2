@@ -16,6 +16,7 @@ function IndexPage() {
       <Seo title="Home" />
       <Content>
         <Hero />
+        {/*
         <SubHero
           title="Reunited siblings is what we do"
           text="Siblings Reunited (STAR) reunites Brothers and Sisters separated
@@ -57,9 +58,9 @@ function IndexPage() {
         />
 
         <TriplePostCards title="Recent Posts" />
-        {/* <StoreSection /> */}
         <StayInTouch />
         <LogoList title="In Partnership with" />
+        */}
       </Content>
     </Layout>
   )
