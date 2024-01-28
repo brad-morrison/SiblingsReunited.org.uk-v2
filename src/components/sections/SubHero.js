@@ -11,8 +11,8 @@ function SubHero(props) {
       <LazyLoad>
         <ContentWrapper>
           <ImageWrapper flipped={props.flipped}>
-            <SVGImage src="/images/logos/Mascot.svg"></SVGImage>
-            <SVGImage2 src="/images/svg/kids.svg"></SVGImage2>
+            <Mascot src="/images/logos/Mascot.svg"></Mascot>
+            <ChildrenVector src="/images/svg/kids.svg"></ChildrenVector>
           </ImageWrapper>
           <TextWrapper>
             <Text>
@@ -30,71 +30,52 @@ function SubHero(props) {
 
 export default SubHero
 
-// animations
-const slideLeftRotate = keyframes`
+// local animations (not from global animation script)
+// Mascot animation
+const local_slideLeftRotate = keyframes`
   from { opacity: 0; transform: translateX(-80px) rotate(-30deg); filter: blur(20px)}
-  to { opacity: 1;  transform: translateX(0px) rotate(0deg);  filter: blur(0px)}
+  to { opacity: 1;  transform: translateX(80px) rotate(0deg);  filter: blur(0px)}
+`
+
+// children vector animation
+export const local_slideRight = keyframes`
+  from { opacity: 0;  transform: translateX(0px); filter: 10px}
+  to { opacity: 1;   transform: translateX(-80px);  filter: blur(0px)}
 `
 
 const Wrapper = styled.div`
-  position: relative;
+  width: 100%;
 `
 
 const ContentWrapper = styled.div`
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
+
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 30px;
-  max-width: 1300px;
-  margin: 0 auto;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
 
   @media (max-width: ${breaks.phone}) {
-    width: 100%;
-    grid-template-columns: 1fr;
-    position: relative;
   }
 `
 
 const ImageWrapper = styled.div`
-  max-height: 400px;
-  padding: 30px;
-  position: relative;
-  width: 100%;
-  height: 100vh; /* You can adjust the height as needed */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 
   @media (max-width: ${breaks.phone}) {
-    width: 100%;
-    height: 300px;
-    grid-template-columns: 1fr;
-    order: 2;
   }
 `
 
-const Image = styled.img`
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  vertical-align: middle;
-  border: 0.5px lightgray solid;
-`
-
-const TextWrapper = styled.div`
-  padding: 30px;
-  display: grid;
-  align-items: center;
-
-  opacity: 0;
-  animation: ${slideDown} ${speed} 0.2s forwards;
-`
+const TextWrapper = styled.div``
 
 const Text = styled.div`
   display: grid;
   gap: 30px;
-`
-
-const Paragraph = styled(BodyMain)`
-  @media (max-width: ${breaks.phone}) {
-    font-size: large;
-  }
+  vertical-align: middle;
 `
 
 const Title = styled(H2)`
@@ -103,37 +84,31 @@ const Title = styled(H2)`
   }
 `
 
-const SVGImage = styled.img`
-  position: absolute;
-  z-index: 100;
-  top: 50%;
-  left: 50%;
-
-  // animation
-  opacity: 0;
-  animation: ${slideLeftRotate} ${speed} 0.2s forwards;
-
+const Paragraph = styled(BodyMain)`
   @media (max-width: ${breaks.phone}) {
-    height: 160px;
-    left: -10px;
+    font-size: large;
   }
 `
 
-const SVGImage2 = styled.img`
-  position: absolute;
-  z-index: 100;
-  top: 50%;
-  left: 50%;
+const Mascot = styled.img`
+  height: 300px;
+  margin: auto;
 
-  // animation
   opacity: 0;
-  animation: ${slideRight} ${speed} 0.2s forwards;
+  animation: ${local_slideLeftRotate} ${speed} forwards;
 
   @media (max-width: ${breaks.phone}) {
-    height: 180px;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    top: 0;
+  }
+`
+
+const ChildrenVector = styled.img`
+  height: 400px;
+  margin: auto;
+
+  transform: translateX(-80px);
+  opacity: 0;
+  animation: ${local_slideRight} ${speed} forwards;
+
+  @media (max-width: ${breaks.phone}) {
   }
 `
