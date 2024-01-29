@@ -58,6 +58,11 @@ const ContentWrapper = styled.div`
   align-content: center;
   align-items: center;
 
+  @media (max-width: 940px) {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+  }
+
   @media (max-width: ${breaks.phone}) {
   }
 `
@@ -65,12 +70,25 @@ const ContentWrapper = styled.div`
 const ImageWrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+
+  @media (max-width: 940px) {
+    //padding: 50px;
+  }
 
   @media (max-width: ${breaks.phone}) {
+    transform: translateX(-30px);
   }
 `
 
-const TextWrapper = styled.div``
+const TextWrapper = styled.div`
+  opacity: 0;
+  animation: ${slideDown} ${speed} forwards;
+  padding: 50px;
+
+  @media (max-width: 940px) {
+  }
+`
 
 const Text = styled.div`
   display: grid;
@@ -79,12 +97,18 @@ const Text = styled.div`
 `
 
 const Title = styled(H2)`
+  @media (max-width: ${breaks.tablet}) {
+    font-size: xx-large;
+  }
   @media (max-width: ${breaks.phone}) {
     font-size: x-large;
   }
 `
 
 const Paragraph = styled(BodyMain)`
+  @media (max-width: ${breaks.tablet}) {
+    font-size: larger;
+  }
   @media (max-width: ${breaks.phone}) {
     font-size: large;
   }
@@ -97,7 +121,12 @@ const Mascot = styled.img`
   opacity: 0;
   animation: ${local_slideLeftRotate} ${speed} forwards;
 
+  @media (max-width: ${breaks.tablet}) {
+    height: 250px;
+  }
+
   @media (max-width: ${breaks.phone}) {
+    height: 200px;
   }
 `
 
@@ -109,6 +138,11 @@ const ChildrenVector = styled.img`
   opacity: 0;
   animation: ${local_slideRight} ${speed} forwards;
 
+  @media (max-width: ${breaks.tablet}) {
+    height: 340px;
+  }
+
   @media (max-width: ${breaks.phone}) {
+    height: 300px;
   }
 `
