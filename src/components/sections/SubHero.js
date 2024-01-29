@@ -73,7 +73,7 @@ const ImageWrapper = styled.div`
   overflow: hidden;
 
   @media (max-width: 940px) {
-    //padding: 50px;
+    order: 2;
   }
 
   @media (max-width: ${breaks.phone}) {

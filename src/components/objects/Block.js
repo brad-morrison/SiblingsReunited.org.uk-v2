@@ -59,6 +59,7 @@ const ContentWrapper = styled.div`
   max-width: 1300px;
   max-height: 400px;
   margin: 30px auto;
+  padding: 0 30px;
 
   > * {
     opacity: 0;

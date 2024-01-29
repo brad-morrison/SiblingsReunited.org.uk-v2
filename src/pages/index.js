@@ -10,13 +10,14 @@ import StayInTouch from "../components/sections/StayInTouch"
 import Block from "../components/objects/Block"
 import LogoList from "../components/sections/LogoList"
 import { breaks } from "../components/styles/BreakStyles"
+import Spacer from "../components/layout/Spacer"
 
 function IndexPage() {
   return (
     <Layout>
       <Seo title="Home" />
       <Content>
-        {/* <Hero /> */}
+        <Hero />
 
         <SubHero
           title="Reuniting siblings is what we do"
@@ -32,7 +33,6 @@ function IndexPage() {
           image="/images/site.jpg"
         />
 
-        {/*}
         <TriplePostCards title="Get Involved" />
 
         <Block
@@ -45,7 +45,7 @@ function IndexPage() {
           Click below to see what you can do!"
           button="What can I do at STAR?"
         />
-
+        {/*}
         <Quotes />
 
         <Block
@@ -77,6 +77,6 @@ const Content = styled.div`
   gap: 150px;
 
   @media (max-width: ${breaks.phone}) {
-    gap: 0;
+    gap: 80px;
   }
 `

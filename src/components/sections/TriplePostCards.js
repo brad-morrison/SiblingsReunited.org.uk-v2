@@ -63,6 +63,7 @@ const PostCards = styled.div`
   grid-template-columns: 1fr 1fr 1fr;
   gap: 30px;
   height: auto;
+  padding: 0 30px;
 
   // mid
   @media (max-width: 1034px) {

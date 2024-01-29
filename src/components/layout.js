@@ -7,17 +7,20 @@ import SideMenu from "./layout/SideMenu"
 import Test from "./test"
 
 function Layout({ children }) {
-  return <main>{children}</main>
+  return (
+    <Site>
+      <NavBar />
+      <SideMenu />
+      <main>{children}</main>
+    </Site>
+  )
 }
 
 export default Layout
 
-/* 
-
 const Site = styled.div`
-  width: 100%;
-  min-width: 100%;
-  max-width: 100%;
-  overflow-x: hidden;
+  //width: 100%;
+  //min-width: 100%;
+  //max-width: 100%;
+  //overflow-x: hidden;
 `
-*/
