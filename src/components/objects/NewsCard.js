@@ -3,7 +3,7 @@ import React from "react"
 import styled, { keyframes } from "styled-components"
 import LazyLoad from "react-lazy-load"
 
-import { BodyMain, H3, Caption } from "../styles/TextStyles"
+import { BodyMain, H3, Caption, H2 } from "../styles/TextStyles"
 import { slideDown, speed, zoomIn } from "../styles/Animations"
 
 function NewsCard(props) {
@@ -88,7 +88,7 @@ const Image = styled.img`
 // text styles
 const Date = styled(Caption)``
 const Paragraph = styled(BodyMain)``
-const Title = styled(H3)`
+const Title = styled(H2)`
   color: black;
 `
 const SmallLink = styled(Caption)`

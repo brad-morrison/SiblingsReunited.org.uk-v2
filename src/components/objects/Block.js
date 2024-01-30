@@ -1,6 +1,6 @@
 import React from "react"
 import styled, { keyframes } from "styled-components"
-import { BodyMain, H1, H3, H4, MediumText } from "../styles/TextStyles"
+import { BodyMain, H1, H2, H3, H4, MediumText } from "../styles/TextStyles"
 import LazyLoad from "react-lazy-load"
 import Button from "./Button"
 import {
@@ -14,6 +14,7 @@ import {
   zoomIn,
   zoomOut,
 } from "../styles/Animations"
+import { breaks } from "../styles/BreakStyles"
 
 function Block(props) {
   return (
@@ -25,10 +26,12 @@ function Block(props) {
             <Image src={props.image} round={props.round} />
           </ImageWrapper>
           <DetailWrapper>
-            <Title titleAlign={props.titleAlign}>{props.title}</Title>
-            <Paragraph>
-              {<p dangerouslySetInnerHTML={{ __html: props.text }}></p>}
-            </Paragraph>
+            <Text>
+              <Title titleAlign={props.titleAlign}>{props.title}</Title>
+              <Paragraph>
+                {<p dangerouslySetInnerHTML={{ __html: props.text }}></p>}
+              </Paragraph>
+            </Text>
             {props.button && <OptionalButton text={props.button} />}
           </DetailWrapper>
         </ContentWrapper>
@@ -45,7 +48,7 @@ const Wrapper = styled.div`
   align-items: center;
 `
 
-const IntroTitle = styled(H4)`
+const IntroTitle = styled(H3)`
   text-align: center;
 
   opacity: 0;
@@ -55,11 +58,16 @@ const IntroTitle = styled(H4)`
 const ContentWrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  gap: 30px;
   max-width: 1300px;
-  max-height: 400px;
   margin: 30px auto;
-  padding: 0 30px;
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+  }
+
+  @media (max-width: ${breaks.phone}) {
+  }
 
   > * {
     opacity: 0;
@@ -119,29 +127,49 @@ const ContentWrapper = styled.div`
 `
 
 const ImageWrapper = styled.div`
-  text-align: center;
   order: ${props => props.flipped};
   overflow: hidden;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: 900px) {
+    order: 0;
+  }
 `
 
 const Image = styled.img`
   object-fit: cover;
-  vertical-align: middle;
   border: 0.5px lightgray solid;
   width: ${props => (props.round ? "400px" : "100%")};
+  //width: 100%;
+  max-width: 100%;
   aspect-ratio: ${props => (props.round ? "1/1" : "16/9")};
   border-radius: ${props => (props.round ? "50%" : "0")};
+
+  @media (max-width: ${breaks.tablet}) {
+    width: ${props => (props.round ? "300px" : "100%")};
+  }
+
+  @media (max-width: ${breaks.phone}) {
+    width: ${props => (props.round ? "200px" : "100%")};
+  }
 `
 
 const DetailWrapper = styled.div`
-  padding: ${props => (props.image ? "0" : "20px")};
   display: grid;
-  align-content: center;
-  gap: 40px;
-  vertical-align: middle;
+  height: 100%;
+  align-content: space-around;
 `
 
-const Title = styled(H3)`
+const Text = styled.div`
+  max-width: 750px;
+`
+
+const Title = styled(H2)`
+  margin-top: 0;
+  margin-bottom: 1rem;
   text-align: ${props =>
     props.titleAlign === "left"
       ? "start"
@@ -152,6 +180,11 @@ const Title = styled(H3)`
       : "left"};
 `
 
-const Paragraph = styled(BodyMain)``
+const Paragraph = styled(BodyMain)`
+  margin-bottom: 2rem;
+`
 
-const OptionalButton = styled(Button)``
+const OptionalButton = styled(Button)`
+  margin-top: 1rem;
+  margin-bottom: 0;
+`

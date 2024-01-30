@@ -1,12 +1,12 @@
 import React from "react"
 import styled, { keyframes } from "styled-components"
-import { BodyMain, H4 } from "../styles/TextStyles"
+import { BodyMain, H2, H4 } from "../styles/TextStyles"
 import LazyLoad from "react-lazy-load"
 import { slideLeft, slideRight, speed } from "../styles/Animations"
 
 function SiteBlock(props) {
   return (
-    <LazyLoad height={"400px"}>
+    <LazyLoad>
       <Wrapper>
         <ContentWrapper>
           <ImageWrapper flipped={props.flipped}>
@@ -40,13 +40,12 @@ const ContentWrapper = styled.div`
 
   // mid
   @media (max-width: 1034px) {
-    grid-template-columns: auto;
+    grid-template-columns: 1fr;
   }
 `
 
 const ImageWrapper = styled.div`
   max-height: 400px;
-  padding: 30px;
   order: ${props => props.flipped};
 
   @media (max-width: 1034px) {
@@ -69,6 +68,7 @@ const Image = styled.img`
 
 const TextWrapper = styled.div`
   padding: 30px;
+  height: 100%;
   display: grid;
   align-items: center;
 `
@@ -93,4 +93,4 @@ const Text = styled.div`
 
 const Paragraph = styled(BodyMain)``
 
-const Title = styled(H4)``
+const Title = styled(H2)``

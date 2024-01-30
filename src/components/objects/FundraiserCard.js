@@ -5,6 +5,7 @@ import {
   BodyMain,
   Caption,
   Caption2,
+  H2,
   H4,
   SmallText,
 } from "../styles/TextStyles"
@@ -70,7 +71,7 @@ const TextWrapper = styled.div`
 
 const Text = styled(BodyMain)``
 
-const Title = styled(H4)``
+const Title = styled(H2)``
 
 const Image = styled.img`
   width: 400px;

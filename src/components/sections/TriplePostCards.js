@@ -1,7 +1,7 @@
 import React from "react"
 import styled, { keyframes } from "styled-components"
 import PostCard from "../objects/PostCard"
-import { H4 } from "../styles/TextStyles"
+import { H3, H3t, H4 } from "../styles/TextStyles"
 import LazyLoad from "react-lazy-load"
 import { slideDown, slideUp, speed } from "../styles/Animations"
 
@@ -42,7 +42,7 @@ const Wrapper = styled.div`
   position: relative;
 `
 
-const MainTitle = styled(H4)`
+const MainTitle = styled(H3)`
   text-align: center;
   margin-bottom: 30px;
 
@@ -63,19 +63,16 @@ const PostCards = styled.div`
   grid-template-columns: 1fr 1fr 1fr;
   gap: 30px;
   height: auto;
-  padding: 0 30px;
 
   // mid
   @media (max-width: 1034px) {
     grid-template-columns: auto auto;
-    padding: 0 20px;
     gap: 20px;
   }
 
   // small
   @media (max-width: 688px) {
     grid-template-columns: auto;
-    padding: 0 20px;
     gap: 20px;
   }
 

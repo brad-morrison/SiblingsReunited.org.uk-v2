@@ -1,6 +1,6 @@
 import React from "react"
 import styled, { keyframes } from "styled-components"
-import { BodyMain, H1, H3, H4, MediumText } from "../styles/TextStyles"
+import { BodyMain, H1, H2, H3, H4, MediumText } from "../styles/TextStyles"
 import LazyLoad from "react-lazy-load"
 import Button from "./Button"
 import {
@@ -83,7 +83,7 @@ const DetailWrapper = styled.div`
     ${speed} forwards;
 `
 
-const Title = styled(H3)`
+const Title = styled(H2)`
   text-align: ${props =>
     props.titleAlign === "left"
       ? "start"

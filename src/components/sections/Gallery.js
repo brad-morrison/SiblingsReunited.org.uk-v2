@@ -37,7 +37,8 @@ const Wrapper = styled.div`
 `
 
 const ContentWrapper = styled.div`
-  padding: 50px;
+  padding: 20px;
+  margin-top: 30px;
 
   opacity: 0;
   animation: ${fadeIn} ${speed} forwards;

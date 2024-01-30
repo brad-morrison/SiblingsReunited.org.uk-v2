@@ -7,6 +7,7 @@ import { animals } from "../../data/Animals"
 import Block from "../objects/Block"
 import BlockText from "../objects/BlockText"
 import { fadeIn, slideDown, speed } from "../styles/Animations"
+import { breaks } from "../styles/BreakStyles"
 
 export default function Animals() {
   return (
@@ -67,4 +68,13 @@ const AnimalCards = styled.div`
   justify-content: center;
   gap: 40px;
   grid-template-columns: auto auto auto auto;
+  margin-top: 3rem;
+
+  @media (max-width: ${breaks.tablet}) {
+    grid-template-columns: auto auto auto;
+  }
+
+  @media (max-width: 800px) {
+    grid-template-columns: auto auto;
+  }
 `

@@ -32,8 +32,6 @@ const Wrapper = styled.div`
 `
 
 const ContentWrapper = styled.div`
-  display: grid;
-  gap: 50px;
   margin-bottom: 50px;
 `
 

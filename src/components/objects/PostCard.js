@@ -1,7 +1,8 @@
 import React from "react"
 import styled from "styled-components"
 import { themes } from "../styles/ColorStyles"
-import { H4, BodyMain } from "../styles/TextStyles"
+import { H4, BodyMain, H2, H3 } from "../styles/TextStyles"
+import { breaks } from "../styles/BreakStyles"
 
 function PostCard(props) {
   return (
@@ -60,6 +61,6 @@ const CardText = styled.div`
   height: auto;
 `
 
-const CardTitle = styled(H4)``
+const CardTitle = styled(H3)``
 
 const CardSubTitle = styled(BodyMain)``

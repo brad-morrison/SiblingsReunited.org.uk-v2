@@ -16,9 +16,9 @@ function WhatWeProvidePage() {
   return (
     <Layout>
       <Seo title="WhatWeProvide" />
-      <ContentWrapper>
-        <TopicPageTitle title="What We Provide" img="/images/birdHouse.jpg" />
 
+      <TopicPageTitle title="What We Provide" img="/images/birdHouse.jpg" />
+      <ContentWrapper>
         <Block
           animation="slideIn"
           title="What makes us special?"
@@ -52,7 +52,9 @@ export default WhatWeProvidePage
 
 const ContentWrapper = styled.div`
   display: grid;
+  grid-template-columns: 1fr;
   gap: 160px;
+  padding: 0 30px;
 `
 
 const SubHeading = styled(H3)`

@@ -39,8 +39,12 @@ const ContentWrapper = styled.div`
 const ItemImage = styled.img`
   object-fit: cover;
   width: 200px;
-  height: 220px;
+  //height: 220px;
   padding: 10px;
+
+  @media (max-width: 710px) {
+    width: 150px;
+  }
 `
 
 const Title = styled(MediumText)`

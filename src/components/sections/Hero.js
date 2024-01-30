@@ -1,6 +1,12 @@
 import React from "react"
 import styled, { keyframes } from "styled-components"
-import { BodyIntro, H1 } from "../styles/TextStyles"
+import {
+  BodyIntro,
+  BodyMain,
+  H1,
+  HeroBody,
+  HeroTitle,
+} from "../styles/TextStyles"
 import Button from "../objects/Button"
 import SocialMediaBar from "../objects/SocialMediaBar"
 import { themes } from "../styles/ColorStyles"
@@ -58,6 +64,8 @@ const ContentWrapper = styled.div`
   grid-template-columns: 600px auto;
   width: 100%;
   min-width: 100%;
+  margin-top: 40px;
+  margin-bottom: 40px;
 
   @media (max-width: ${breaks.phone}) {
     grid-template-columns: auto;
@@ -124,6 +132,7 @@ const TextWrapper = styled.div`
   padding: 40px;
   border-radius: 15px;
   border: 0.5px lightgray solid;
+  margin-bottom: 10px;
 
   // animation
   opacity: 0;
@@ -163,16 +172,6 @@ position: absolute;
 `
 */
 
-const Title = styled(H1)`
-  color: ${themes.text1};
+const Title = styled(HeroTitle)``
 
-  @media (max-width: ${breaks.phone}) {
-    font-size: xx-large;
-  }
-`
-
-const Description = styled(BodyIntro)`
-  @media (max-width: ${breaks.phone}) {
-    font-size: large;
-  }
-`
+const Description = styled(BodyMain)``

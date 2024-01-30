@@ -72,6 +72,8 @@ const slideDown = keyframes`
 const PageContent = styled.div`
   max-width: 1300px;
   margin: 80px auto;
+
+  padding: 0 30px;
   display: grid;
   gap: 160px;
 `

@@ -2,7 +2,7 @@ import React from "react"
 import styled, { keyframes } from "styled-components"
 import QuoteCard from "../objects/QuoteCard"
 import LazyLoad from "react-lazy-load"
-import { BodyIntro, H1, H4, MediumText } from "../styles/TextStyles"
+import { BodyIntro, H1, H2, H4, MediumText } from "../styles/TextStyles"
 import { fadeIn, speed, zoomIn } from "../styles/Animations"
 
 function Quotes(props) {
@@ -38,7 +38,7 @@ const Wrapper = styled.div`
   position: relative;
 `
 
-const MainTitle = styled(H4)`
+const MainTitle = styled(H2)`
   font-weight: 700;
   text-align: center;
   margin-bottom: 50px;
@@ -57,7 +57,6 @@ const ContentWrapper = styled.div`
 
 const QuoteCards = styled.div`
   display: grid;
-  padding: 0 30px;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 30px;
   height: auto;
@@ -65,14 +64,12 @@ const QuoteCards = styled.div`
   // mid
   @media (max-width: 1034px) {
     grid-template-columns: auto auto;
-    padding: 0 20px;
     gap: 20px;
   }
 
   // small
   @media (max-width: 688px) {
     grid-template-columns: auto;
-    padding: 0 20px;
     gap: 20px;
   }
 

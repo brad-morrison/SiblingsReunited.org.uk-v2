@@ -2,7 +2,7 @@ import React from "react"
 import styled, { keyframes } from "styled-components"
 import SocialMediaButton from "../objects/SocialMediaButton"
 import { themes } from "../styles/ColorStyles"
-import { BodyMain, H3, MediumText } from "../styles/TextStyles"
+import { BodyMain, H2, H3, MediumText } from "../styles/TextStyles"
 import LazyLoad from "react-lazy-load"
 import { speed, zoomIn } from "../styles/Animations"
 
@@ -72,7 +72,6 @@ const ContentWrapper = styled.div`
 
 const ImageWrapper = styled.div`
   max-height: 400px;
-  padding: 30px;
 `
 
 const Image = styled.img`
@@ -97,7 +96,7 @@ const Text = styled.div`
 
 const Paragraph = styled(BodyMain)``
 
-const Title = styled(H3)``
+const Title = styled(H2)``
 
 const ButtonWrapper = styled.div`
   display: flex;

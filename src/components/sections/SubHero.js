@@ -96,23 +96,9 @@ const Text = styled.div`
   vertical-align: middle;
 `
 
-const Title = styled(H2)`
-  @media (max-width: ${breaks.tablet}) {
-    font-size: xx-large;
-  }
-  @media (max-width: ${breaks.phone}) {
-    font-size: x-large;
-  }
-`
+const Title = styled(H1)``
 
-const Paragraph = styled(BodyMain)`
-  @media (max-width: ${breaks.tablet}) {
-    font-size: larger;
-  }
-  @media (max-width: ${breaks.phone}) {
-    font-size: large;
-  }
-`
+const Paragraph = styled(BodyMain)``
 
 const Mascot = styled.img`
   height: 300px;

@@ -5,6 +5,7 @@ import LazyLoad from "react-lazy-load"
 import {
   BodyMain,
   Caption,
+  H2,
   H4,
   MediumText,
   SmallText,
@@ -73,7 +74,7 @@ const TextWrapper = styled.div`
 
 const Text = styled(BodyMain)``
 
-const Title = styled(H4)``
+const Title = styled(H2)``
 
 const Quote = styled(MediumText)`
   opacity: 40%;

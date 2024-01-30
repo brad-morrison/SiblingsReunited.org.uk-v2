@@ -11,7 +11,6 @@ import Block from "../components/objects/Block"
 import LogoList from "../components/sections/LogoList"
 import { breaks } from "../components/styles/BreakStyles"
 import Spacer from "../components/layout/Spacer"
-import BlockNew from "../components/objects/BlockNew"
 
 function IndexPage() {
   return (
@@ -34,38 +33,40 @@ function IndexPage() {
           image="/images/site.jpg"
         />
 
-        <TriplePostCards title="Get Involved" />
+        <PageContent>
+          <TriplePostCards title="Get Involved" />
 
-        <BlockNew
-          animation="slideIn"
-          image="/images/kids.jpeg"
-          flipped="1"
-          title="Are you a child coming to STAR Siblings Reunited? Block New"
-          text="We can’t wait to welcome you and your siblings! Click below to open our child page and see what fun activities you can do together.
+          <Block
+            animation="slideIn"
+            image="/images/kids.jpeg"
+            flipped="1"
+            title="Are you a child coming to STAR Siblings Reunited? Block New"
+            text="We can’t wait to welcome you and your siblings! Click below to open our child page and see what fun activities you can do together.
           <br><br>
           Click to find out more!"
-          button="What can I do at STAR?"
-        />
-        {/*}
-        <Quotes />
+            button="What can I do at STAR?"
+          />
+          <Quotes />
 
-        <Block
-          animation="slideOut"
-          image="/images/news.jpg"
-          introTitle="Featured Post"
-          title="Brothers and sisters split up by the care system"
-          text="A major review of Scotland's care system has said the pain of
+          <Block
+            animation="slideOut"
+            image="/images/news.jpg"
+            introTitle="Featured Post"
+            title="Brothers and sisters split up by the care system"
+            text="A major review of Scotland's care system has said the pain of
           brothers and sisters being separated often has profound and
           lifelong consequences.
           <br><br>
           Click below to read the full article."
-          button="Read more"
-        />
+            button="Read more"
+          />
 
-        <TriplePostCards title="Recent Posts" />
-        <StayInTouch />
+          <TriplePostCards title="Recent Posts" />
+          <StayInTouch />
+          {/*}
         <LogoList title="In Partnership with" />
         */}
+        </PageContent>
       </Content>
     </Layout>
   )
@@ -80,4 +81,8 @@ const Content = styled.div`
   @media (max-width: ${breaks.phone}) {
     gap: 80px;
   }
+`
+
+const PageContent = styled.div`
+  padding: 0 20px;
 `
