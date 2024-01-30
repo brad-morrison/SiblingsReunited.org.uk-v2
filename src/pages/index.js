@@ -11,6 +11,7 @@ import Block from "../components/objects/Block"
 import LogoList from "../components/sections/LogoList"
 import { breaks } from "../components/styles/BreakStyles"
 import Spacer from "../components/layout/Spacer"
+import BlockNew from "../components/objects/BlockNew"
 
 function IndexPage() {
   return (
@@ -35,14 +36,14 @@ function IndexPage() {
 
         <TriplePostCards title="Get Involved" />
 
-        <Block
+        <BlockNew
           animation="slideIn"
           image="/images/kids.jpeg"
           flipped="1"
-          title="Are you a child coming to STAR Siblings Reunited?"
+          title="Are you a child coming to STAR Siblings Reunited? Block New"
           text="We can’t wait to welcome you and your siblings! Click below to open our child page and see what fun activities you can do together.
           <br><br>
-          Click below to see what you can do!"
+          Click to find out more!"
           button="What can I do at STAR?"
         />
         {/*}
