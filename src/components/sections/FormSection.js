@@ -37,7 +37,7 @@ const ContentWrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-content: center;
-  padding: 30px;
+  padding: 20px;
   gap: 30px;
 
   @media (max-width: ${breaks.tablet}) {

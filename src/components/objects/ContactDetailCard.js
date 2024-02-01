@@ -3,6 +3,7 @@ import styled from "styled-components"
 import { themes } from "../styles/ColorStyles"
 import { Caption } from "../styles/TextStyles"
 import { FaEnvelope, FaFacebook, FaHome, FaMail, FaPhone } from "react-icons/fa"
+import { breaks } from "../styles/BreakStyles"
 
 export default function ContactDetailCard(props) {
   function Icon() {
@@ -51,6 +52,10 @@ const ContentWrapper = styled.div`
   border: 0.5px solid rgba(0, 0, 0, 0.1);
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.08);
 
+  @media (max-width: ${breaks.phone}) {
+    border-radius: 0px;
+  }
+
   :hover {
     cursor: pointer;
   }
@@ -66,6 +71,10 @@ const IconWrapper = styled.div`
   height: 60px;
   border-radius: 30px;
   font-size: 30px;
+
+  @media (max-width: ${breaks.phone}) {
+    border-radius: 0px;
+  }
 `
 
 const Text = styled(Caption)`

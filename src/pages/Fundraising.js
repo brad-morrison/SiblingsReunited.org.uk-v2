@@ -40,6 +40,8 @@ export default FundraisingPage
 
 const PageContent = styled.div`
   display: grid;
+  width: 100%;
   gap: 140px;
-  margin: 100px auto;
+
+  padding: 0 30px;
 `

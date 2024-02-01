@@ -11,6 +11,7 @@ import animations, {
   speed,
   zoomIn,
 } from "../styles/Animations"
+import { breaks } from "../styles/BreakStyles"
 
 export default function FundraisePack() {
   return (
@@ -82,6 +83,11 @@ const TextSection = styled.div`
   @media (max-width: 1100px) {
     order: 2;
   }
+
+  @media (max-width: ${breaks.tablet}) {
+    width: 100%;
+    max-width: 100%;
+  }
 `
 
 const MediaSection = styled.div`
@@ -93,6 +99,9 @@ const MediaSection = styled.div`
   margin: auto;
 
   //margin-top: 2rem;
+  @media (max-width: ${breaks.phone}) {
+    display: none;
+  }
 
   // animations
   opacity: 0;

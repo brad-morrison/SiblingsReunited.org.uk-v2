@@ -96,7 +96,7 @@ const ContactCards = styled.div`
   gap: 30px;
 
   @media (max-width: ${breaks.phone}) {
-    padding: 0px 20px;
+    gap: 15px;
   }
 
   // animations

@@ -7,6 +7,7 @@ import FormSection from "../components/sections/FormSection"
 import TriplePostCards from "../components/sections/TriplePostCards"
 import StayInTouch from "../components/sections/StayInTouch"
 import ContactDetails from "../components/sections/ContactDetails"
+import { breaks } from "../components/styles/BreakStyles"
 
 export default function ContactPage() {
   return (
@@ -18,9 +19,11 @@ export default function ContactPage() {
 
         <FormSection></FormSection>
 
-        <TriplePostCards title="You might also be interested in"></TriplePostCards>
+        <BottomSection>
+          <TriplePostCards title="You might also be interested in"></TriplePostCards>
 
-        <StayInTouch></StayInTouch>
+          <StayInTouch></StayInTouch>
+        </BottomSection>
       </ContentWrapper>
     </Layout>
   )
@@ -29,4 +32,8 @@ export default function ContactPage() {
 const ContentWrapper = styled.div`
   display: grid;
   gap: 120px;
+`
+
+const BottomSection = styled.div`
+  padding: 20px;
 `

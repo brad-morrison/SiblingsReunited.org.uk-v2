@@ -41,7 +41,7 @@ const Wrapper = styled.div`
   gap: 30px;
 
   @media (max-width: 800px) {
-    gap: 20px;
+    gap: 50px;
     grid-template-columns: auto;
   }
 `
@@ -58,7 +58,6 @@ const CardWrapper = styled.div`
 const TextWrapper = styled.div`
   display: grid;
   grid-template-columns: auto;
-  padding: 30px;
   gap: 20px;
 
   @media (max-width: 800px) {
