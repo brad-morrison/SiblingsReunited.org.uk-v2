@@ -7,28 +7,26 @@ import { fadeIn, speed, zoomIn } from "../styles/Animations"
 
 function Quotes(props) {
   return (
-    <LazyLoad>
-      <Wrapper>
-        <ContentWrapper>
-          <MainTitle>{props.title}</MainTitle>
-          <QuoteCards>
-            <QuoteCard
-              quote="I just wanted to thank you for a brilliant visit to STAR today. Your
+    <Wrapper>
+      <ContentWrapper>
+        <MainTitle>{props.title}</MainTitle>
+        <QuoteCards>
+          <QuoteCard
+            quote="I just wanted to thank you for a brilliant visit to STAR today. Your
                   vision is amazing and the setting is perfect"
-              author="Children's panel member"
-            />
-            <QuoteCard
-              quote="I found it to be a magical place for Christopher to meet his siblings, with no one assessing or judging them"
-              author="Kinship carer"
-            />
-            <QuoteCard
-              quote="Most importantly for the girls, it was a carefree environment. Two hours of quality uninterrupted sister time."
-              author="Foster carer"
-            />
-          </QuoteCards>
-        </ContentWrapper>
-      </Wrapper>
-    </LazyLoad>
+            author="Children's panel member"
+          />
+          <QuoteCard
+            quote="I found it to be a magical place for Christopher to meet his siblings, with no one assessing or judging them"
+            author="Kinship carer"
+          />
+          <QuoteCard
+            quote="Most importantly for the girls, it was a carefree environment. Two hours of quality uninterrupted sister time."
+            author="Foster carer"
+          />
+        </QuoteCards>
+      </ContentWrapper>
+    </Wrapper>
   )
 }
 

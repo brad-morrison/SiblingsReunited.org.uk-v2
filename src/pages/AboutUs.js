@@ -56,8 +56,7 @@ export default function AboutUsPage() {
         <Team />
 
         <NewsList />
-
-        <TriplePostCards title="You may be interested in"></TriplePostCards>
+        <TriplePostCards title={"You may be interested in"}></TriplePostCards>
         <StayInTouch />
       </PageContent>
     </Layout>
@@ -70,25 +69,13 @@ const slideDown = keyframes`
 `
 
 const PageContent = styled.div`
-  max-width: 1300px;
+  max-width: 1400px;
   margin: 80px auto;
 
   padding: 0 30px;
   display: grid;
   gap: 160px;
 `
-
-const SubHeading = styled(H3)``
-
-const SubHeadingCenter = styled(H3)`
-  text-align: center;
-
-  // animation
-  opacity: 0;
-  animation: ${slideDown} 1s forwards;
-`
-
-const Text = styled(BodyMain)``
 
 const WideImage = styled.img`
   width: 100%;

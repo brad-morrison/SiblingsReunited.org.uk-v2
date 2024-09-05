@@ -18,25 +18,23 @@ import { breaks } from "../styles/BreakStyles"
 
 function Block(props) {
   return (
-    <LazyLoad height={props.lazyLoadHeight}>
-      <Wrapper>
-        <IntroTitle>{props.introTitle}</IntroTitle>
-        <ContentWrapper animation={props.animation}>
-          <ImageWrapper flipped={props.flipped}>
-            <Image src={props.image} round={props.round} />
-          </ImageWrapper>
-          <DetailWrapper>
-            <Text>
-              <Title titleAlign={props.titleAlign}>{props.title}</Title>
-              <Paragraph>
-                {<p dangerouslySetInnerHTML={{ __html: props.text }}></p>}
-              </Paragraph>
-            </Text>
-            {props.button && <OptionalButton text={props.button} />}
-          </DetailWrapper>
-        </ContentWrapper>
-      </Wrapper>
-    </LazyLoad>
+    <Wrapper>
+      <IntroTitle>{props.introTitle}</IntroTitle>
+      <ContentWrapper animation={props.animation}>
+        <ImageWrapper flipped={props.flipped}>
+          <Image src={props.image} round={props.round} />
+        </ImageWrapper>
+        <DetailWrapper>
+          <Text>
+            <Title titleAlign={props.titleAlign}>{props.title}</Title>
+            <Paragraph>
+              {<p dangerouslySetInnerHTML={{ __html: props.text }}></p>}
+            </Paragraph>
+          </Text>
+          {props.button && <OptionalButton text={props.button} />}
+        </DetailWrapper>
+      </ContentWrapper>
+    </Wrapper>
   )
 }
 

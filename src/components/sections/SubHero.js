@@ -101,7 +101,7 @@ const Title = styled(H1)``
 const Paragraph = styled(BodyMain)``
 
 const Mascot = styled.img`
-  height: 350px;
+  height: 300px;
   margin: auto;
 
   opacity: 0;

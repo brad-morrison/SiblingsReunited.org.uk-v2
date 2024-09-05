@@ -11,6 +11,7 @@ import Block from "../components/objects/Block"
 import LogoList from "../components/sections/LogoList"
 import { breaks } from "../components/styles/BreakStyles"
 import Spacer from "../components/layout/Spacer"
+import LazyLoad from "react-lazy-load"
 
 function IndexPage() {
   return (
@@ -47,7 +48,6 @@ function IndexPage() {
             button="What can I do at STAR?"
           />
           <Quotes />
-
           <Block
             animation="slideOut"
             image="/images/news.jpg"
@@ -60,13 +60,10 @@ function IndexPage() {
           Click below to read the full article."
             button="Read more"
           />
-
           <TriplePostCards title="Recent Posts" />
           <StayInTouch />
-          {/*}
-        <LogoList title="In Partnership with" />
-        */}
         </PageContent>
+        <LogoList title="In Partnership with" />
       </Content>
     </Layout>
   )
@@ -77,6 +74,8 @@ export default IndexPage
 const Content = styled.div`
   display: grid;
   gap: 150px;
+  max-width: 1400px;
+  margin: auto;
 
   @media (max-width: ${breaks.phone}) {
     gap: 80px;
@@ -84,5 +83,7 @@ const Content = styled.div`
 `
 
 const PageContent = styled.div`
-  padding: 0 20px;
+  padding: 0 40px;
+  display: grid;
+  gap: 100px;
 `

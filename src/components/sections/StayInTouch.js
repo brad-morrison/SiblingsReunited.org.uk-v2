@@ -9,39 +9,37 @@ import { speed, zoomIn } from "../styles/Animations"
 function StayInTouch() {
   const buttonSize = "75px"
   return (
-    <LazyLoad>
-      <Wrapper>
-        <ContentWrapper>
-          <ImageWrapper>
-            <Image src="/images/wellies.png" />
-          </ImageWrapper>
-          <TextWrapper>
-            <Text>
-              <Title>Stay in touch</Title>
-              <Paragraph>
-                Follow us on social media to keep up with the latest news or
-                find out more. We love letting everyone know what our sibling
-                groups have been up to!
-              </Paragraph>
-            </Text>
-            <ButtonWrapper>
-              <SocialMediaButton
-                type="/images/icons/face.svg"
-                width={buttonSize}
-              />
-              <SocialMediaButton
-                type="/images/icons/twit.svg"
-                width={buttonSize}
-              />
-              <SocialMediaButton
-                type="/images/icons/inst.svg"
-                width={buttonSize}
-              />
-            </ButtonWrapper>
-          </TextWrapper>
-        </ContentWrapper>
-      </Wrapper>
-    </LazyLoad>
+    <Wrapper>
+      <ContentWrapper>
+        <ImageWrapper>
+          <Image src="/images/wellies.png" />
+        </ImageWrapper>
+        <TextWrapper>
+          <Text>
+            <Title>Stay in touch</Title>
+            <Paragraph>
+              Follow us on social media to keep up with the latest news or find
+              out more. We love letting everyone know what our sibling groups
+              have been up to!
+            </Paragraph>
+          </Text>
+          <ButtonWrapper>
+            <SocialMediaButton
+              type="/images/icons/face.svg"
+              width={buttonSize}
+            />
+            <SocialMediaButton
+              type="/images/icons/twit.svg"
+              width={buttonSize}
+            />
+            <SocialMediaButton
+              type="/images/icons/inst.svg"
+              width={buttonSize}
+            />
+          </ButtonWrapper>
+        </TextWrapper>
+      </ContentWrapper>
+    </Wrapper>
   )
 }
 
