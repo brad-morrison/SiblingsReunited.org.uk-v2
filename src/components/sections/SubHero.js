@@ -11,7 +11,7 @@ function SubHero(props) {
       <LazyLoad>
         <ContentWrapper>
           <ImageWrapper flipped={props.flipped}>
-            <Mascot src="/images/logos/Mascot.svg"></Mascot>
+            <Mascot src="/images/svg/mascot.svg"></Mascot>
             <ChildrenVector src="/images/svg/kids.svg"></ChildrenVector>
           </ImageWrapper>
           <TextWrapper>
@@ -101,7 +101,7 @@ const Title = styled(H1)``
 const Paragraph = styled(BodyMain)``
 
 const Mascot = styled.img`
-  height: 300px;
+  height: 350px;
   margin: auto;
 
   opacity: 0;

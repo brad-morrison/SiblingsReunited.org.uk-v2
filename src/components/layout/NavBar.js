@@ -66,7 +66,7 @@ const LogoWrapper = styled.div`
 
 const Logo = styled.div`
   height: 100%;
-  background: url("./images/logos/logo.png");
+  background: url("./images/logos/logo.svg");
   background-size: contain;
   background-repeat: no-repeat;
 `
@@ -76,6 +76,7 @@ const Items = styled.div`
   grid-template-columns: auto auto auto auto auto auto auto auto;
   justify-content: end;
   align-content: stretch;
+  align-items: center;
   gap: 30px;
   //padding: 0 0px;
   height: 100%;
